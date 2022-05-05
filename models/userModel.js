@@ -74,5 +74,6 @@ userSchema.methods.comparePassword = function (passwordSave, passwordReq) {
   const decryptPassword = CryptoJS.AES.decrypt(passwordSave, process.env.SECRET_KEY).toString(CryptoJS.enc.Utf8);
   return decryptPassword === passwordReq;
 };
+// dulicate key value handle
 const User = mongoose.model('User', userSchema);
 module.exports = User;

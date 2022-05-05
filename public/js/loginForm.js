@@ -1,4 +1,4 @@
-const loginForm = document.querySelector('#form--login');
+const loginForm = document.querySelector('#form-signin');
 const login = (email, password) => {
   axios({
     method: 'post',
@@ -28,6 +28,5 @@ loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
-  console.log(email);
   login(email, password);
 });

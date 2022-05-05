@@ -6,3 +6,8 @@ exports.getLogin = (req, res) => {
     title: 'Login or register your account ',
   });
 };
+exports.getIndex = (req, res) => {
+  res.status(200).render('index', {
+    title: 'LoveBook store for everyone',
+  });
+};
