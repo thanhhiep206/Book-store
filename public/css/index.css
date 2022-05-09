@@ -9,7 +9,18 @@
 body,html{
     background-color: #F8F9FA;
 }
-
+/* account css */
+a.nav-link:hover {
+    color: #1a94ff !important;
+}
+.info-logout a.nav-link {
+    margin: 0 0 0 6px;
+    padding: 0!important;
+}
+li.ifuser{
+    margin-top: 7px;
+}
+/* het account css */
 .navbar-nav li .nav-link{
    font-size: 13px;
    padding-top: 17px;
@@ -25,7 +36,7 @@ li.nav-item a{
     transition: 0.2s;
 }
 
-li.nav-item:hover a {
+li.nav-item a:hover  {
     color: #1a94ff!important;
 }
 

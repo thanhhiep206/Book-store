@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -8,10 +9,8 @@
     <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/index.css">
-
     <link rel="stylesheet" href="/fontawesome_free_5.13.0/css/all.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -62,20 +61,31 @@
 
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
-        
                     <!-- neu ton tai user thi` -->
-                    <!-- <div class="dropdown">
-                        <li class="nav-item account d-flex" type="button" class="btn dropdown" data-toggle="dropdown">
-                            <a href="#" class="btn btn-secondary rounded-circle">
-                                <i class="fa fa-user"></i>
+                    <% if (user) { %>
+                        <div class="">
+                            <li class="nav-item account d-flex ifuser"  type="button" class="" data-toggle="">
+                                <a href="#" class="btn btn-secondary rounded-circle">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                                <div class="info-logout">
+                                    <a class="nav-link text-dark text-uppercase username" href="/account"><%= user.name %></a>
+                                    <a class="nav-link text-dark logout" >Đăng xuất <i class="fas fa-sign-out-alt"></i></a>
+                                </div>
+                            </li>
+                        </div>
+                        <li class="nav-item giohang">
+                            <a href="/cart" class="btn btn-secondary rounded-circle">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div class="cart-amount">0</div>
                             </a>
-                            <div class="info-logout">
-                                <a class="nav-link text-dark text-uppercase username" href="tai-khoan.html">Khánh Nguyễn</a>
-                                <a class="nav-link text-dark logout" href="#">Thoát <i class="fas fa-sign-out-alt"></i></a>
-                            </div>
+                            <a class="nav-link text-dark giohang text-uppercase" href="/cart"
+                                style="display:inline-block">Giỏ
+                                Hàng</a>
                         </li>
-                    </div> -->
-                    <!-- neu ko ton tai user thi bhien cai ne`-->
+                        
+                    <%  } else{ %>
+                     <!-- neu ko ton tai user thi bhien cai ne`-->
                     <div class="dropdown">
                         <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
                             <a href="#" class="btn btn-secondary rounded-circle">
@@ -91,15 +101,17 @@
                                 data-target="#formdangnhap">Đăng nhập</a>
                         </div>
                     </div>
+                    
                     <li class="nav-item giohang">
-                        <a href="" class="btn btn-secondary rounded-circle">
+                        <a href="/cart" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
-                        <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
+                        <a class="nav-link text-dark giohang text-uppercase" href="/cart"
                             style="display:inline-block">Giỏ
                             Hàng</a>
                     </li>
+                    <% } %>
                 </ul>
             </div>
         </div>
@@ -267,18 +279,17 @@
                                 </ul>
                             </li>
 
-                            <li><a href="#">Nghệ Thuật Sống - Tâm Lý </a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Sách Lập Trình </a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Nghệ Thuật Sống - Tâm
-                                            Lý</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Lập Trình</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Sách Nghệ Thuật Sống</a></li>
-                                        <li><a href="#">Sách Tâm Lý</a></li>
-                                        <li><a href="#">Sách Hướng Nghiệp</a></li>
+                                        <li><a href="#">Lập trình Javscript</a></li>
+                                        <li><a href="#">Lập trình Golang</a></li>
+                                        <li><a href="#">Lập trình Php</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Sách Nghệ Thuật Sống Đẹp</a></li>
-                                        <li><a href="#">Sách Tư Duy </a></li>
+                                        <li><a href="#">Lập trình Java</a></li>
+                                        <li><a href="#">Lập trình Flutter</a></li>
                                     </div>
                                 </ul>
                             </li>

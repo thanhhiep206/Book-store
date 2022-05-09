@@ -1,0 +1,27 @@
+<div class="card">
+    <a href="#" class="motsanpham"
+        style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+        title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+        <img class="card-img-top anh" src="/images/<%=book.img %>"
+            alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+        <div class="card-body noidungsp mt-3">
+            <h3 class="card-title ten"><%= book.name %>  </h3>
+            <small class="tacgia text-muted"><%= book.author %></small>
+            <div class="gia d-flex align-items-baseline">
+                <div class="giamoi"><%= 1 %></div>
+                <div class="giacu text-muted"><%= book.price %></div>
+                <div class="sale"><%= book.percentSale %></div>
+            </div>
+            <div class="danhgia">
+                <ul class="d-flex" style="list-style: none;">
+                    <li class="active"><i class="fa fa-star"></i></li>
+                    <li class="active"><i class="fa fa-star"></i></li>
+                    <li class="active"><i class="fa fa-star"></i></li>
+                    <li class="active"><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><span class="text-muted"><%= book.ratingsQuantity %></span></li>
+                </ul>
+            </div>
+        </div>
+    </a>
+</div>

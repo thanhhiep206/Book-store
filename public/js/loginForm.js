@@ -1,4 +1,5 @@
 const loginForm = document.querySelector('#form-signin');
+const logoutBtn = document.querySelector('.logout');
 const login = (email, password) => {
   axios({
     method: 'post',
@@ -30,3 +31,25 @@ loginForm.addEventListener('submit', (e) => {
   const password = document.querySelector('#password').value;
   login(email, password);
 });
+// logout
+const logout = () => {
+  console.log(1);
+  axios({
+    method: 'get',
+    url: 'http://localhost:3000/api/v1/users/logout',
+  })
+    .then((res) => {
+      try {
+        if (res.data.status === 'success') {
+          alert('logout successfully!');
+          location.reload(true);
+        }
+      } catch (e) {
+        console.log(e.response.data);
+      }
+    })
+    .catch((e) => {
+      alert(e.response.data.message);
+    });
+};
+logoutBtn.addEventListener('click', logout);

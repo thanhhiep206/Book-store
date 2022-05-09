@@ -1,13 +1,29 @@
 const catchAsync = require('../utils/catchAsync');
 const User = require('../models/userModel');
-
-exports.getLogin = (req, res) => {
-  res.status(200).render('login', {
-    title: 'Login or register your account ',
-  });
-};
-exports.getIndex = (req, res) => {
+const axios = require('axios');
+const Book = require('../models/bookModel');
+exports.getIndex = catchAsync(async (req, res, next) => {
+  // const result = await axios({
+  //   method: 'get',
+  //   url: 'http://localhost:3000/api/v1/books',
+  // });
+  // const book = result.data.book;
+  const books = await Book.find();
   res.status(200).render('index', {
     title: 'LoveBook store for everyone',
+    books,
+    user: req.user,
+  });
+});
+exports.getMe = (req, res) => {
+  res.status(200).render('account', {
+    title: 'Account Settings',
+    user: req.user,
+  });
+};
+exports.getCart = (req, res) => {
+  res.status(200).render('cart', {
+    title: 'Your cart',
+    user: req.user,
   });
 };

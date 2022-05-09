@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const viewController = require('../controllers/viewController');
-
-router.get('/login', viewController.getLogin);
-router.get('/', viewController.getIndex);
+const authController = require('../controllers/authController');
+router.get('/', authController.isLoggined, viewController.getIndex);
+router.get('/account', authController.isLoggined, viewController.getMe);
+router.get('/cart', authController.isLoggined, viewController.getCart);
 module.exports = router;

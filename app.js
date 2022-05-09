@@ -13,10 +13,11 @@ if (process.env.NODE_ENV === 'development') {
   // app.use(morgan('tiny'));
 }
 // app.use((req, res, next) => {
-//   console.log('Req time: ' + new Date().toISOString());
+//   // console.log(req.cookies);
 //   next();
 // });
 ///use Router
 app.use('/', require('./routers/viewRouter'));
+app.use('/api/v1/books', require('./routers/bookRouter'));
 app.use('/api/v1/users', require('./routers/userRouter'));
 module.exports = app;

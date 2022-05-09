@@ -6,7 +6,7 @@
 
 
 
-
+/* css account */
 li.nav-item.account {
     margin-top: 7px;
 }
@@ -17,7 +17,7 @@ li.nav-item.account {
 }
 
 a.nav-link:hover {
-    color: #F5A623!important;
+    color: #1a94ff!important;
 }
 
 
@@ -80,7 +80,7 @@ body,html{
 }
 
 .navbar input.form-control {
-    border: 2px solid #CF111A!important;
+    border: 2px solid #1a94ff!important;
     
 }
 
@@ -132,7 +132,7 @@ a.btn.btn-secondary.rounded-circle {
 }
 
 .nav-item.giohang:hover .cart-amount{
-    background: #CF111A;
+    background: #1a94ff;
     color: white;
 }
 
@@ -150,9 +150,9 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-    background: #F5A623;
+    background: #1a94ff;
     color: white;
-    box-shadow: 0px 2px 5px #F5A623;
+    box-shadow: 0px 2px 5px #1a94ff;
 }
 
 .navbar-nav .nav-item.active a{
@@ -187,7 +187,7 @@ ul.tabs li.tab a {
 }
 
 ul.tabs li:hover a {
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 ul.tabs li:hover{
@@ -198,7 +198,7 @@ ul.tabs li hr {position: relative;width: 50%;top: 0px;left: 25%;visibility: hidd
 
 ul.tabs li:hover hr {
     visibility: visible;
-    border-top: 2px solid #F5A623;
+    border-top: 2px solid #1a94ff;
     width: 100%;
     left: 0;
 }
@@ -244,7 +244,7 @@ ul.tabs li.active hr {
 
 .btn-google {
     color: white;
-    background-color: #ea4335;
+    background-color: #1a94ff;
 }
   
 .btn-facebook {
@@ -274,7 +274,7 @@ ul.tabs li.active hr {
 
 label.error {
     display: inline-block;
-    color:red;
+    color:#1a94ff;
     width: 300px;
     
     margin-top:5px;
@@ -287,7 +287,7 @@ label.error {
 
 /* .duoinavbar  */
 .duoinavbar{
-    background-color:#CF111A ;
+    background-color:#1a94ff ;
 }
 
 .benphai.float-right {
@@ -302,7 +302,7 @@ label.error {
 
 .categoryheader {
     height: 40px;
-    background-color: #aa1318;
+    background-color: #1a94ff;
 }
 
 .duoinavbar .container .row {
@@ -350,7 +350,7 @@ label.error {
 }
 
 .categorycontent > ul > li:hover{
-    background-color: #CF111A;
+    background-color: #1a94ff;
     cursor: pointer;
 }
 
@@ -427,7 +427,7 @@ ul i.fa.fa-chevron-right{
 ul li a.header{
     font-size: 15px;
     padding-left: 33px;
-    color: #CF111A;
+    color: #1a94ff;
 }
 
 .categorycontent ul li ul .content{
@@ -444,7 +444,7 @@ ul li a.header{
 
 
 .categorycontent ul li ul .content li a:hover{
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 .categorycontent{
@@ -503,7 +503,7 @@ footer .row a {
 }
 
 footer .row a:hover {
-    color:  #F5A623;
+    color:  #1a94ff;
 }
 
 footer .header {
@@ -535,11 +535,11 @@ footer .header {
 }
 
 .breadcrumb-item a:hover{
-    color:#F5A623;
+    color:#1a94ff;
 }
 
 .breadcrumb-item.active a{
-    color:#F5A623;
+    color:#1a94ff;
 }
 /* het css cho breadcrumb  */
 
@@ -672,7 +672,7 @@ footer .header {
 }
 
 .khoithongtin .giaban .giamoi {
-    color: red;
+    color: #1a94ff;
     font-size: 26px;
     position: absolute;
     top: 12px;
@@ -681,7 +681,7 @@ footer .header {
 
 /* don vi tien  */
 .khoithongtin .giaban .donvitien {
-    color: red;
+    color: #1a94ff;
     font-size: 26px;
     position: absolute;
     top: 12px;
@@ -786,7 +786,7 @@ footer .header {
 
 #nav-danhgia .diem {
     font-size: 45px;
-    color: red;
+    color: #1a94ff;
     font-weight: bold;
 }
 
@@ -910,7 +910,7 @@ li.active .fa-star {
 }
 
 .giamoi {
-    color: red;
+    color: #1a94ff;
     font-size: 14px;
     font-weight: 500;
     padding-right: 10px;
@@ -953,7 +953,7 @@ h6.card-title.ten {
 }
 
 .card:hover .ten {
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 /* xu ly margin slick  */
@@ -984,13 +984,13 @@ h6.card-title.ten {
     }
 
     .navbar ul li.account{
-        border-top: 1px dashed #CF111A;
-        border-bottom: 1px dashed #CF111A;
+        border-top: 1px dashed #1a94ff;
+        border-bottom: 1px dashed #1a94ff;
         padding-bottom: 0.5rem;
         margin-bottom: 0.25rem;
     }
     .navbar ul li.giohang{
-        border-bottom: 1px dashed #CF111A;
+        border-bottom: 1px dashed #1a94ff;
         padding-bottom: 0.5rem;
         margin-right:8px;
     }
@@ -1038,7 +1038,7 @@ h6.card-title.ten {
     -webkit-box-orient: vertical;
 }
 
-.the-loai-sach ul li:hover .ten{color: #F5A623;}
+.the-loai-sach ul li:hover .ten{color: #1a94ff;}
 
 .page-item .page-link {
     color: #939393;
