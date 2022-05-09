@@ -3,12 +3,8 @@ const bookController = require('../controllers/bookController');
 const router = require('express').Router();
 
 //all
-router.get('/', bookController.getAllBook);
-router.post('/', bookController.createBook);
-router.delete('/', bookController.deleteAllBook);
+router.route('/').get(bookController.getAllBook).post(bookController.createBook).delete(bookController.deleteAllBook);
 //id
-router.patch('/:id', bookController.updateBook);
-router.delete('/:id', bookController.getAllBook);
-router.get('/:id', bookController.getOneBook);
+router.route('/:id').patch(bookController.updateBook).delete(bookController.getAllBook).get(bookController.getOneBook);
 
 module.exports = router;

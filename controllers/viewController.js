@@ -27,3 +27,10 @@ exports.getCart = (req, res) => {
     user: req.user,
   });
 };
+//get 404 all router
+exports.getError = (req, res) => {
+  res.status(404).render('error', {
+    title: 'Not found router page',
+    user: null,
+  });
+};

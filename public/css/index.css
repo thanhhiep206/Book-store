@@ -656,5 +656,12 @@ footer .header {
         display: none;
     }
 }
+.errorpage{
+    background-color: #8CDDF9;
+}
+.number404{
+  margin-left: 20px;
+  
+}
 
 
