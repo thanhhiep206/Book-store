@@ -436,6 +436,9 @@ img.card-img-top.anh {
     top: 15px;
     transition: 0.3s;
 }
+img.card-img-top.anh.setHeight{
+    height: 400px;
+}
 
 ul span.text-muted {
     font-size: 11px;
@@ -450,13 +453,14 @@ i.fa.fa-star {
 }
 
 li.active .fa-star {
-    color: #1a94ff;
+    color: #FDD836;
 }
 
 .sale {
-    background: #1a94ff;
-    border-radius: 6px;
-    font-size: 11px;color: white;
+    background: #FFF0F1;
+    border: 1px solid #FF424E;
+    border-radius: 2px;
+    font-size: 11px;color: #FF424E;
     padding: 1px 4px;
     position: absolute;
     right: 0
@@ -470,7 +474,7 @@ li.active .fa-star {
 }
 
 .giamoi {
-    color: 1a94ff;
+    color: #FF424E;
     font-size: 14px;
     font-weight: 500;
     padding-right: 10px;
