@@ -786,3 +786,10 @@ label.chuyenkhoan {
         margin-left: 15px;
     }
 }
+/*error page */
+.errorpage{
+    background-color: #8CDDF9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

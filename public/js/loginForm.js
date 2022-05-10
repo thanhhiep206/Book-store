@@ -49,7 +49,7 @@ const logout = () => {
       }
     })
     .catch((e) => {
-      alert(e.response.data.message);
+      console.log(e);
     });
 };
 logoutBtn.addEventListener('click', logout);

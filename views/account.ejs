@@ -6,74 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/account.css">
-
-    <link rel="stylesheet" href="/fontawesome_free_5.13.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    
-</head>
-
-<body>
-    <!-- code cho nut like share facebook  -->
-    <!-- <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script> -->
-
-    <!-- header -->
-    <nav class="navbar navbar-expand-md bg-white navbar-light">
-        <div class="container">
-            <!-- logo  -->
-            <a class="navbar-brand" href="/" style="color: #1a94ff;">LoveBook</a>
-
-            <!-- navbar-toggler  -->
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <!-- form tìm kiếm  -->
-                <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
-                    <div class="input-group" style="width: 520px;">
-                        <input type="text" class="form-control" aria-label="Small"
-                            placeholder="Nhập sách cần tìm kiếm...">
-                        <div class="input-group-append">
-                            <button type="button" class="btn" style="background-color: #1a94ff; color: white;">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-                <!-- ô thông tin tài khoản nút đăng xuất và giỏ hàng trên header  -->
-                <ul class="navbar-nav mb-1 ml-auto">
-                    <div class="dropdown">
-                        <li class="nav-item account d-flex" type="button" class="btn dropdown" data-toggle="dropdown">
-                            <a href="#" class="btn btn-secondary rounded-circle">
-                                <i class="fa fa-user"></i>
-                            </a>
-                            <div class="info-logout">
-                                <a class="nav-link text-dark text-uppercase username" href="/account"><%= user.name %></a>
-                                <a class="nav-link text-dark logout" >Đăng xuất <i class="fas fa-sign-out-alt"></i></a>
-                            </div>
-                        </li>
-                    </div>
-                    <li class="nav-item giohang">
-                        <a href="/cart" class="btn btn-secondary rounded-circle">
-                            <i class="fa fa-shopping-cart"></i>
-                            <div class="cart-amount">0</div>
-                        </a>
-                        <a class="nav-link text-dark giohang text-uppercase" href="/cart"
-                            style="display:inline-block">Giỏ
-                            Hàng</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
+    <%- include('include/_header') %>
 
     <!-- form dang ky khi click vao button tren header-->
     
