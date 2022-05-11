@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
-
+const slugify = require('slugify');
 const bookSchema = new mongoose.Schema(
   {
     name: {
       required: true,
       type: String,
       unique: true,
+    },
+    cartgory: {
+      required: true,
+      type: String,
     },
     slug: String,
     price: {
@@ -14,8 +18,9 @@ const bookSchema = new mongoose.Schema(
     },
     percentSale: {
       required: true,
-      type: String,
+      type: Number,
     },
+    priceafterSale: Number,
     author: {
       required: true,
       type: String,
@@ -35,10 +40,39 @@ const bookSchema = new mongoose.Schema(
       require: true,
       type: String,
     },
+    reviews: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ReviewBook',
+    },
   },
+  { timestamps: true },
   {
-    timestamps: true,
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true },
   }
 );
+// virtuals property
+//not working
+// bookSchema.virtual('reviews', {
+//   ref: 'ReviewBook',
+//   foreignField: 'book',
+//   localField: '_id',
+// });
+//populate
+// bookSchema.pre(/^find/, function (next) {
+//   console.log(1);
+//   this.populate({
+//     path: 'reviews',
+//     select: '-__v',
+//   });
+//   next();
+// });
+bookSchema.pre('save', function (next) {
+  const percent = 100;
+  this.slug = slugify(this.name, { lower: true });
+  this.priceafterSale = this.price - (this.price * Math.abs(this.percentSale)) / percent;
+  next();
+});
+
 const Book = mongoose.model('Book', bookSchema);
 module.exports = Book;

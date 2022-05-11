@@ -9,9 +9,11 @@ exports.getAll = (Model) =>
     });
   });
 //getOne
-exports.getOne = (Model) =>
+exports.getOne = (Model, populate) =>
   catchAsync(async (req, res) => {
-    const data = await Model.findById(req.params.id);
+    let query = Model.findById(req.params.id);
+    if (populate) query = query.populate(populate);
+    const data = await query;
     if (!data)
       return res.status(400).json({
         status: 'fail',

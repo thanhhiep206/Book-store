@@ -2,7 +2,7 @@ const reviewController = require('../controllers/reviewController');
 const router = require('express').Router();
 //ALl
 router
-  .route()
+  .route('/')
   .get(reviewController.getAllReview)
   .post(reviewController.createOneReview)
   .delete(reviewController.deleteAllReview);
@@ -12,3 +12,5 @@ router
   .get(reviewController.getOneReview)
   .patch(reviewController.updateOneReview)
   .delete(reviewController.deleteOneReview);
+
+module.exports = router;

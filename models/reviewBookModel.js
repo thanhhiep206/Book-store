@@ -12,17 +12,27 @@ const reviewBookSchema = new mongoose.Schema(
     },
     sizeWidth: Number,
     sizeHeight: Number,
-    publisher: String,
+    chapter: Number,
     coverImage: {
       type: String,
       default: 'Bìa mềm',
     },
     pageNumber: Number,
     weight: Number,
+    introduction: String,
   },
   {
-    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
+
+// reviewBookSchema.pre(/^find/, function (next) {
+//   this.populate({
+//     path: 'book',
+//     select: '-__v',
+//   });
+//   next();
+// });
 const reviewBook = mongoose.model('ReviewBook', reviewBookSchema);
 module.exports = reviewBook;

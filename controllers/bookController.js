@@ -10,4 +10,4 @@ exports.deleteAllBook = factory.deleteAll(Book);
 //getAllBook
 exports.getAllBook = factory.getAll(Book);
 //getOneBook
-exports.getOneBook = factory.getOne(Book);
+exports.getOneBook = factory.getOne(Book, { path: 'reviews' });

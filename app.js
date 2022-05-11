@@ -18,6 +18,7 @@ if (process.env.NODE_ENV === 'development') {
 // });
 ///use Router
 app.use('/', require('./routers/viewRouter'));
+app.use('/api/v1/reviews', require('./routers/reviewRouter'));
 app.use('/api/v1/books', require('./routers/bookRouter'));
 app.use('/api/v1/users', require('./routers/userRouter'));
 module.exports = app;
