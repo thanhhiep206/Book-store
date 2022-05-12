@@ -1,8 +1,10 @@
 const catchAsync = require('../utils/catchAsync');
 //getAll
-exports.getAll = (Model) =>
+exports.getAll = (Model, populate) =>
   catchAsync(async (req, res) => {
-    const data = await Model.find();
+    let query = Model.find();
+    if (populate) query = query.populate(populate);
+    const data = await query;
     res.status(201).json({
       status: 'success',
       data,

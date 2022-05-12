@@ -62,9 +62,12 @@ exports.getReview = catchAsync(async (req, res) => {
 //render each cartgory
 
 exports.getCartgory = catchAsync(async (req, res) => {
+  const books = await Book.find({ cartgory: req.params.cartgory });
+  console.log(books);
   res.status(404).render('cartgory', {
     title: 'ok',
+    books,
     user: req.user,
-    style: 'cartgory',
+    style: 'product',
   });
 });

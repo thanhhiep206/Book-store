@@ -1097,4 +1097,7 @@ h3.account-header {
     font-size: 18px;
 }
 
-
+/* fix fontsize */
+.font{
+    font-size: 14px;
+}

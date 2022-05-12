@@ -7,5 +7,5 @@ router.get('/cart', authController.isLoggined, viewController.getCart);
 //nest route
 router.get('/book/:slug', authController.isLoggined, viewController.getReview);
 // router.get('/*', viewController.getError);
-router.get('/:cartgory', authController.isLoggined, viewController.getCartgory);
+router.get('/cartgory/:cartgory', authController.isLoggined, viewController.getCartgory);
 module.exports = router;

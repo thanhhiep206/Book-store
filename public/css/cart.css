@@ -793,3 +793,7 @@ label.chuyenkhoan {
     align-items: center;
     justify-content: center;
 }
+/* fix fontsize */
+.font{
+    font-size: 14px;
+}
