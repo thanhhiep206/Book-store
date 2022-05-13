@@ -460,7 +460,8 @@ li.active .fa-star {
     background: #FFF0F1;
     border: 1px solid #FF424E;
     border-radius: 2px;
-    font-size: 11px;color: #FF424E;
+    font-size: 11px;
+    color: #FF424E;
     padding: 1px 4px;
     position: absolute;
     right: 0

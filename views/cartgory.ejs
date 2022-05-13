@@ -2,36 +2,40 @@
   <%- include('include/_cartgory') %>
 
     <!-- breadcrumb  -->
-    <!-- <section class="breadcrumbbar">
+    <section class="breadcrumbbar">
         <div class="container">
             <ol class="breadcrumb mb-0 p-0 bg-transparent">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item active"><a href="sach-kinh-te.html">Sách kinh tế - kỹ năng</a></li>
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                <% books.forEach(function(book){ %>
+                    <li class="breadcrumb-item active"><a href="#"><%="Sách " + book.cartgory%> </a></li>
+                <% }); %>   
             </ol>
         </div>
-    </section> -->
+    </section>
 
     <!-- ảnh banner  -->
     <section class="banner">
         <div class="container">
-            <a href="/"><img src="images/banner-sach-ktkn.jpg" alt="banner-sach-ktkn"
+            <a href="/"><img src="/images/banner.png" alt="banner"
                     class="img-fluid"></a>
         </div>
     </section>
 
     <!-- thể loại sách: kinh tế chính trị nhân vật bài học kinh doanh ( từng ô vuông) -->
-    <section class="page-content my-3">
+    <!-- <section class="page-content my-3">
         <div class="container">
-            <div>
-                <h1 class="header text-uppercase">sách kinh tế - kỹ năng</h1>
+            <div>              
+                    <h1 class="header text-uppercase"></h1>
+                   
             </div>
             <div class="the-loai-sach">
                 <ul class="list-unstyled d-flex">
-                    <!-- //foreach -->
+                  
+                    
                     <li>
                         <a href="#" class="danh-muc text-decoration-none">
                             <div class="img text-center">
-                                <img src="images/tls-kinh-te-chinh-tri.png" alt="tls-kinh-te-chinh-tri">
+                                <img src="/images/tls-kinh-te-chinh-tri.png" alt="tls-kinh-te-chinh-tri">
                             </div>
                             <div class="ten">
                                 Kinh tế - chính trị
@@ -42,7 +46,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- khối sản phẩm  -->
     <section class="content my-4">

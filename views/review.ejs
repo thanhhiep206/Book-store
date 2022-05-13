@@ -139,13 +139,15 @@
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light pt-4">
                         <h5 class="header text-uppercase" style="font-weight: 400;">Sản phẩm tương tự</h5>
-                        <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                        <a href="/cartgory/<%=book.cartgory%>" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
                     <!-- 1 sản phẩm -->
                     <!--foreach-->
-                    
+                    <% bookSimilar.forEach(book=>{%>
+                        <%- include('include/_booktemplate',{book}) %> 
+                   <% }) %>
                 </div>
             </div>
         </div>

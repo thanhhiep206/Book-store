@@ -3,7 +3,18 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+/* fix account css */
+a.nav-link:hover {
+    color: #1a94ff !important;
+}
+.info-logout a.nav-link {
+    margin: 0 0 0 6px;
+    padding: 0!important;
+}
+li.ifuser{
+    margin-top: 7px;
+}
+/* het account css */
 .header-khoi-sp {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 10px;
@@ -37,7 +48,7 @@ label.label-select {
 .header-khoi-sp a {
     font-size: 13px;
     margin: 0 3px 0 3px;
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 .page-content h1.header {
@@ -70,8 +81,8 @@ li.nav-item a{
     transition: 0.2s;
 }
 
-li.nav-item:hover a {
-    color: #F5A623!important;
+li.nav-item a:hover {
+    color: #1a94ff!important;
 }
 
 a.nav-link {
@@ -128,7 +139,7 @@ a.btn.btn-secondary.rounded-circle {
 }
 
 a.dropdown-item {
-    background: #F5A623;
+    background: #1a94ff;
     border-radius: 4px;
     font-size: 14px;
     color: white;
@@ -136,13 +147,13 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-    background: #F5A623;
+    background: #1a94ff;
     color: white;
-    box-shadow: 0px 2px 5px #F5A623;
+    box-shadow: 0px 2px 5px #1a94ff;
 }
 
 .navbar-nav .nav-item.active a{
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 .nutcuonlen{
@@ -173,7 +184,7 @@ ul.tabs li.tab a {
 }
 
 ul.tabs li:hover a {
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 ul.tabs li:hover{
@@ -184,7 +195,7 @@ ul.tabs li hr {position: relative;width: 50%;top: 0px;left: 25%;visibility: hidd
 
 ul.tabs li:hover hr {
     visibility: visible;
-    border-top: 2px solid #F5A623;
+    border-top: 2px solid #1a94ff;
     width: 100%;
     left: 0;
 }
@@ -200,11 +211,11 @@ ul.tabs li {
 }
 
 ul.tabs li.active a{
-    color: #F5A623;
+    color: #1a94ff;
 }
 ul.tabs li.active hr {
     visibility: visible;
-    border-top: 2px solid #F5A623;
+    border-top: 2px solid #1a94ff;
     width: 100%;
     left: 0;
 }
@@ -430,7 +441,7 @@ ul li a.header{
 
 
 .categorycontent ul li ul .content li a:hover{
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 .categorycontent{
@@ -489,7 +500,7 @@ footer .row a {
 }
 
 footer .row a:hover {
-    color:  #F5A623;
+    color:  #1a94ff;
 }
 
 footer .header {
@@ -521,11 +532,11 @@ footer .header {
 }
 
 .breadcrumb-item a:hover{
-    color:#F5A623;
+    color:#1a94ff;
 }
 
 .breadcrumb-item.active a{
-    color:#F5A623;
+    color:#1a94ff;
 }
 /* het css cho breadcrumb  */
 
@@ -550,7 +561,7 @@ footer .header {
 }
 
 .product-detail .thumb-img.vienvang{
-    border: 1px solid #F5A623;
+    border: 1px solid #1a94ff;
 }
 /* het css cho product-page  */
 /* css cho khoi thong tin cua  product-page*/
@@ -603,7 +614,7 @@ footer .header {
 }
 
 .thongtinsach a.tacgia {
-    color: #F5A623;
+    color: #1a94ff;
     text-decoration: none;
 }
 
@@ -629,7 +640,7 @@ footer .header {
 
 .khoithongtin .uudai ul li::before {
     content: "\2022";
-    color: #F5A623;
+    color: #1a94ff;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -648,7 +659,7 @@ footer .header {
 
 .khoithongtin .uudai {
     background: #FEF6E9;
-    border: 1px solid #F5A623;
+    border: 1px solid #1a94ff;
     border-radius: 5px;
     font-size: 13px;
 }
@@ -667,7 +678,7 @@ footer .header {
 
 /* don vi tien  */
 .khoithongtin .giaban .donvitien {
-    color: 1a94ff;
+    color: #FF424E;
     font-size: 26px;
     position: absolute;
     top: 12px;
@@ -685,10 +696,11 @@ footer .header {
 }
 
 .khoithongtin .tietkiem .sale {
-    background: #F5A623;
-    border-radius: 6px;
+    background: #FFF0F1;
+    border: 1px solid #FF424E;
+    border-radius: 2px;
     font-size: 11px;
-    color: white;
+    color: #FF424E;
     padding: 1px 4px;
     position: absolute;
     font-weight: bold;
@@ -700,7 +712,7 @@ footer .header {
 }
 
 .khoithongtin .huongdanmuahang {
-    color: #F7A623;
+    color: #1a94ff;
     font-size: 13px;
     margin: 10px 0px;
     display: block;
@@ -880,9 +892,11 @@ li.active .fa-star {
 }
 
 .noidungsp .gia .sale {
-    background: #F5A623;
-    border-radius: 6px;
-    font-size: 11px;color: white;
+    background: #FFF0F1;
+    border: 1px solid #FF424E;
+    border-radius: 2px;
+    font-size: 11px;
+    color: #FF424E;
     padding: 1px 4px;
     position: absolute;
     right: 0
@@ -939,7 +953,7 @@ h6.card-title.ten {
 }
 
 .card:hover .ten {
-    color: #F5A623;
+    color: #1a94ff;
 }
 
 /* xu ly margin slick  */
@@ -1024,15 +1038,15 @@ h6.card-title.ten {
     -webkit-box-orient: vertical;
 }
 
-.the-loai-sach ul li:hover .ten{color: #F5A623;}
+.the-loai-sach ul li:hover .ten{color: #1a94ff;}
 
 .page-item .page-link {
     color: #939393;
 }
 
 .page-item.active  .page-link {
-    background: #F5A623;
-    border: 1px solid #F5A623;
+    background: #1a94ff;
+    border: 1px solid #1a94ff;
     color: white;
 }
 
@@ -1048,7 +1062,7 @@ h6.card-title.ten {
 
 .account-page-tab-content .nav-tabs .nav-item.active {
     color: black;
-    border-top: 4px solid #F5A623;
+    border-top: 4px solid #1a94ff;
 }
 
 .account-page-tab-content .nav-tabs a {
