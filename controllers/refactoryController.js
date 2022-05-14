@@ -50,9 +50,14 @@ exports.deleteOne = (Model) =>
   });
 exports.updateOne = (Model) =>
   catchAsync(async (req, res) => {
-    const dataUpdate = await Model.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    const dataUpdate = await Model.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
     if (!dataUpdate)
       return res.status(400).json({
         status: 'fail',

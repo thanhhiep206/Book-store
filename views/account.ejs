@@ -23,20 +23,22 @@
                             <div class="offset-md-4 mt-3">
                                 <h3 class="account-header">Thông tin tài khoản</h3>
                             </div>
+                            <form action="/updateMe" id="update">
                             <div class="hoten my-3">
                                 <div class="row">
                                     <label class="col-md-2 offset-md-2" for="account-hoten">Họ tên</label>
-                                    <input class="col-md-4" type="text" name="account-hoten" placeholder="<%=user.name %>" readonly>
+                                    <input class="col-md-4" type="text" name="name" placeholder="<%=user.name %>" id="myname">
                                 </div>
                             </div>
                             <div class="email my-3">
                                 <div class="row">
                                     <label class="col-md-2 offset-md-2" for="account-email">Địa chỉ email</label>
-                                    <input class="col-md-4" type="text" name="account-email" disabled="disabled" value="<%= user.email %>"@gmail.com">
-                                    <button type="button" class="button-capnhat text-uppercase offset-md-4 btn btn-warning mb-4">Cập nhật</button>
+                                    <input class="col-md-4" type="text" name="account-email" disabled="disabled" value="<%= user.email %>">
+                                    <button type="submit" class="button-capnhat text-uppercase offset-md-4 btn btn-warning mb-4" style="margin-top: 20px;">Cập nhật</button>
 
                                 </div>
                             </div>
+                            </form>
                             <div class="checkbox-change-pass my-3">
                                 <div class="row">
                                     <input type="checkbox" name="changepass" id="changepass" class="offset-md-4" style="margin-top: 6px;margin-right: 5px; ">

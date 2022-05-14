@@ -1,4 +1,4 @@
-const factory = require('./factory');
+const factory = require('./refactoryController');
 const Book = require('../models/bookModel');
 //create Book
 exports.createBook = factory.createOne(Book);

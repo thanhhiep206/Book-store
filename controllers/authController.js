@@ -88,3 +88,16 @@ exports.isLoggined = async (req, res, next) => {
 
   next();
 };
+//authorization
+exports.authorization = (role) => {
+  // authorize based on user role
+  return (req, res, next) => {
+    if (!role.includes(req.user.role)) {
+      return res.status(401).json({ message: 'You not permission' });
+    }
+
+    next();
+  };
+};
+//update Password
+exports.updatePassword = catchAsync(async (req, res) => {});
