@@ -1,7 +1,5 @@
 const catchAsync = require('../utils/catchAsync');
-const axios = require('axios');
 const Book = require('../models/bookModel');
-const ReviewBook = require('../models/reviewBookModel');
 //render home
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
@@ -43,10 +41,6 @@ exports.getError = (req, res) => {
 };
 // render review foreach book
 exports.getReview = catchAsync(async (req, res) => {
-  // const book = await Book.findOne({ slug: req.params.slug }).populate({
-  //   path: 'reviews',
-  //   fields: 'publishDate sizeWidth sizeHeight publisher coverImage pageNumber weight',
-  // });
   const book = await Book.findOne({ slug: req.params.slug }).populate('reviews');
   // book similar not equal above book
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
@@ -65,8 +59,9 @@ exports.getReview = catchAsync(async (req, res) => {
 //render each cartgory
 
 exports.getCartgory = catchAsync(async (req, res) => {
-  const books = await Book.find({ cartgory: req.params.cartgory });
-  console.log(books);
+  let books;
+
+  books = await Book.find({ cartgory: req.params.cartgory });
   res.status(404).render('cartgory', {
     title: 'Danh mục sách',
     books,

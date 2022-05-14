@@ -73,9 +73,7 @@ exports.isLoggined = async (req, res, next) => {
   if (req.cookies.jwt) {
     try {
       const decoded = await util.promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_KEY);
-      console.log(decoded);
       const user = await User.findOne({ _id: decoded.id });
-      console.log(user);
       if (!user) {
         throw new Error(' User not loggin Please login to continue');
       }

@@ -437,7 +437,7 @@ img.card-img-top.anh {
     transition: 0.3s;
 }
 img.card-img-top.anh.setHeight{
-    height: 400px;
+    height: 250px;
 }
 
 ul span.text-muted {

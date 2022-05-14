@@ -34,12 +34,12 @@
 
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <!-- form tìm kiếm  -->
-            <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
+            <form class="form-inline ml-auto my-2 my-lg-0 mr-3" action="/search" method="get" id="search">
                 <div class="input-group" style="width: 520px;">
-                    <input type="text" class="form-control" aria-label="Small"
-                        placeholder="Nhập sách cần tìm kiếm...">
+                    <input type="text" class="form-control" aria-label="Small" id="inputSearch"
+                        placeholder="Nhập sách cần tìm kiếm..." name="name">
                     <div class="input-group-append">
-                        <button type="button" class="btn" style="background-color: #1a94ff; color: white;">
+                        <button type="submit" class="btn" style="background-color: #1a94ff; color: white;">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
