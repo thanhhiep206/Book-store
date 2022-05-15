@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const util = require('util');
+const CryptoJS = require('crypto-js');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 //sign jwt id
@@ -100,4 +101,24 @@ exports.authorization = (role) => {
   };
 };
 //update Password
-exports.updatePassword = catchAsync(async (req, res) => {});
+exports.updatePasswordMe = catchAsync(async (req, res, next) => {
+  const { password, newpassword, passwordConfirm } = req.body;
+  const user = await User.findById(req.user._id).select('+password');
+  console.log(user);
+  const compare = await user.comparePassword(user.password, password);
+  if (!compare) {
+    throw new Error('Password current is not correct');
+  }
+  if (password === newpassword) {
+    throw new Error('newpassword is same password current');
+  }
+  if (password !== passwordConfirm) {
+    throw new Error('passwordConfirm is not same newpassword');
+  }
+  user.password = passwordConfirm;
+  await user.save();
+  res.status(200).json({
+    status: 'success',
+    data: user,
+  });
+});

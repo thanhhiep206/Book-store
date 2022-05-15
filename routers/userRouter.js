@@ -6,6 +6,12 @@ router.post('/signup', authController.signup);
 router.post('/login', authController.login);
 router.get('/logout', authController.logout);
 router.post('/updateMe', authController.isLoggined, authController.authorization('user'), userController.updateMe);
+router.post(
+  '/updatePasswordMe',
+  authController.isLoggined,
+  authController.authorization('user'),
+  authController.updatePasswordMe
+);
 //crud user
 router.use(authController.authorization('admin'));
 //all
