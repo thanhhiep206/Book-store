@@ -8,7 +8,9 @@
             <div class="cart-page bg-white">
                 <div class="row">
                     <!-- giao diện giỏ hàng khi không có item  -->
-                    <div class="col-12 cart-empty d-none">
+
+                    <% if(bookInfo.length===0) { %>
+                    <div class="col-12 cart-empty ">
                         <div class="py-3 pl-3">
                             <h6 class="header-gio-hang">GIỎ HÀNG CỦA BẠN <span>(0 sản phẩm)</span></h6>
                             <div class="cart-empty-content w-100 text-center justify-content-center">
@@ -18,12 +20,14 @@
                             </div>
                         </div>
                     </div>
+                    <% } else{ %>  
 
                     <!-- giao diện giỏ hàng khi có hàng (phần comment màu xanh bên dưới là phần 2 sản phẩm trong giỏ hàng nhưng giờ đã demo bằng jquery) -->
                     
                     <% bookInfo.forEach(function(book){ %>
                         <%- include('include/_bookcarttemplate',{book}) %>
                       <% }); %>
+                      <% } %>
                     <!-- giao diện phần thanh toán nằm bên phải  -->
                     <!-- <div class="col-md-4 cart-steps pl-0">
                         <div id="cart-steps-accordion" role="tablist" aria-multiselectable="true"> -->
