@@ -4,11 +4,11 @@
         <div class="cart-list-items">
             <div class="cart-item d-flex">
                 <a href="#" class="img">
-                    <img src="/images/anhsp1.jpg" class="img-fluid" alt="anhsp1">
+                    <img src="/images/<%=book.img%>" class="img-fluid" alt="<%=book.name%>">
                 </a>
                 <div class="item-caption d-flex w-100">
                     <div class="item-info ml-3">
-                        <a href="#" class="ten">Lập kế hoạch kinh doanh hiệu quả</a>
+                        <a href="#" class="ten"><%=book.name%></a>
                         <div class="soluong d-flex">
                             <div class="input-number input-group mb-3">
                                 <div class="input-group-prepend">
@@ -22,8 +22,8 @@
                         </div>
                     </div>
                     <div class="item-price ml-auto d-flex flex-column align-items-end">
-                        <div class="giamoi">111.200 ₫</div>
-                        <div class="giacu">139.000 ₫</div>
+                        <div class="giamoi"><%=book.priceafterSale +"$"%></div>
+                        <div class="giacu"><%=book.price +"$"%></div>
                         <span class="remove mt-auto"><i class="far fa-trash-alt"></i></span>
                     </div>
                 </div>
@@ -33,29 +33,23 @@
         </div> 
          <div class="row">
             <div class="col-md-3">
-                <a href="/" class="btn nutmuathem mb-3">Mua thêm</a>
+                <a href="/" class="btn nutmuathem mb-3">Đặt mua</a>
             </div>
             <div class="col-md-5 offset-md-4">
                 <div class="tonggiatien">
                     <div class="group d-flex justify-content-between">
                         <p class="label">Tạm tính:</p>
-                        <p class="tamtinh">328.000 ₫</p>
+                        <p class="tamtinh"><%=book.priceafterSale  +"$"%></p>
                     </div>
-                    <div class="group d-flex justify-content-between">
-                        <p class="label">Giảm giá:</p>
-                        <p class="giamgia">0 ₫</p>
-                    </div>
+                   
                     <div class="group d-flex justify-content-between">
                         <p class="label">Phí vận chuyển:</p>
                         <p class="phivanchuyen">0 ₫</p>
                     </div>
-                    <div class="group d-flex justify-content-between">
-                        <p class="label">Phí dịch vụ:</p>
-                        <p class="phidicvu">0 ₫</p>
-                    </div>
+                   
                     <div class="group d-flex justify-content-between align-items-center">
                         <strong class="text-uppercase">Tổng cộng:</strong>
-                        <p class="tongcong">328.000 ₫</p>
+                        <p class="tongcong"><%=book.priceafterSale  +"$"%></p>
                     </div>
                     <small class="note d-flex justify-content-end text-muted">
                         (Giá đã bao gồm VAT)

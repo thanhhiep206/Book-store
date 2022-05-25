@@ -8,7 +8,7 @@
             <div class="cart-page bg-white">
                 <div class="row">
                     <!-- giao diện giỏ hàng khi không có item  -->
-                    <!-- <div class="col-12 cart-empty d-none">
+                    <div class="col-12 cart-empty d-none">
                         <div class="py-3 pl-3">
                             <h6 class="header-gio-hang">GIỎ HÀNG CỦA BẠN <span>(0 sản phẩm)</span></h6>
                             <div class="cart-empty-content w-100 text-center justify-content-center">
@@ -17,18 +17,21 @@
                                 <a href="/" class="btn nutmuathem mb-3">Mua thêm</a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     <!-- giao diện giỏ hàng khi có hàng (phần comment màu xanh bên dưới là phần 2 sản phẩm trong giỏ hàng nhưng giờ đã demo bằng jquery) -->
-                  <%- include('include/_bookcarttemplate') %>
+                    
+                    <% bookInfo.forEach(function(book){ %>
+                        <%- include('include/_bookcarttemplate',{book}) %>
+                      <% }); %>
                     <!-- giao diện phần thanh toán nằm bên phải  -->
-                    <div class="col-md-4 cart-steps pl-0">
-                        <div id="cart-steps-accordion" role="tablist" aria-multiselectable="true">
+                    <!-- <div class="col-md-4 cart-steps pl-0">
+                        <div id="cart-steps-accordion" role="tablist" aria-multiselectable="true"> -->
                             <!-- bước số 1: đăng nhập hoặc đăng ký -->
                       
                             
                             <!-- bước số 2: nhập địa chỉ giao hàng  -->
-                            <div class="card">
+                            <!-- <div class="card">
                                 <div class="card-header" role="tab" id="step2header">
                                     <h5 class="mb-0">
                                         <a data-toggle="collapse" data-parent="#cart-steps-accordion"
@@ -76,7 +79,7 @@
                                 </div>
                                 
                                 <!-- bước 3: thanh toán đặt mua  -->
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-header" role="tab" id="step3header">
                                         <h5 class="mb-0">
                                             <a data-toggle="collapse" data-parent="#cart-steps-accordion"
@@ -139,7 +142,7 @@
                             </div>
                             
                         </div>
-                    </div>
+                    </div> --> 
                     <!-- het div cart-steps  -->
                 </div>
                 <!-- het row  -->

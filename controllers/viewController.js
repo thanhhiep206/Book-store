@@ -1,6 +1,7 @@
 const catchAsync = require('../utils/catchAsync');
 const Book = require('../models/bookModel');
 const User = require('../models/userModel');
+const Cart = require('../models/cartModel');
 //render home
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
@@ -26,10 +27,14 @@ exports.getMe = (req, res) => {
 };
 //render cart page
 exports.getCart = catchAsync(async (req, res) => {
+  const bookInCart = await Cart.find({ user: req.user.id }); //return array
+  const bookInfo = bookInCart.map((x) => x.book);
+  console.log(bookInfo);
   res.status(200).render('cart', {
     title: 'Your cart',
     user: req.user,
     style: 'cart',
+    bookInfo,
   });
 });
 //get 404 all router
