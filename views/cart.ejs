@@ -15,7 +15,7 @@
                             <h6 class="header-gio-hang">GIỎ HÀNG CỦA BẠN <span>(0 sản phẩm)</span></h6>
                             <div class="cart-empty-content w-100 text-center justify-content-center">
                                 <img src="images/shopping-cart-not-product.png" alt="shopping-cart-not-product">
-                                <p>Chưa có sản phẩm nào trong giở hàng của bạn</p>
+                                <p>Chưa có sản phẩm nào trong giỏ hàng của bạn</p>
                                 <a href="/" class="btn nutmuathem mb-3">Mua thêm</a>
                             </div>
                         </div>
@@ -29,124 +29,7 @@
                       <% }); %>
                       <% } %>
                     <!-- giao diện phần thanh toán nằm bên phải  -->
-                    <!-- <div class="col-md-4 cart-steps pl-0">
-                        <div id="cart-steps-accordion" role="tablist" aria-multiselectable="true"> -->
-                            <!-- bước số 1: đăng nhập hoặc đăng ký -->
-                      
-                            
-                            <!-- bước số 2: nhập địa chỉ giao hàng  -->
-                            <!-- <div class="card">
-                                <div class="card-header" role="tab" id="step2header">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#cart-steps-accordion"
-                                            href="#step2contentid" aria-expanded="true" aria-controls="step2contentid"
-                                            class="text-uppercase header"><span class="steps">1</span>
-                                            <span class="label">Địa chỉ giao hàng</span>
-                                            <i class="fa fa-chevron-right float-right"></i>
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="step2contentid" class="collapse in" role="tabpanel"
-                                    aria-labelledby="step2header" class="stepscontent">
-                                    <div class="card-body">
-                                        <form class="form-diachigiaohang">
-                                            <div class="form-label-group">
-                                                <input type="text" id="inputName" class="form-control"
-                                                    placeholder="Nhập họ và tên" name="name" required autofocus>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <input type="text" id="inputPhone" class="form-control"
-                                                    placeholder="Nhập số điện thoại" name="phone" required>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <input type="email" id="inputEmail" class="form-control"
-                                                    placeholder="Nhập địa chỉ email" name="email" required>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <input type="text" id="inputAddress" class="form-control"
-                                                    placeholder="Nhập Địa chỉ giao hàng" name="address" required>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <input type="text" id="inputCity" class="form-control"
-                                                    placeholder="Nhập Tỉnh/Thành phố" name="city" required>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <input type="text" id="inputDistrict" class="form-control"
-                                                    placeholder="Nhập Quận/Huyện" name="district" required>
-                                            </div>
-                                            <div class="form-label-group">
-                                                <textarea type="text" id="inputNote" class="form-control"
-                                                    placeholder="Nhập ghi chú (Nếu có)" name="note"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                
-                                <!-- bước 3: thanh toán đặt mua  -->
-                                <!-- <div class="card">
-                                    <div class="card-header" role="tab" id="step3header">
-                                        <h5 class="mb-0">
-                                            <a data-toggle="collapse" data-parent="#cart-steps-accordion"
-                                                href="#step3contentid" aria-expanded="true"
-                                                aria-controls="step3contentid" class="text-uppercase header"><span
-                                                    class="steps">2</span>
-                                                <span class="label">Thanh toán đặt mua</span>
-                                                <i class="fa fa-chevron-right float-right"></i>
-                                            </a>
-                                        </h5>
-                                    </div>
-                                    <div id="step3contentid" class="collapse in" role="tabpanel"
-                                        aria-labelledby="step3header" class="stepscontent">
-                                        <div class="card-body" style="padding: 15px;">
-                                            <div class="goigiaohang">
-                                                <h6 class="header text-uppercase">Chọn gói giao hàng</h6>
-                                                <div class="option">
-                                                    <input type="radio" name="goigiaohang" id="ghtc" checked>
-                                                    <label for="ghtc">Giao hàng tiêu chuẩn</label>
-                                                    <p>Từ 1-3 ngày tại TP. Hà Nội; từ 3-5 ngày đối với các Tỉnh /
-                                                        Thành khác</p>
-                                                </div>
-                                                <div class="option">
-                                                    <input type="radio" name="goigiaohang" id="ghn">
-                                                    <label for="ghn">Giao hàng nhanh</label>
-                                                    <p>1 ngày tại TP. Hà Nội; từ 2-3 ngày đối với các Tỉnh / Thành
-                                                        khác</p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="pttt">
-                                                <h6 class="header text-uppercase">Chọn phương thức thanh toán</h6>
-                                                <div class="option mb-2">
-                                                    <input type="radio" name="pttt" id="cod" checked>
-                                                    <label for="cod">Thanh toán bằng tiền mặt khi nhận hàng</label>
-                                                </div>
-                                                <div class="option option2">
-                                                    <input type="radio" name="pttt" id="atm">
-                                                    <label for="atm" class="chuyenkhoan">Thanh toán chuyển khoản trước
-                                                        qua Thẻ ATM/Internet Banking</label>
-                                                    <p class="mt-4">- Quý khách chỉ chuyển khoản khi được xác nhận có đủ
-                                                        sách qua điện thoại từ LoveBook.</p>
-                                                    <p>- Thời gian chuyển khoản là trong tối đa 2 ngày từ khi có xác
-                                                        nhận đủ sách.</p>
-                                                    <p>- Nội dung chuyển khoản cần ghi: <a href="#">[Mã đơn hàng]</a> ;
-                                                        hoặc <a href="#">[số điện thoại dùng đặt hàng]</a> </p>
-                                                    <p>- Xem thông tin chuyển khoản của LoveBooks <a
-                                                            href="#">tại đây</a> </p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <button class="btn btn-lg btn-block btn-checkout text-uppercase text-white"
-                                                style="background: #F5A623">Đặt mua</button>
-                                            <p class="text-center note-before-checkout">(Vui lòng kiểm tra lại đơn hàng
-                                                trước khi Đặt Mua)</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                    </div> --> 
+                    
                     <!-- het div cart-steps  -->
                 </div>
                 <!-- het row  -->

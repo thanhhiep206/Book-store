@@ -1,4 +1,8 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const Stripe = require('stripe');
+//process.env not working
+const stripe = Stripe(
+  'sk_test_51L2suxEvR2fI04fev5mtTHoIsZ9VATmjvxVVxcbTrdej7KtQUOgklQeMrLW4Ibvk48ReZo7pA2C7fKqWA0zGG1ZU00zP6PIOpg'
+);
 const Book = require('../models/bookModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
@@ -21,7 +25,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       {
         name: book.name,
         description: book.description,
-        images: book.image,
+        images: book.img,
         amount: book.priceafterSale * 100,
         currency: 'usd',
         quantity: 1,
