@@ -9,11 +9,11 @@ router.post('/updateMe', authController.isLoggined, authController.authorization
 router.post(
   '/updatePasswordMe',
   authController.isLoggined,
-  authController.authorization('user'),
+  authController.authorization('user', 'admin'),
   authController.updatePasswordMe
 );
 //crud user
-router.use(authController.authorization('admin'));
+// router.use(authController.authorization('admin'));
 //all
 router.route('/').get(userController.getAllUser).post(userController.createOneUser).delete(userController.deleteAllUser);
 //id
