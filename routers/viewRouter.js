@@ -2,11 +2,13 @@ const router = require('express').Router();
 const viewController = require('../controllers/viewController');
 const authController = require('../controllers/authController');
 const searchController = require('../controllers/searchController');
+const orderController = require('../controllers/orderController');
 router.use(authController.isLoggined);
 // router.get('/admin/dashboard', viewController.getAdmin);
 // router.get('/admin/dashboard/add_user', viewController.getadduser);
 // router.get('/admin/dashboard/update_user', viewController.getupdateUser);
-router.get('/', viewController.getIndex);
+
+router.get('/', orderController.createOrderCheckout, viewController.getIndex);
 router.get('/account', viewController.getMe);
 router.get('/cart', viewController.getCart);
 //nest route

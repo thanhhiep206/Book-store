@@ -3,6 +3,7 @@ const Stripe = require('stripe');
 const stripe = Stripe(
   'sk_test_51L2suxEvR2fI04fev5mtTHoIsZ9VATmjvxVVxcbTrdej7KtQUOgklQeMrLW4Ibvk48ReZo7pA2C7fKqWA0zGG1ZU00zP6PIOpg'
 );
+const Cart = require('../models/cartModel');
 const Book = require('../models/bookModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
@@ -15,8 +16,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: `${req.protocol}://${req.get('host')}/my-books/?book=${req.params.bookId}&user=${req.user.id}&price=${
-      book.price
+    success_url: `${req.protocol}://${req.get('host')}/?book=${req.params.bookId}&user=${req.user.id}&price=${
+      book.priceafterSale
     }`,
     cancel_url: `${req.protocol}://${req.get('host')}/book/${book.slug}`,
     customer_email: req.user.email,
@@ -24,9 +25,9 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     line_items: [
       {
         name: book.name,
-        description: book.description,
-        images: book.img,
-        amount: book.priceafterSale * 100,
+        // description: book.description,
+        images: [`/images/${book.img}`],
+        amount: book.priceafterSale,
         currency: 'usd',
         quantity: 1,
       },
@@ -40,12 +41,13 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createBookingCheckout = catchAsync(async (req, res, next) => {
+exports.createOrderCheckout = catchAsync(async (req, res, next) => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
   const { book, user, price } = req.query;
 
   if (!book && !user && !price) return next();
   await Order.create({ book, user, price });
-
+  //delete cart after payment
+  await Cart.deleteOne({ book, user });
   res.redirect(req.originalUrl.split('?')[0]);
 });
