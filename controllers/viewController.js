@@ -2,6 +2,7 @@ const catchAsync = require('../utils/catchAsync');
 const Book = require('../models/bookModel');
 const User = require('../models/userModel');
 const Cart = require('../models/cartModel');
+const Order = require('../models/orderModel');
 //render home
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
@@ -18,13 +19,16 @@ exports.getIndex = catchAsync(async (req, res, next) => {
   });
 });
 //render profile user
-exports.getMe = (req, res) => {
+exports.getMe = catchAsync(async (req, res) => {
+  const orderlist = await Order.find({ user: req.user.id });
+  console.log(orderlist);
   res.status(200).render('account', {
     title: 'Account Settings',
     user: req.user,
+    orderlist,
     style: 'account',
   });
-};
+});
 //render cart page
 exports.getCart = catchAsync(async (req, res) => {
   const bookInCart = await Cart.find({ user: req.user.id }); //return array
