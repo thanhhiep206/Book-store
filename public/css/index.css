@@ -630,7 +630,10 @@ footer .header {
     margin-bottom: 13px;
 }
 /* het css cho footer  */
-
+.setHeightBook{
+    height: 100px;
+    width: 130px;
+}
 
 @media (max-width:767px){
     .navbar form .input-group{

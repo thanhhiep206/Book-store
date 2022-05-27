@@ -315,79 +315,10 @@
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                     <!-- 1 san pham -->
-                    <div class="col-lg col-sm-4">
-                        <div class="card">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="Từng bước chân nở hoa: Khi câu kinh bước tới">
-                                <img class="card-img-top anh " src="/images/tung-buoc-chan-no-hoa.jpg"
-                                    alt="tung-buoc-chan-no-hoa">
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Từng bước chân nở hoa: Khi câu kinh bước tới</h3>
-                                    <small class="thoigian text-muted">03/04/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg col-sm-4">
-                        <div class="card">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom" title="Cảm ơn vì đã được thương">
-                                <img class="card-img-top anh" src="/images/cam-on-vi-da-duoc-thuong.jpg"
-                                    alt="cam-on-vi-da-duoc-thuong">
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Cảm ơn vì đã được thương</h3>
-                                    <small class="thoigian text-muted">31/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg col-sm-4">
-                        <div class="card">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="Hào quang của vua Gia Long trong mắt Michel Gaultier">
-                                <img class="card-img-top anh" src="/images/vua-gia-long.jpg" alt="vua-gia-long">
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Hào quang của vua Gia Long trong mắt Michel Gaultier</h3>
-                                    <small class="thoigian text-muted">21/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg col-sm-4">
-                        <div class="card">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="Suối nguồn” và cái tôi hiện sinh trong từng cá thể">
-                                <img class="card-img-top anh" src="/images/suoi-nguon-va-cai-toi-trong-tung-ca-the.jpg"
-                                    alt="suoi-nguon-va-cai-toi-trong-tung-ca-the">
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">"Suối nguồn” và cái tôi hiện sinh trong từng cá thể</h3>
-                                    <small class="thoigian text-muted">16/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg col-sm-4">
-                        <div class="card cuoicung">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="Đại dịch trên những con đường tơ lụa">
-                                <img class="card-img-top anh" src="/images/dai-dich-tren-con-duong-to-lua.jpg"
-                                    alt="dai-dich-tren-con-duong-to-lua">
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Đại dịch trên những con đường tơ lụa</h3>
-                                    <small class="thoigian text-muted">16/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <% bookProgram.forEach(function(book){ %>
+                        <%- include('include/_bookgoodtemplate',{book}) %>
+                      <% }); %>
+                    
                 </div>
             </div>
             <hr>

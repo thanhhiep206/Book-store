@@ -1,0 +1,15 @@
+<div class="col-lg col-sm-4">
+    <div class="card">
+        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+            data-toggle="tooltip" data-placement="bottom"
+            title="<%=book.name%>">
+            <img class="card-img-top anh setHeightBook" src="/images/<%=book.img%>"
+                alt="<%=book.name%>">   
+            <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten"><%=book.name%></h3>
+                <small class="thoigian text-muted"><%=book.createdAt.toString().substring(8,15).replace(' ','/')%></small>
+                <div><a class="detail" href="/book/<%= book.slug%>">Xem chi tiết</a></div>
+            </div>
+        </a>
+    </div>
+</div>
