@@ -24,11 +24,13 @@ exports.getManagerBook = catchAsync(async (req, res) => {
     allBook,
   });
 });
-exports.getManagerUser = (req, res) => {
+exports.getManagerUser = catchAsync(async (req, res) => {
+  const allUser = await User.find({ role: { $ne: 'admin' } });
   res.status(200).render('admin/user', {
     breadcrumb: 'User',
+    allUser,
   });
-};
+});
 exports.getManagerOrder = (req, res) => {
   res.status(200).render('admin/order', {
     breadcrumb: 'Order',
