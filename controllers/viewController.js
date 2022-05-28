@@ -9,6 +9,7 @@ exports.getIndex = catchAsync(async (req, res, next) => {
 
   const bookProgram = await Book.find({ cartgory: 'laptrinh' });
   const books = await Book.find({ percentSale: { $gte: 45 } });
+
   res.status(200).render('index', {
     title: 'LoveBook store for everyone',
     bookbestSale,
