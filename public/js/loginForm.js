@@ -1,5 +1,6 @@
+console.log(1);
 const loginForm = document.querySelector('#form-signin');
-const logoutBtn = document.querySelector('.logout');
+const logoutBtn = document.getElementById('logout');
 const login = (email, password) => {
   axios({
     method: 'post',

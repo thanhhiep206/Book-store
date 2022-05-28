@@ -3,7 +3,7 @@ const User = require('../models/userModel');
 const Cart = require('../models/cartModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
-
+//getAdmin dashboard if req.user.role =='admin'
 exports.getDashboard = (req, res, next) => {
   if (req.user) {
     if (req.user.role == 'admin') {
@@ -17,16 +17,13 @@ exports.getDashboard = (req, res, next) => {
     next();
   }
 };
-exports.getManagerBook = (req, res) => {
+exports.getManagerBook = catchAsync(async (req, res) => {
+  const allBook = await Book.find();
   res.status(200).render('admin/book', {
     breadcrumb: 'Book',
+    allBook,
   });
-};
-exports.getManagerBook = (req, res) => {
-  res.status(200).render('admin/book', {
-    breadcrumb: 'Book',
-  });
-};
+});
 exports.getManagerUser = (req, res) => {
   res.status(200).render('admin/user', {
     breadcrumb: 'User',

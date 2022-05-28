@@ -5,11 +5,11 @@ const searchController = require('../controllers/searchController');
 const orderController = require('../controllers/orderController');
 const adminController = require('../controllers/adminController');
 router.use(authController.isLoggined);
-
+//getdashboard Admin  middleware
 router.get('/', orderController.createOrderCheckout, adminController.getDashboard, viewController.getIndex);
 router.get('/account', viewController.getMe);
 router.get('/cart', viewController.getCart);
-//nest route
+
 router.get('/book/:slug', viewController.getReview);
 // router.get('/*', viewController.getError);
 router.get('/cartgory/:cartgory', viewController.getCartgory);
