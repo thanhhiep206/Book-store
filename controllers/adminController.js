@@ -31,13 +31,16 @@ exports.getManagerUser = catchAsync(async (req, res) => {
     allUser,
   });
 });
-exports.getManagerOrder = (req, res) => {
+exports.getManagerOrder = catchAsync(async (req, res) => {
+  const order = await Order.find();
   res.status(200).render('admin/order', {
     breadcrumb: 'Order',
+    order,
   });
-};
+});
 exports.getProfile = (req, res) => {
   res.status(200).render('admin/profile', {
     breadcrumb: 'Profile',
+    user: req.user,
   });
 };
