@@ -18,24 +18,24 @@ exports.getDashboard = (req, res, next) => {
   }
 };
 exports.getManagerBook = catchAsync(async (req, res) => {
-  const allBook = await Book.find();
+  const items = await Book.find();
   res.status(200).render('admin/book', {
     breadcrumb: 'Book',
-    allBook,
+    items,
   });
 });
 exports.getManagerUser = catchAsync(async (req, res) => {
-  const allUser = await User.find({ role: { $ne: 'admin' } });
+  const items = await User.find({ role: { $ne: 'admin' } });
   res.status(200).render('admin/user', {
     breadcrumb: 'User',
-    allUser,
+    items,
   });
 });
 exports.getManagerOrder = catchAsync(async (req, res) => {
-  const order = await Order.find();
+  const items = await Order.find();
   res.status(200).render('admin/order', {
     breadcrumb: 'Order',
-    order,
+    items,
   });
 });
 exports.getProfile = (req, res) => {

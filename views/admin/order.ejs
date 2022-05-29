@@ -104,7 +104,7 @@
           </div>
           <div class="card-body pt-4 p-3">
             <ul class="list-group">  
-              <% order.forEach(function(orderItem){ %>
+              <% items.forEach(function(orderItem){ %>
                 <%- include('../partials/_ordertemplate',{orderItem}) %>
               <% }); %>
             </ul>

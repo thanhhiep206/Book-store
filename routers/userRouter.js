@@ -18,4 +18,5 @@ router.post(
 router.route('/').get(userController.getAllUser).post(userController.createOneUser).delete(userController.deleteAllUser);
 //id
 router.route('/:id').patch(userController.updateOneUser).delete(userController.deleteOneUser).get(userController.getOneUser);
+
 module.exports = router;

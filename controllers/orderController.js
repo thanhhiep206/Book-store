@@ -7,7 +7,6 @@ const Cart = require('../models/cartModel');
 const Book = require('../models/bookModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
-
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get the currently booked tour
   const book = await Book.findById(req.params.bookId);

@@ -2,7 +2,7 @@
 <table class="m-auto">
     <tr>
         <th><%=randomId%></th>
-        <th><%=order.book.createdAt%></th>
+        <th><%=order.book.createdAt.toString().substring(8,15).replace(' ',"/")%></th>
         <th><%=order.book.name%></th>
         <th><%=order.book.priceafterSale +"$"%></th>
         <th>Đã thanh toán</th>

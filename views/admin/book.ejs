@@ -4,6 +4,9 @@
       <div class="col-12">
         <div class="card mb-4">
           <div class="card-header pb-0">
+            <a class="btn bg-gradient-dark mb-0" href=""><i class="fas fa-plus"></i>&nbsp;&nbsp;Add New Book</a>
+          </div>
+          <div class="card-header pb-0">
             <h6>List Book in store</h6>
           </div>
           <div class="card-body px-0 pt-0 pb-2">
@@ -20,7 +23,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <% allBook.forEach(function(book){ %>
+                  <% items.forEach(function(book){ %>
                     <%- include('../partials/_booktemplate',{book}) %>
                   <% }); %>
                  
