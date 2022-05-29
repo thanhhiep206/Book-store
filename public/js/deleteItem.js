@@ -1,4 +1,4 @@
-const deleteBtn = document.getElementById('deletebtn');
+const deleteBtn = document.querySelectorAll('#deletebtn');
 
 const deleteItem = (model, itemId) => {
   axios({
@@ -19,10 +19,12 @@ const deleteItem = (model, itemId) => {
     });
 };
 
-deleteBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log(1);
-  const { model, itemId } = e.target.dataset;
-  console.log(e.target.dataset);
-  //   deleteItem(model, itemId);
-});
+deleteBtn.forEach((ele) =>
+  ele.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(1);
+    const { model, itemId } = e.target.dataset;
+    console.log(e.target.dataset);
+    deleteItem(model, itemId);
+  })
+);
