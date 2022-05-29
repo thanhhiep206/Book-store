@@ -13,7 +13,6 @@ const login = (email, password) => {
     .then((res) => {
       try {
         if (res.data.status === 'success') {
-          alert('Login successfully!');
           window.setTimeout(() => {
             location.assign('/');
           }, 1000);
@@ -42,7 +41,6 @@ const logout = () => {
     .then((res) => {
       try {
         if (res.data.status === 'success') {
-          alert('logout successfully!');
           location.reload(true);
         }
       } catch (e) {
