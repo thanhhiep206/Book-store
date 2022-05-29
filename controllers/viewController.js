@@ -80,4 +80,3 @@ exports.getCartgory = catchAsync(async (req, res) => {
     style: 'product',
   });
 });
-//admin

@@ -38,7 +38,7 @@ exports.deleteAll = (Model) =>
 exports.deleteOne = (Model) =>
   catchAsync(async (req, res) => {
     const dataDelete = await Model.findByIdAndDelete(req.params.id);
-    if (!data)
+    if (!dataDelete)
       return res.status(400).json({
         status: 'fail',
         msg: 'not find data to delete',
