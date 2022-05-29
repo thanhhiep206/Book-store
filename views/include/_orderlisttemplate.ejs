@@ -2,7 +2,8 @@
 <table class="m-auto">
     <tr>
         <th><%=randomId%></th>
-        <th><%=order.book.createdAt.toString().substring(8,15).replace(' ',"/")%></th>
+        <%let formatDate =new Date().toISOString().split('T')[0]%>
+        <th><%=formatDate%></th>
         <th><%=order.book.name%></th>
         <th><%=order.book.priceafterSale +"$"%></th>
         <th>Đã thanh toán</th>

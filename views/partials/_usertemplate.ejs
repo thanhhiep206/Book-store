@@ -18,7 +18,7 @@
       <span class="badge badge-sm bg-gradient-success">Online</span>
     </td>
     <td class="align-middle text-center">
-      <span class="text-secondary text-xs font-weight-bold"><%=user.createdAt.toString().substring(8,15).replace(' ','/')%></span>
+      <span class="text-secondary text-xs font-weight-bold"><%=user.createdAt.toISOString().split('T')[0]%></span>
     </td>
     
     <td class="align-middle">

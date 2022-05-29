@@ -4,6 +4,7 @@
       <span class="mb-2 text-xs">Item <span class="text-dark font-weight-bold ms-sm-2"><%=orderItem.book.name%></span></span>
       <span class="mb-2 text-xs">Email  <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.user.email%>></span></span>
       <span class="mb-2 text-xs">Price <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.book.priceafterSale%></span></span>
+      <span class="mb-2 text-xs">TimeOrder <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.createdAt.toISOString().split('T')[0]%></span></span>
       <span class="mb-2 text-xs">Quantity <span class="text-dark ms-sm-2 font-weight-bold">1</span></span>
       <span class="mb-2 text-xs">Serial order <span class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
     </div>
