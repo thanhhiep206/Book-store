@@ -7,6 +7,7 @@ const Cart = require('../models/cartModel');
 const Book = require('../models/bookModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
+const factory = require('./refactoryController');
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get the currently booked tour
   const book = await Book.findById(req.params.bookId);
@@ -50,3 +51,9 @@ exports.createOrderCheckout = catchAsync(async (req, res, next) => {
   await Cart.deleteOne({ book, user });
   res.redirect(req.originalUrl.split('?')[0]);
 });
+exports.getOneOrder = factory.getOne(Order);
+exports.getAllOrder = factory.getAll(Order);
+exports.createOneOrder = factory.createOne(Order);
+exports.deleteOneOrder = factory.deleteOne(Order);
+exports.deleteAllOrder = factory.deleteAll(Order);
+exports.updateOneOrder = factory.updateOne(Order);
