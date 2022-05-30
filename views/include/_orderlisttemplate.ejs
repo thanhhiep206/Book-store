@@ -2,8 +2,7 @@
 <table class="m-auto">
     <tr>
         <th><%=randomId%></th>
-        <%let formatDate =new Date().toISOString().split('T')[0]%>
-        <th><%=formatDate%></th>
+        <th><%=order.createdAt.toISOString().split('T')[0]%></th>
         <th><%=order.book.name%></th>
         <th><%=order.book.priceafterSale +"$"%></th>
         <th>Đã thanh toán</th>

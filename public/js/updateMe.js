@@ -1,13 +1,12 @@
 //updateName
 const updateMe = document.querySelector('#update');
 const updatePassword = document.querySelector('#update_password');
-const update = (name) => {
-  console.log(name);
+const update = (data) => {
   axios({
     method: 'post',
     url: 'http://localhost:3000/api/v1/users/updateMe',
     data: {
-      name,
+      data,
     },
   })
     .then((res) => {
@@ -26,8 +25,11 @@ const update = (name) => {
 };
 updateMe.addEventListener('submit', (e) => {
   e.preventDefault();
-  const name = document.querySelector('#myname').value;
-  update(name);
+  const form = new FormData();
+  form.append('name', document.getElementById('myname').value);
+  form.append('photo', document.getElementById('photo').files[0]);
+  console.log(form);
+  update(form);
 });
 //update Password
 const updatePass = (password, newpassword, passwordConfirm) => {

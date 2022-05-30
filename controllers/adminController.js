@@ -4,19 +4,7 @@ const Cart = require('../models/cartModel');
 const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
 //getAdmin dashboard if req.user.role =='admin'
-exports.getDashboard = (req, res, next) => {
-  if (req.user) {
-    if (req.user.role == 'admin') {
-      res.status(200).render('admin/index', {
-        breadcrumb: 'Dashboard',
-      });
-    } else {
-      next();
-    }
-  } else {
-    next();
-  }
-};
+
 exports.getManagerBook = catchAsync(async (req, res) => {
   const items = await Book.find();
   res.status(200).render('admin/book', {

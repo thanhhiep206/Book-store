@@ -30,12 +30,18 @@
                                     <input class="col-md-4" type="text" name="name" placeholder="<%=user.name %>" id="myname">
                                 </div>
                             </div>
+                            
                             <div class="email my-3">
                                 <div class="row">
                                     <label class="col-md-2 offset-md-2" for="account-email">Địa chỉ email</label>
                                     <input class="col-md-4" type="text" name="account-email" disabled="disabled" value="<%= user.email %>">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="row">
+                                    <label class="col-md-2 offset-md-2" for="photo">Thay đổi ảnh đại diện</label>
+                                    <input class="col-md-4" type="file" accept='image/*' id="photo" name="photo" />
                                     <button type="submit" class="button-capnhat text-uppercase offset-md-4 btn btn-warning mb-4" style="margin-top: 20px;">Cập nhật</button>
-
                                 </div>
                             </div>
                             </form>

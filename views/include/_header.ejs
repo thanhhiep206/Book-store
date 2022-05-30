@@ -16,8 +16,8 @@
 <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon.png">
-<link rel="icon" type="image/png" href="/images/icon.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon.png">
+  <link rel="icon" type="image/png" href="/images/icon.png">
 </head>
 
 <body>
@@ -53,9 +53,14 @@
                    <% if (user) { %>
                     <div class="">
                         <li class="nav-item account d-flex ifuser" type="button" class="" data-toggle="">
-                            <a href="#" class="btn btn-secondary rounded-circle">
-                                <i class="fa fa-user"></i>
-                            </a>
+                        <% if (user.photo){ %>
+                            <img src="/images/<%=user.photo%>" class="btn btn-light rounded-circle" style="width:40px">
+                            </img>
+                            <%  } else{ %>
+                                <a href="#" class="btn btn-secondary rounded-circle">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            <% } %>
                             <div class="info-logout">
                                 <a class="nav-link text-dark text-uppercase username" href="/account"><%= user.name %></a>
                                 <a class="nav-link text-dark logout" id="logout" >Đăng xuất <i class="fas fa-sign-out-alt"></i></a>
@@ -91,7 +96,7 @@
                 </div>
                 
                 <li class="nav-item giohang">
-                    <a href="/cart" class="btn btn-secondary rounded-circle">
+                    <a href="/#" class="btn btn-secondary rounded-circle">
                         <i class="fa fa-shopping-cart"></i>
                         <div class="cart-amount">0</div>
                     </a>

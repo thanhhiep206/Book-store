@@ -5,10 +5,10 @@ const authController = require('../controllers/authController');
 const searchController = require('../controllers/searchController');
 const orderController = require('../controllers/orderController');
 const userController = require('../controllers/userController');
-const adminController = require('../controllers/adminController');
+const adminPage = require('../middleware/adminPage');
 router.use(authController.isLoggined);
 //getdashboard Admin  middleware
-router.get('/', orderController.createOrderCheckout, adminController.getDashboard, viewController.getIndex);
+router.get('/', orderController.createOrderCheckout, adminPage.getDashboard, viewController.getIndex);
 router.get('/account', viewController.getMe);
 router.get('/cart', viewController.getCart);
 
