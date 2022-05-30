@@ -37,29 +37,16 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 
 //    next()
 // }
-//allow field  update
-const filterObj = (obj, ...allowedFields) => {
-  const newObj = {};
-  Object.keys(obj).forEach((el) => {
-    if (allowedFields.includes(el)) newObj[el] = obj[el];
-  });
-  return newObj;
-};
-exports.updateMe = catchAsync(async (req, res) => {
-  console.log(req.file);
-  //update User allow field\
-  const filteredBody = filterObj(req.body, 'name', 'email');
-  if (req.file) filteredBody.photo = req.file.filename;
 
-  // 3) Update user document
-  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
-    new: true,
-    runValidators: true,
-  });
-  console.log(updatedUser);
+exports.updateMe = catchAsync(async (req, res) => {
+  let user = req.user;
+  //allow field  update
+  let allowedFields = { name: req.body.name, photo: req.file.filename };
+  user = Object.assign(user, allowedFields);
+  await user.save();
   res.status(200).json({
     status: 'success',
-    data: { user: updatedUser },
+    data: { user },
   });
 });
 //for admin
