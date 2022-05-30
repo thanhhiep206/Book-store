@@ -23,7 +23,7 @@ exports.uploadUserPhoto = upload.single('photo');
 exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
   if (!req.file) return next();
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
-
+  console.log(req.file.filename);
   await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat('jpeg')
@@ -38,19 +38,28 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 //    next()
 // }
 //allow field  update
-
+const filterObj = (obj, ...allowedFields) => {
+  const newObj = {};
+  Object.keys(obj).forEach((el) => {
+    if (allowedFields.includes(el)) newObj[el] = obj[el];
+  });
+  return newObj;
+};
 exports.updateMe = catchAsync(async (req, res) => {
+  console.log(req.file);
   //update User allow field\
-  // You pick only allowed fields from submitted body
-  let user = req.user;
-  let allowedFields = { name: req.body.name };
+  const filteredBody = filterObj(req.body, 'name', 'email');
+  if (req.file) filteredBody.photo = req.file.filename;
 
-  //  // Override the current user data with new one
-  user = Object.assign(user, allowedFields);
-  await user.save();
+  // 3) Update user document
+  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
+    runValidators: true,
+  });
+  console.log(updatedUser);
   res.status(200).json({
     status: 'success',
-    data: { user },
+    data: { user: updatedUser },
   });
 });
 //for admin

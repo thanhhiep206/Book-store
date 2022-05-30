@@ -5,11 +5,11 @@ const router = require('express').Router();
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
 router.get('/logout', authController.logout);
-router.post(
+router.patch(
   '/updateMe',
   authController.isLoggined,
-  userController.resizeUserPhoto,
   userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
   userController.updateMe
 );
 router.post(

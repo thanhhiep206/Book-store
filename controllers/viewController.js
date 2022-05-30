@@ -22,7 +22,7 @@ exports.getIndex = catchAsync(async (req, res, next) => {
 //render profile user
 exports.getMe = catchAsync(async (req, res) => {
   const orderlist = await Order.find({ user: req.user.id });
-  console.log(orderlist);
+
   res.status(200).render('account', {
     title: 'Account Settings',
     user: req.user,
@@ -52,7 +52,6 @@ exports.getError = (req, res) => {
 // render review foreach book
 exports.getReview = catchAsync(async (req, res) => {
   const book = await Book.findOne({ slug: req.params.slug }).populate('reviews');
-  console.log(book.id);
   // book similar not equal above book
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
 
