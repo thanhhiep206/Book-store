@@ -1,5 +1,5 @@
 
-<%- include ('include/_header') %>
+<%- include ('../include/_header') %>
 
     <!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
     <section class="duoinavbar">
@@ -252,7 +252,7 @@
                     
                     <!-- 1 san pham -->
                     <% bookProgram.forEach(function(book){ %>
-                        <%- include('include/_booktemplate',{book}) %>
+                        <%- include('../include/_booktemplate',{book}) %>
                       <% }); %>
                   
                 </div>
@@ -274,7 +274,7 @@
                 <div class="khoisanpham">
                      <!-- 1 san pham -->
                      <% bookbestSale.forEach(function(book){ %>
-                        <%- include('include/_booktemplate',{book}) %>
+                        <%- include('../include/_booktemplate',{book}) %>
                       <% }); %>
                 </div> 
             </div>
@@ -296,7 +296,7 @@
                     <!-- 1 san pham -->
                      <!-- 1 san pham -->
                      <% books.forEach(function(book){ %>
-                        <%- include('include/_booktemplate',{book}) %>
+                        <%- include('../include/_booktemplate',{book}) %>
                       <% }); %>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                     </div>
                     <!-- 1 san pham -->
                     <% bookProgram.forEach(function(book){ %>
-                        <%- include('include/_bookgoodtemplate',{book}) %>
+                        <%- include('../include/_bookgoodtemplate',{book}) %>
                       <% }); %>
                     
                 </div>
@@ -326,4 +326,4 @@
     </section>
 
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
-   <%- include('include/_footer') %>
+   <%- include('../include/_footer') %>

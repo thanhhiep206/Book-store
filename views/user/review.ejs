@@ -1,17 +1,9 @@
-  <%- include('include/_header') %>
+  <%- include('../include/_header') %>
 
     <!-- thanh "danh muc sach" đã được ẩn bên trong + hotline + ho tro truc tuyen -->
-    <%- include('include/_cartgory') %>
+    <%- include('../include/_cartgory') %>
     <!-- breadcrumb  -->
-    <!-- <section class="breadcrumbbar">
-        <div class="container">
-            <ol class="breadcrumb mb-0 p-0 bg-transparent">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="#">Sách kinh tế</a></li>
-                <li class="breadcrumb-item active"><a href="#">Sách kỹ năng làm việc</a></li>
-            </ol>
-        </div>
-    </section> -->
+   
 
     <!-- nội dung của trang  -->
     <section class="product-page mb-4">
@@ -20,7 +12,7 @@
             <div class="product-detail bg-white p-4">
                 <div class="row">
                     <!-- ảnh  -->
-                   <%-include ('include/_reviewtemplate') %>
+                   <%-include ('../include/_reviewtemplate') %>
 
                     <!-- decripstion của 1 sản phẩm: giới thiệu , đánh giá độc giả  -->
                     <div class="product-description col-md-9">
@@ -146,7 +138,7 @@
                     <!-- 1 sản phẩm -->
                     <!--foreach-->
                     <% bookSimilar.forEach(book=>{%>
-                        <%- include('include/_booktemplate',{book}) %> 
+                        <%- include('../include/_booktemplate',{book}) %> 
                    <% }) %>
                 </div>
             </div>
@@ -154,4 +146,4 @@
     </section>
 
     
-<%- include('include/_footer') %>
+<%- include('../include/_footer') %>

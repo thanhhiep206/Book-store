@@ -10,7 +10,7 @@ exports.getIndex = catchAsync(async (req, res, next) => {
   const bookProgram = await Book.find({ cartgory: 'laptrinh' });
   const books = await Book.find({ percentSale: { $gte: 45 } });
 
-  res.status(200).render('index', {
+  res.status(200).render('user/index', {
     title: 'LoveBook store for everyone',
     bookbestSale,
     bookProgram,
@@ -23,7 +23,7 @@ exports.getIndex = catchAsync(async (req, res, next) => {
 exports.getMe = catchAsync(async (req, res) => {
   const orderlist = await Order.find({ user: req.user.id });
 
-  res.status(200).render('account', {
+  res.status(200).render('user/account', {
     title: 'Account Settings',
     user: req.user,
     orderlist,
@@ -34,7 +34,7 @@ exports.getMe = catchAsync(async (req, res) => {
 exports.getCart = catchAsync(async (req, res) => {
   const bookInCart = await Cart.find({ user: req.user.id }); //return array
   const bookInfo = bookInCart.map((x) => x.book);
-  res.status(200).render('cart', {
+  res.status(200).render('user/cart', {
     title: 'Your cart',
     user: req.user,
     style: 'cart',
@@ -43,7 +43,7 @@ exports.getCart = catchAsync(async (req, res) => {
 });
 //get 404 all router
 exports.getError = (req, res) => {
-  res.status(404).render('error', {
+  res.status(404).render('user/error', {
     title: 'Not found router page',
     user: null,
     style: 'cart',
@@ -56,7 +56,7 @@ exports.getReview = catchAsync(async (req, res) => {
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
 
   const reviewOfoneBook = book.reviews;
-  res.status(404).render('review', {
+  res.status(404).render('user/review', {
     title: 'Love book',
     user: req.user,
     book,
@@ -72,7 +72,7 @@ exports.getCartgory = catchAsync(async (req, res) => {
   let books;
 
   books = await Book.find({ cartgory: req.params.cartgory });
-  res.status(404).render('cartgory', {
+  res.status(404).render('user/cartgory', {
     title: 'Danh mục sách',
     books,
     user: req.user,

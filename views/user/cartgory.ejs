@@ -1,5 +1,5 @@
-  <%-include('include/_header') %>
-  <%- include('include/_cartgory') %>
+  <%-include('../include/_header') %>
+  <%- include('../include/_cartgory') %>
 
     <!-- breadcrumb  -->
     <section class="breadcrumbbar">
@@ -19,32 +19,7 @@
         </div>
     </section>
 
-    <!-- thể loại sách: kinh tế chính trị nhân vật bài học kinh doanh ( từng ô vuông) -->
-    <!-- <section class="page-content my-3">
-        <div class="container">
-            <div>              
-                    <h1 class="header text-uppercase"></h1>
-                   
-            </div>
-            <div class="the-loai-sach">
-                <ul class="list-unstyled d-flex">
-                  
-                    
-                    <li>
-                        <a href="#" class="danh-muc text-decoration-none">
-                            <div class="img text-center">
-                                <img src="/images/tls-kinh-te-chinh-tri.png" alt="tls-kinh-te-chinh-tri">
-                            </div>
-                            <div class="ten">
-                                Kinh tế - chính trị
-                            </div>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </section> -->
+   
 
     <!-- khối sản phẩm  -->
     <section class="content my-4">
@@ -77,7 +52,7 @@
                              <!-- foreach -->
                              <% books.forEach(function(book){ %>
                                 <div class="col-lg-3 col-md-4 col-xs-6 item ">
-                                <%-include('include/_booktemplate',{book})%>
+                                <%-include('../include/_booktemplate',{book})%>
                                 </div>
                               <% }); %>    
                     </div>
@@ -124,4 +99,4 @@
     <!--het _1khoi-->
 
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
-    <%-include('include/_footer') %>
+    <%-include('../include/_footer') %>

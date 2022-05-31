@@ -1,7 +1,7 @@
-  <%- include ('include/_header') %>
+  <%- include ('../include/_header') %>
 
     <!-- thanh "danh muc sach" đã được ẩn bên trong + hotline + ho tro truc tuyen -->
-    <%- include('include/_cartgory') %>
+    <%- include('../include/_cartgory') %>
     <!-- giao diện giỏ hàng  -->
     <section class="content my-3">
         <div class="container">
@@ -25,7 +25,7 @@
                     <!-- giao diện giỏ hàng khi có hàng (phần comment màu xanh bên dưới là phần 2 sản phẩm trong giỏ hàng nhưng giờ đã demo bằng jquery) -->
                     
                     <% bookInfo.forEach(function(book){ %>
-                        <%- include('include/_bookcarttemplate',{book}) %>
+                        <%- include('../include/_bookcarttemplate',{book}) %>
                       <% }); %>
                       <% } %>
                     <!-- giao diện phần thanh toán nằm bên phải  -->
@@ -42,4 +42,4 @@
 
 
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
-   <%- include('include/_footer') %>
+   <%- include('../include/_footer') %>
