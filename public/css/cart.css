@@ -508,6 +508,7 @@ footer .header {
     cursor: pointer;
     font-size: 18px;
     color: #bebebe;
+    border: none;
 }
 
 .item-price .giacu {

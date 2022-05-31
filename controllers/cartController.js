@@ -15,7 +15,14 @@ exports.addtoCart = catchAsync(async (req, res, next) => {
     booktocart,
   });
 });
+exports.deleteCart = catchAsync(async (req, res, next) => {
+  const bookDelete = await Cart.findOneAndDelete({ user: req.user.id, book: req.params.bookId });
 
+  res.status(201).json({
+    status: 'success',
+    bookDelete,
+  });
+});
 exports.createCart = factory.createOne(Cart);
 
 exports.updateCart = factory.updateOne(Cart);

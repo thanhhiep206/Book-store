@@ -24,7 +24,7 @@
                     <div class="item-price ml-auto d-flex flex-column align-items-end">
                         <div class="giamoi"><%=book.priceafterSale +"$"%></div>
                         <div class="giacu"><%=book.price +"$"%></div>
-                        <span class="remove mt-auto"><i class="far fa-trash-alt"></i></span>
+                        <a href="/" class="remove mt-auto" id="dlcart" ><i class="far fa-trash-alt" data-bookincart="<%=book.id%>"></i></a>
                     </div>
                 </div>
                 

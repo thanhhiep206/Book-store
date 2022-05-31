@@ -71,7 +71,7 @@ userSchema.pre('save', async function (next) {
 });
 userSchema.methods.comparePassword = function (passwordSave, passwordReq) {
   //decryptPassword
-  const decryptPassword = CryptoJS.AES.decrypt(passwordSave, 'bookstore123').toString(CryptoJS.enc.Utf8);
+  const decryptPassword = CryptoJS.AES.decrypt(passwordSave, process.env.SECRET_KEY).toString(CryptoJS.enc.Utf8);
 
   return decryptPassword === passwordReq;
 };
