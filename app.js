@@ -12,12 +12,14 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
+// Set security HTTP headers
+//pass a script in helmet to load
+// app.use(helmet());
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('tiny'));
 }
 //Security
-// Set security HTTP headers
-app.use(helmet());
+
 //  rate Limit
 const limiter = rateLimit({
   max: 100,
@@ -25,7 +27,6 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again in an hour!',
 });
 app.use('/api', limiter);
-// Data sanitization against NoSQL query injection
 
 // Data sanitization against XSS
 app.use(xss());

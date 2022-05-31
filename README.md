@@ -11,11 +11,12 @@
 
 ## Introduction
 
-A Book ecommerce website using Node js, Expressjs,template ejs and Mongoose.
+A Book ecommerce website using Node js, Expressjs,EJS and Mongoose.
 
 ## Demo
 
-![screenshot](screenshot.png)
+![screenshot](/public/images/demo%20web.png)
+![screenshot](/public/images/demo%20admin.png)
 
 The application is deployed to Heroku and can be accessed through the following link:
 
@@ -24,13 +25,13 @@ The application is deployed to Heroku and can be accessed through the following 
 - Test User Credentials
   - Email: `gblhiep@gmail.com`
   - Password: `test1234`
-  - Test Admin Credentials
-    - Email: `admin@gmail.com`
-    - Password: `test1234`
-  - Test Stripe Card Details
-    - Card Number: `4242 4242 4242 4242`
-    - Expiry: `Any Future Month`
-    - CVV: `Any three Digit Number`
+- Test Admin Credentials
+  - Email: `admin@gmail.com`
+  - Password: `test1234`
+- Test Stripe Card Details
+  - Card Number: `4242 4242 4242 4242`
+  - Expiry: `Any Future Month`
+  - CVV: `Any three Digit Number`
 
 ## Run
 
@@ -38,7 +39,7 @@ To run this application, you have to set your own environmental variables. For s
 
 - MONGO_URI: this is the connection string of your MongoDB Atlas database.
 
-- JWT_KEY: a secret message for the session. You can use any string here.
+- JWT_KEY: a secret jsonwebtoken
 
 - STRIPE_SECRET_KEY: the stripe package is used to process payment in the checkout route. To get this, you should set up a stripe account and put your private API key here.
 
@@ -55,6 +56,7 @@ The application is built with:
 - Node.js
 - MongoDB
 - Express
+- EJS
 - Bootstrap
 - FontAwesome
 - Stripe API
@@ -94,6 +96,7 @@ All the models can be found in the models directory created using mongoose.
 - password (String)
 - passwordConfirm(String)
 - photo(String)
+- createdAt (Date)
 
 ### Book Schema:
 
@@ -122,11 +125,13 @@ All the models can be found in the models directory created using mongoose.
 - pageNumber (Number)
 - weight(Number)
 - introduction: String,
+- createdAt (Date)
 
 ### Cart Schema:
 
 - book (ObjectId - a reference to the Book schema)
 - user (ObjectId - a reference to the User schema)
+- createdAt (Date)
 
 ### Order Schema:
 
