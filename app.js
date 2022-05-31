@@ -5,6 +5,7 @@ const path = require('path');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const xss = require('xss-clean');
+const compression = require('compression');
 const cookieParser = require('cookie-parser');
 //use middleware built in
 app.use(express.json());
@@ -30,6 +31,7 @@ app.use('/api', limiter);
 
 // Data sanitization against XSS
 app.use(xss());
+app.use(compression());
 ///use Router
 app.use('/', require('./routers/viewRouter'));
 app.use('/', require('./routers/adminRouter'));
