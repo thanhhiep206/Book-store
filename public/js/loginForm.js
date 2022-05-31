@@ -28,5 +28,6 @@ loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
+  console.log(password);
   login(email, password);
 });
