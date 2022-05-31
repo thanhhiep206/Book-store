@@ -3,6 +3,8 @@ const app = express();
 const morgan = require('morgan');
 const path = require('path');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const xss = require('xss-clean');
 const cookieParser = require('cookie-parser');
 //use middleware built in
 app.use(express.json());
@@ -24,7 +26,6 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 // Data sanitization against NoSQL query injection
-app.use(mongoSanitize());
 
 // Data sanitization against XSS
 app.use(xss());

@@ -15,7 +15,7 @@ exports.search = catchAsync(async (req, res) => {
   } else if (req.query.search) {
     query = req.query.search;
     const items = await Book.find({ name: new RegExp(query, 'i') });
-    res.status(404).render('admin/user', {
+    res.status(404).render('admin/book', {
       breadcrumb: 'Book',
       items,
     });
