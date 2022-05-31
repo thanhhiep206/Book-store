@@ -9,12 +9,11 @@ const sendToken = (user, res) => {
   const token = jwt.sign({ id: user._id }, process.env.JWT_KEY, {
     expiresIn: JWT_EXPIRES_IN,
   });
-  // set expires cookie but error i set expires in this comment
-  // expires: new Date(Date.now() + 10 * 60 * 1000 * 100000),
+
   res.cookie('jwt', token, {
     httpOnly: true,
   });
-  console.log(token);
+  // console.log(token);
   // Remove password from output
   user.password = undefined;
   res.status(201).json({
@@ -104,7 +103,7 @@ exports.authorization = (role) => {
 exports.updatePasswordMe = catchAsync(async (req, res, next) => {
   const { password, newpassword, passwordConfirm } = req.body;
   const user = await User.findById(req.user._id).select('+password');
-  console.log(user);
+  // console.log(user);
   const compare = await user.comparePassword(user.password, password);
   if (!compare) {
     throw new Error('Password current is not correct');

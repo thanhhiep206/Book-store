@@ -49,7 +49,7 @@ To run this application, you have to set your own environmental variables. For s
 
 - ADMIN_EMAIL, ADMIN_PASSWORD: the email and password used to log into the admin panel using
 
-Now you can run "npm run start:dev" in the terminal and the application should work.
+Now you can run "npm run start" in the terminal and the application should work.
 
 ## Technology
 

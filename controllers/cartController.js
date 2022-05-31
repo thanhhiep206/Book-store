@@ -7,7 +7,7 @@ exports.addtoCart = catchAsync(async (req, res, next) => {
     user: req.user.id,
     book: req.params.bookId,
   });
-  console.log(booktocart);
+
   await booktocart.save();
 
   res.status(201).json({

@@ -60,7 +60,6 @@ const bookSchema = new mongoose.Schema(
 // });
 //populate
 // bookSchema.pre(/^find/, function (next) {
-//   console.log(1);
 //   this.populate({
 //     path: 'reviews',
 //     select: '-__v',
