@@ -6,6 +6,7 @@ const error = require('./middleware/logerror');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const xss = require('xss-clean');
+const cors = require('cors');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 //use middleware built in
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Set security HTTP headers
 //pass a script in helmet to load
 // app.use(helmet());
+app.use(cors());
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('tiny'));
 }
