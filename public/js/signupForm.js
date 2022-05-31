@@ -3,7 +3,7 @@ const signup = (name, email, password, passwordConfirm) => {
   console.log(passwordConfirm);
   axios({
     method: 'post',
-    url: 'http://localhost:3000/api/v1/users/signup',
+    url: '/api/v1/users/signup',
     data: {
       name,
       email,

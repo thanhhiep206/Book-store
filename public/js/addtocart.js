@@ -2,7 +2,7 @@ const addtocartBtn = document.getElementById('addcart');
 const addtocart = (bookId) => {
   axios({
     method: 'post',
-    url: `http://localhost:3000/api/v1/carts/${bookId}`,
+    url: `/api/v1/carts/${bookId}`,
   })
     .then((res) => {
       try {

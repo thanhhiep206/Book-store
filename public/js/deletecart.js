@@ -3,7 +3,7 @@ const deleteBtn = document.getElementById('dlcart');
 const deleteCart = (bookincart) => {
   axios({
     method: 'delete',
-    url: `http://localhost:3000/api/v1/carts/${bookincart}`,
+    url: `/api/v1/carts/${bookincart}`,
   })
     .then((res) => {
       try {

@@ -3,7 +3,7 @@ const logout = () => {
   console.log(1);
   axios({
     method: 'get',
-    url: 'http://localhost:3000/api/v1/users/logout',
+    url: '/api/v1/users/logout',
   })
     .then((res) => {
       try {
