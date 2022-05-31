@@ -22,7 +22,7 @@ A Book ecommerce website using Node js, Expressjs,EJS and Mongoose.
 
 The application is deployed to Heroku and can be accessed through the following link:
 
-[LoveBook on Heroku](https://best-bags.herokuapp.com/)
+[LoveBook on Heroku](https://lovebook206.herokuapp.com/)
 
 - Test User Credentials
   - Email: `gblhiep@gmail.com`
