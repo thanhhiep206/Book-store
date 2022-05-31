@@ -46,10 +46,11 @@ exports.login = catchAsync(async (req, res) => {
       status: 'fail',
       message: 'User not exist, Please signup to continue',
     });
-  console.log(user);
+
   const compare = await user.comparePassword(user.password, password);
   if (!compare)
     return res.status(404).json({
+      user,
       status: 'fail',
       message: 'password  not correct',
     });
