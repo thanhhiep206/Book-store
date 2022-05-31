@@ -15,8 +15,10 @@ A Book ecommerce website using Node js, Expressjs,EJS and Mongoose.
 
 ## Demo
 
-![screenshot](/public/images/demo%20web.png)
-![screenshot](/public/images/demo%20admin.png)
+- User Page
+  ![screenshot](/public/images/demo%20web.png)
+- Admin Page
+  ![screenshot](/public/images/demo%20admin.png)
 
 The application is deployed to Heroku and can be accessed through the following link:
 
@@ -83,7 +85,7 @@ Users can do the following:
   Admins can do the following:
 
 - Login or logout to the admin panel
-- View all the information stored in the database. They can view/add/edit/delete orders, users, products and categories. The cart model cannot be modified by an admin because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
+- View all the information stored in the database. They can view/add/edit/delete orders, users, products . The cart model cannot be modified by an admin because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
 
 ## Database
 
