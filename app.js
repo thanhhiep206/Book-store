@@ -43,5 +43,12 @@ app.use('/api/v1/carts', require('./routers/cartRouter'));
 app.use('/api/v1/reviews', require('./routers/reviewRouter'));
 app.use('/api/v1/books', require('./routers/bookRouter'));
 app.use('/api/v1/users', require('./routers/userRouter'));
+app.use('/*', (req, res) => {
+  res.status(404).render('error', {
+    title: 'Not found router ',
+    user: null,
+    style: 'cart',
+  });
+});
 app.use(error);
 module.exports = app;

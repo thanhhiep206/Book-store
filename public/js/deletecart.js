@@ -1,4 +1,4 @@
-const deleteBtn = document.getElementById('dlcart');
+const deleteBtn = document.querySelectorAll('#dlcart');
 
 const deleteCart = (bookincart) => {
   axios({
@@ -19,9 +19,11 @@ const deleteCart = (bookincart) => {
     });
 };
 
-deleteBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const { bookincart } = e.target.dataset;
+deleteBtn.forEach((ele) =>
+  ele.addEventListener('click', (e) => {
+    e.preventDefault();
+    const { bookincart } = e.target.dataset;
 
-  deleteCart(bookincart);
-});
+    deleteCart(bookincart);
+  })
+);

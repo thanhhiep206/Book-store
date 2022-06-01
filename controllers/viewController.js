@@ -41,14 +41,7 @@ exports.getCart = catchAsync(async (req, res) => {
     bookInfo,
   });
 });
-//get 404 all router
-exports.getError = (req, res) => {
-  res.status(404).render('user/error', {
-    title: 'Not found router page',
-    user: null,
-    style: 'cart',
-  });
-};
+
 // render review foreach book
 exports.getReview = catchAsync(async (req, res) => {
   const book = await Book.findOne({ slug: req.params.slug }).populate('reviews');
