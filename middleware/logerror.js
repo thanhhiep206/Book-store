@@ -1,8 +1,8 @@
 const winston = require('winston');
 const logger = winston.createLogger({
   transports: [new winston.transports.Console(), new winston.transports.File({ filename: 'combined.log' })],
-  exceptionHandlers: [new transports.File({ filename: 'exceptions.log' })],
-  rejectionHandlers: [new transports.File({ filename: 'rejections.log' })],
+  exceptionHandlers: [new winston.transports.File({ filename: 'exceptions.log' })],
+  rejectionHandlers: [new winston.transports.File({ filename: 'rejections.log' })],
 });
 
 //   winston.add(new winston.transports.MongoDB,{db:'mongodb+srv://dthadmin:hiephihi123@cluster0.owazy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'});
