@@ -20,7 +20,8 @@ exports.getManagerUser = catchAsync(async (req, res) => {
   });
 });
 exports.getManagerOrder = catchAsync(async (req, res) => {
-  const items = await Order.find({ user: { $ne: null } });
+  const item = await Order.find();
+  const items = item.filter((x) => x.user === null);
   res.status(200).render('admin/order', {
     breadcrumb: 'Order',
     items,

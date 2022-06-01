@@ -12,10 +12,5 @@ module.exports = function (err, req, res, next) {
     message: err.message,
   });
   //middle ware erro
-  res.status(404).render('error', {
-    title: 'Not found router ',
-    user: null,
-    style: 'cart',
-    message: err.message,
-  });
+  res.status(404).send(err.message);
 };
