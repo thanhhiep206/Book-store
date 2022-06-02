@@ -54,10 +54,10 @@
                     <div class="">
                         <li class="nav-item account d-flex ifuser" type="button" class="" data-toggle="">
                         <% if (user.photo){ %>
-                            <img src="/images/<%=user.photo%>" class="btn btn-light rounded-circle" style="width:40px">
-                            </img>
+                            <img src="/images/<%=user.photo%>" class="btn btn-light rounded-circle" style="width:40px" >
+                            <a href="/account"></a></img>
                             <%  } else{ %>
-                                <a href="#" class="btn btn-secondary rounded-circle">
+                                <a href="/account" class="btn btn-secondary rounded-circle">
                                     <i class="fa fa-user"></i>
                                 </a>
                             <% } %>

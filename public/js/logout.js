@@ -1,6 +1,5 @@
 const logoutBtn = document.getElementById('logout');
 const logout = () => {
-  console.log(1);
   axios({
     method: 'get',
     url: '/api/v1/users/logout',

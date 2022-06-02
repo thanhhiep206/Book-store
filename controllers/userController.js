@@ -32,11 +32,6 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 
   next();
 });
-//for each user update  yourseft
-// exports.getMe= (req,res,next)=>{
-
-//    next()
-// }
 
 exports.updateMe = catchAsync(async (req, res) => {
   let user = req.user;
