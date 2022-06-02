@@ -17,7 +17,7 @@ const signup = (name, email, password, passwordConfirm) => {
       }
     })
     .catch((e) => {
-      console.log(e);
+      alert(e.response.data);
     });
 };
 signupForm.addEventListener('submit', (e) => {
