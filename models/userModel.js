@@ -7,10 +7,14 @@ const userSchema = new mongoose.Schema(
     name: {
       type: String,
       required: [true, 'Please provide your name'],
-      minLength: 6,
       trim: true,
       lowercase: true,
       maxLength: 30,
+      validate(value) {
+        if (value.length < 6) {
+          throw new Error('Name must be more than 6 characters ');
+        }
+      },
     },
     email: {
       type: String,

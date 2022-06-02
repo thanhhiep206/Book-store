@@ -1,7 +1,7 @@
-<%var randomId=Math.random().toString(36)%>
+
 <table class="m-auto">
     <tr>
-        <th><%=randomId%></th>
+        <th><%=order.id%></th>
         <th><%=order.createdAt.toISOString().split('T')[0]%></th>
         <th><%=order.book.name%></th>
         <th><%=order.book.priceafterSale +"$"%></th>

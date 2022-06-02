@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const mongoose = require('mongoose');
 //connectDB
 const connect = async () => {
@@ -7,7 +8,7 @@ const connect = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     },
-    () => console.log('connect successfully')
+    () => console.log(chalk.blueBright('connect successfully'))
   );
 };
 

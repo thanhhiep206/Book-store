@@ -17,7 +17,7 @@ const signup = (name, email, password, passwordConfirm) => {
           alert('Signup successfully!, Please Login to site');
         }
       } catch (e) {
-        console.log(e);
+        alert(e.response.data.message);
       }
     })
     .catch((e) => {
