@@ -6,12 +6,8 @@ const deleteCart = (bookincart) => {
     url: `/api/v1/carts/${bookincart}`,
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          location.reload(true);
-        }
-      } catch (e) {
-        console.log(e.response.data);
+      if (res.data.status === 'success') {
+        location.reload(true);
       }
     })
     .catch((e) => {

@@ -5,14 +5,10 @@ const addtocart = (bookId) => {
     url: `/api/v1/carts/${bookId}`,
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          window.setTimeout(() => {
-            location.assign('/cart');
-          }, 1000);
-        }
-      } catch (e) {
-        console.log(e.response.data);
+      if (res.data.status === 'success') {
+        window.setTimeout(() => {
+          location.assign('/cart');
+        }, 1000);
       }
     })
     .catch((e) => {

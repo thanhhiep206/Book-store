@@ -10,14 +10,10 @@ const login = (email, password) => {
     },
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          window.setTimeout(() => {
-            location.assign('/');
-          }, 1000);
-        }
-      } catch (e) {
-        console.log(e.response.data);
+      if (res.data.status === 'success') {
+        window.setTimeout(() => {
+          location.assign('/');
+        }, 1000);
       }
     })
     .catch((e) => {

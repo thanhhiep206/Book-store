@@ -6,12 +6,8 @@ const deleteItem = (model, itemId) => {
     url: `/api/v1/${model}/${itemId}`,
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          location.reload(true);
-        }
-      } catch (e) {
-        console.log(e.response.data);
+      if (res.data.status === 'success') {
+        location.reload(true);
       }
     })
     .catch((e) => {

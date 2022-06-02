@@ -7,3 +7,4 @@
 {"level":"error","message":"User validation failed: name: Name must be more than 6 characters "}
 {"level":"error","message":"User validation failed: email: Invalid email"}
 {"level":"error","message":"User validation failed: email: Invalid email"}
+{"level":"error","message":"User validation failed: email: Invalid email"}

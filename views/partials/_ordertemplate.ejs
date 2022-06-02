@@ -6,7 +6,7 @@
       <span class="mb-2 text-xs">Price <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.book.priceafterSale%></span></span>
       <span class="mb-2 text-xs">TimeOrder <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.createdAt.toISOString().split('T')[0]%></span></span>
       <span class="mb-2 text-xs">Quantity <span class="text-dark ms-sm-2 font-weight-bold">1</span></span>
-      <span class="mb-2 text-xs">Serial order <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.id%>></span></span>
+      <span class="mb-2 text-xs">Serial order <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.id%></span></span>
     </div>
     <div class="ms-auto text-end">
       <a class="btn btn-link text-danger text-gradient px-3 mb-0"  id="deletebtn" data-model="orders" data-item-id="<%=orderItem.id%>"><i class="far fa-trash-alt me-2"></i>Delete</a>

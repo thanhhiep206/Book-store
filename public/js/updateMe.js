@@ -8,13 +8,9 @@ const update = (data) => {
     data,
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          alert('update successfully!');
-          location.reload(true);
-        }
-      } catch (e) {
-        console.log(e);
+      if (res.data.status === 'success') {
+        alert('update successfully!');
+        location.reload(true);
       }
     })
     .catch((e) => {

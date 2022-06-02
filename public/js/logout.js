@@ -6,12 +6,8 @@ const logout = () => {
     url: '/api/v1/users/logout',
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          location.reload(true);
-        }
-      } catch (e) {
-        console.log(e.response.data);
+      if (res.data.status === 'success') {
+        location.reload(true);
       }
     })
     .catch((e) => {

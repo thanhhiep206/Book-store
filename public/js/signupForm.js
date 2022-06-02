@@ -12,16 +12,12 @@ const signup = (name, email, password, passwordConfirm) => {
     },
   })
     .then((res) => {
-      try {
-        if (res.data.status === 'success') {
-          alert('Signup successfully!, Please Login to site');
-        }
-      } catch (e) {
-        alert(e.response.data.message);
+      if (res.data.status === 'success') {
+        alert('Signup successfully!, Please Login to site');
       }
     })
     .catch((e) => {
-      alert(e.response.data.message);
+      console.log(e);
     });
 };
 signupForm.addEventListener('submit', (e) => {
