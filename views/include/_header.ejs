@@ -70,10 +70,9 @@
                     <li class="nav-item giohang">
                         <a href="/cart" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
-                            <% if (bookInfo){ %>
-                            <% let amountBookInCart = bookInfo.length %>
-                            <div class="cart-amount"><%=amountBookInCart%></div>
-                            <%} else{ %>
+                            <% if (title==='Your cart') { %>
+                            <div class="cart-amount"><%=bookInfo.length%></div>
+                            <%  } else{ %>
                             <div class="cart-amount">0</div>
                             <% } %>
                         </a>
