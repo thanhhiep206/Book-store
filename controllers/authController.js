@@ -50,7 +50,6 @@ exports.login = catchAsync(async (req, res) => {
   const compare = await user.comparePassword(user.password, password);
   if (!compare)
     return res.status(404).json({
-      user,
       status: 'fail',
       message: 'password  not correct',
     });

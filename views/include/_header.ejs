@@ -70,7 +70,8 @@
                     <li class="nav-item giohang">
                         <a href="/cart" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
-                            <div class="cart-amount">0</div>
+                            <% let amountBookInCart = bookInfo.length %>
+                            <div class="cart-amount"><%=amountBookInCart%></div>
                         </a>
                         <a class="nav-link text-dark giohang text-uppercase" href="/cart"
                             style="display:inline-block">Giỏ
