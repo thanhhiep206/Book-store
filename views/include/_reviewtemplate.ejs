@@ -55,7 +55,9 @@
                     </div>
                 </div>
             </div>
-            <button class="nutmua btn w-100 text-uppercase" id="addcart" data-book-id="<%=book.id %>">Chọn mua</button>
+            <form action="/api/v1/carts/<%=book.id%>" method="post">
+            <button class="nutmua btn w-100 text-uppercase">Chọn mua</button>
+            </form>
             <a class="huongdanmuahang text-decoration-none" href="#">(Vui lòng xem hướng dẫn mua
                 hàng)</a>
            

@@ -63,7 +63,8 @@
                             <% } %>
                             <div class="info-logout">
                                 <a class="nav-link text-dark text-uppercase username" href="/account"><%= user.name %></a>
-                                <a class="nav-link text-dark logout" id="logout" >Đăng xuất <i class="fas fa-sign-out-alt"></i></a>
+                                
+                                    <a type="submit" class="nav-link text-dark logout" id="logout" >Đăng xuất <i class="fas fa-sign-out-alt"></i></a>  
                             </div>
                         </li>
                     </div>
@@ -136,7 +137,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="form-signup" class="form-signin mt-2">
+                <form id="form-signup" class="form-signin mt-2" >
                     <div class="form-label-group">
                         <input type="text" class="form-control" id="name--signup" placeholder="Nhập họ và tên" name="name" required
                             autofocus>
@@ -190,7 +191,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="form-signin" class="form-signin mt-2" >
+                <form id="form-signin" class="form-signin mt-2"  >
                     <div class="form-label-group">
                         <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email" name="email"
                             required autofocus>

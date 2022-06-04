@@ -1,32 +1,31 @@
 <tr>
+  <form method="post" action="/api/v1/books/<%=book.id +"?_method=PATCH"%>" >
     <td>
       <div class="d-flex px-2 py-1">
         <div>
           <img src="/images/<%=book.img%>" class="avatar avatar-sm me-3" alt="<%=book.name%>">
         </div>
-        <div class="d-flex flex-column justify-content-center">
-         <h6 class="mb-0 text-sm"><%=book.name%></h6>
-         
-        </div>
+        <input class="d-flex flex-column justify-content-center form-control" value="<%=book.name%>" name="name">
       </div>
     </td>
     <td>
-      <p class="text-xs font-weight-bold mb-0"><%=book.author%></p>
-     
+      <input class="form-control" type="text" value="<%=book.author%>" size="10" name="author">  
     </td>
     <td class="align-middle text-center text-sm">
-      <span class="badge badge-sm bg-gradient-success"><%=book.price+"$"%></span>
+      <input class="form-control" type="text" value="<%=book.price%>" size="4" name="price">
     </td>
     <td class="align-middle text-center">
-      <span class="text-secondary text-xs font-weight-bold"><%=book.percentSale+"%"%></span>
+      <input class="form-control" type="text" value="<%=book.percentSale%>" size="4" name="percentSale">
     </td>
     <td class="align-middle text-center">
-        <span class="text-secondary text-xs font-weight-bold"><%=book.cartgory%></span>
+      <input class="form-control" type="text" value="<%=book.cartgory%>" size="7" name="cartgory"> 
       </td>
     <td class="align-middle">
       <div class="ms-auto text-end">
         <a class="btn btn-link text-danger text-gradient px-3 mb-0"id="deletebtn"  data-model="books" data-item-id="<%=book.id%>"><i class="far fa-trash-alt me-2"></i>Delete</a>
-        <a class="btn btn-link text-dark px-3 mb-0" ><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
+        <button type="submit"  class="btn btn-link text-dark px-3 mb-0" ><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true" ></i>Update</button>
       </div> 
     </td>
+  </form>
+ 
   </tr>

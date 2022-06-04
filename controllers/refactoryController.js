@@ -63,6 +63,10 @@ exports.updateOne = (Model) =>
         status: 'fail',
         msg: 'not find book to update',
       });
+    // check if have slug so call api book
+    if (dataUpdate.slug) {
+      return res.redirect('/admin/book');
+    }
     res.status(201).json({
       status: 'success',
       msg: `update ${dataUpdate.name} sucessfully`,
@@ -71,6 +75,9 @@ exports.updateOne = (Model) =>
 exports.createOne = (Model) =>
   catchAsync(async (req, res) => {
     const newData = await Model.create(req.body);
+    if (newData.slug) {
+      return res.redirect('/admin/book');
+    }
     res.status(201).json({
       status: 'success',
       newData,

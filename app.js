@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 const morgan = require('morgan');
 const path = require('path');
 const error = require('./middleware/logerror');
@@ -11,6 +12,7 @@ const compression = require('compression');
 const cookieParser = require('cookie-parser');
 //use middleware built in
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');

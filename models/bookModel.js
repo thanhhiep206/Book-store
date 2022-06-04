@@ -37,7 +37,6 @@ const bookSchema = new mongoose.Schema(
       default: 0,
     },
     img: {
-      require: true,
       type: String,
     },
     reviews: {

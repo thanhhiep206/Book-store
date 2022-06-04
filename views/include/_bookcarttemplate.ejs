@@ -24,7 +24,9 @@
                     <div class="item-price ml-auto d-flex flex-column align-items-end">
                         <div class="giamoi"><%=book.priceafterSale +"$"%></div>
                         <div class="giacu"><%=book.price +"$"%></div>
-                        <a href="/" class="remove mt-auto" id="dlcart" ><i class="far fa-trash-alt" data-bookincart="<%=book.id%>"></i></a>
+                        <form method="post" action="/api/v1/carts/<%=book.id +"?_method=DELETE"%>" >
+                        <button type="submit" class="remove mt-auto"  ><i class="far fa-trash-alt"></i></button>
+                        </form>
                     </div>
                 </div>
                 
