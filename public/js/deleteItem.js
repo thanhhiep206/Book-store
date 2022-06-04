@@ -3,7 +3,7 @@ const deleteBtn = document.querySelectorAll('#deletebtn');
 const deleteItem = (model, itemId) => {
   axios({
     method: 'delete',
-    url: `http://localhost:3000/api/v1/${model}/${itemId}`,
+    url: `/api/v1/${model}/${itemId}`,
   })
     .then((res) => {
       if (res.data.status === 'success') {

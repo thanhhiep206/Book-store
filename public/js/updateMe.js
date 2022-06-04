@@ -4,7 +4,7 @@ const updatePassword = document.querySelector('#update_password');
 const update = (data) => {
   axios({
     method: 'patch',
-    url: 'http://localhost:3000/api/v1/users/updateMe',
+    url: '/api/v1/users/updateMe',
     data,
   })
     .then((res) => {
