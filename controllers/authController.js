@@ -58,7 +58,7 @@ exports.login = catchAsync(async (req, res) => {
 });
 //logout
 exports.logout = (req, res) => {
-  //clearCookie to delete toke inside jwt not delete jwt
+  //clearCookie
   res.cookie('jwt', 'loggedout', {
     expires: new Date(Date.now()),
     httpOnly: true,
@@ -104,7 +104,6 @@ exports.authorization = (role) => {
 exports.updatePasswordMe = catchAsync(async (req, res, next) => {
   const { password, newpassword, passwordConfirm } = req.body;
   const user = await User.findById(req.user._id).select('+password');
-  // console.log(user);
   const compare = await user.comparePassword(user.password, password);
   if (!compare) {
     throw new Error('Password current is not correct');
