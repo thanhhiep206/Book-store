@@ -48,8 +48,7 @@ To run this application, you have to set your own environmental variables. For s
 - USER_EMAIL, USER_PASSWORD: the email and password to login to home page
 
 - ADMIN_EMAIL, ADMIN_PASSWORD: the email and password used to log into the admin panel using
-
-Now you can run "npm run start" in the terminal and the application should work.
+  Now you can run "npm run start" in the terminal and the application should work.
 
 ## Technology
 
@@ -65,6 +64,7 @@ The application is built with:
 - Multer: used to upload file
 - Jsonwebtoken: used for authentication
 - Validator: used for form validation
+- nodemailer: used for send email
 - And many other package
 
 ## Features
@@ -83,7 +83,7 @@ Users can do the following:
 - The profile contains all the orders a user has made
   -upload image profile
   Admins can do the following:
-
+- Send email to reset password
 - Login or logout to the admin panel
 - View all the information stored in the database. They can view/add/edit/delete orders, users, products . The cart model cannot be modified by an admin because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
 
