@@ -3,6 +3,7 @@ const util = require('util');
 const CryptoJS = require('crypto-js');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
+const sendEmail = require('../utils/email');
 //sign jwt id
 const JWT_EXPIRES_IN = '20h';
 const sendToken = (user, res) => {
@@ -120,4 +121,23 @@ exports.updatePasswordMe = catchAsync(async (req, res, next) => {
     status: 'success',
     data: user,
   });
+});
+exports.forgotPassword = catchAsync(async (req, res, next) => {
+  // 1) Get user based on POSTed email
+  const { email } = req.body;
+  const user = await User.findOne({ email });
+  if (!user) {
+    throw new Error('User not exists');
+  }
+  //not securtiy but just demo  send email reset password
+  const passwordRandom = Math.random().toString(36).substring(2, 8);
+
+  await sendEmail({
+    email: user.email,
+    subject: 'Your password reset ',
+    message: `this is new your password :  ${passwordRandom} `,
+  });
+  user.password = passwordRandom;
+  await user.save({ validateBeforeSave: false });
+  return res.redirect('/');
 });

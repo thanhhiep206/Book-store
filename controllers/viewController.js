@@ -49,7 +49,7 @@ exports.getReview = catchAsync(async (req, res) => {
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
 
   const reviewOfoneBook = book.reviews;
-  res.status(404).render('user/review', {
+  res.status(200).render('user/review', {
     title: 'Love book',
     user: req.user,
     book,
@@ -65,10 +65,13 @@ exports.getCartgory = catchAsync(async (req, res) => {
   let books;
 
   books = await Book.find({ cartgory: req.params.cartgory });
-  res.status(404).render('user/cartgory', {
+  res.status(200).render('user/cartgory', {
     title: 'Danh mục sách',
     books,
     user: req.user,
     style: 'product',
   });
 });
+exports.getResetPassword = (req, res) => {
+  res.status(200).render('user/resetpassword');
+};

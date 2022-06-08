@@ -29,7 +29,7 @@ updateMe.addEventListener('submit', (e) => {
 const updatePass = (password, newpassword, passwordConfirm) => {
   axios({
     method: 'post',
-    url: 'http://localhost:3000/api/v1/users/updatePasswordMe',
+    url: '/api/v1/users/updatePasswordMe',
     data: {
       password,
       newpassword,

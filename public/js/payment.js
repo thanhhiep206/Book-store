@@ -6,7 +6,7 @@ const orderBook = async (bookId) => {
   try {
     // 1) Get Checkout session from API
 
-    const session = await axios(`http://localhost:3000/api/v1/orders/checkout-session/${bookId}`);
+    const session = await axios(`/api/v1/orders/checkout-session/${bookId}`);
 
     // 2) Create checkout from + chanre credit card
     await stripe.redirectToCheckout({
