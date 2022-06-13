@@ -118,6 +118,10 @@ $(function () {
   });
 
   // gui danh gia
+  $('.formdanhgia').hide(200);
+  $('.vietdanhgia').click(function (e) {
+    $('.formdanhgia').toggle(200);
+  });
 
   //rotate chevron
   $('#step1contentid').on('show.bs.collapse', function () {
@@ -139,14 +143,12 @@ $(function () {
     $(this).prev().removeClass('active');
   });
 
-  // nut btn-shopping-without-signup
-  $('#step1contentid').collapse('show');
-  $('.btn-shopping-without-signup').click(function (e) {
-    $('#step1contentid').collapse('hide');
-    $('#step2contentid').collapse('show');
-  });
+  onLoadCartNumbers();
+  displayCart();
 
-  // validate
+  $('.items .row').isotope({
+    itemSelector: '.item',
+  });
 
   $('.tag a').click(function (e) {
     var tacgia = $(this).data('tacgia');

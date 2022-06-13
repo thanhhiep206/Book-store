@@ -1,6 +1,15 @@
-exports.getDashboard = (req, res, next) => {
+//statistical
+const Order = require('../models/orderModel');
+const User = require('../models/userModel');
+const catchAsync = require('../utils/catchAsync');
+//total money in per day
+let query = new Date();
+
+exports.getDashboard = catchAsync(async (req, res, next) => {
   if (req.user) {
     if (req.user.role == 'admin') {
+      const totalMoneyDay = await Order.find({ createAt: new Date() });
+      console.log(totalMoneyDay);
       res.status(200).render('admin/index', {
         breadcrumb: 'Dashboard',
       });
@@ -10,4 +19,4 @@ exports.getDashboard = (req, res, next) => {
   } else {
     next();
   }
-};
+});
