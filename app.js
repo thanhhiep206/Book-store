@@ -45,5 +45,6 @@ app.use('/api/v1/carts', require('./routers/cartRouter'));
 app.use('/api/v1/reviews', require('./routers/reviewRouter'));
 app.use('/api/v1/books', require('./routers/bookRouter'));
 app.use('/api/v1/users', require('./routers/userRouter'));
+app.use('/api/v1/comments', require('./routers/commentRouter'));
 app.use(error);
 module.exports = app;

@@ -3,6 +3,7 @@ const Book = require('../models/bookModel');
 const User = require('../models/userModel');
 const Cart = require('../models/cartModel');
 const Order = require('../models/orderModel');
+const Comment = require('../models/commentModel');
 //render home
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
@@ -49,12 +50,15 @@ exports.getReview = catchAsync(async (req, res) => {
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
 
   const reviewOfoneBook = book.reviews;
+  const comment = await Comment.find();
+  const commentBook = comment.filter((x) => x.book.slug === req.params.slug);
   res.status(200).render('user/review', {
     title: 'Love book',
     user: req.user,
     book,
     bookSimilar,
     reviewOfoneBook,
+    commentBook,
     style: 'product',
   });
 });

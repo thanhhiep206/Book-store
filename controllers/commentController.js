@@ -9,4 +9,6 @@ exports.addComment = catchAsync(async (req, res, next) => {
   });
 
   await comment.save();
+  //reloAD PAGE
+  res.redirect(req.get('referer'));
 });

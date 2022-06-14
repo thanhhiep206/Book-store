@@ -29,3 +29,5 @@
 {"level":"error","message":"User validation failed: password: Path `password` (`1mnzr`) is shorter than the minimum allowed length (6)., passwordConfirm: Path `passwordConfirm` (`1mnzr`) is shorter than the minimum allowed length (6)."}
 {"level":"error","message":"User validation failed: password: Password must contain at least one letter and one number"}
 {"level":"error","message":"Cast to date failed for value \"/Mon Jun 13 2022 21:11:59 GMT+0700 (Indochina Time)/i\" (type RegExp) at path \"createdAt\" for model \"Order\""}
+{"level":"error","message":"Cannot read property 'slug' of undefined"}
+{"level":"error","message":"Cannot read property 'slug' of undefined"}

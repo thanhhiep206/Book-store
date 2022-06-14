@@ -3,7 +3,7 @@ const loginForm = document.querySelector('#form-signin');
 const login = (email, password) => {
   axios({
     method: 'post',
-    url: 'http://localhost:3000/api/v1/users/login',
+    url: '/api/v1/users/login',
     data: {
       email,
       password,

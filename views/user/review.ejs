@@ -85,7 +85,7 @@
                                             <div class="btn vietdanhgia mt-3">Viết đánh giá của bạn</div>
                                         </div>
                                         <!-- nội dung của form đánh giá  -->
-                                        <form class="formdanhgia">
+                                        <form class="formdanhgia" action="/api/v1/comments/<%=book.id%>" method="post">
                                             <h6 class="tieude text-uppercase">GỬI ĐÁNH GIÁ CỦA BẠN</h6>
                                             <span class="danhgiacuaban">Đánh giá của bạn về sản phẩm này:</span>
                                             <div class="rating d-flex flex-row-reverse align-items-center justify-content-end">
@@ -96,7 +96,7 @@
                                                 <input type="radio" name="star" id="star5"><label for="star5"></label>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="txtComment w-100" placeholder="Đánh giá của bạn về sản phẩm này">
+                                                <input type="text" class="txtComment w-100" name="content" placeholder="Đánh giá của bạn về sản phẩm này">
                                             </div>
                                             <button type="submit" class="btn nutguibl">Gửi bình luận</button>
                                         </form>
@@ -111,7 +111,7 @@
                         <div class="review-content comment-content" id="commentContent">
 
 
-                            <% comment.forEach(function(comment){ %>
+                            <% commentBook.forEach(function(comment){ %>
                                 <%- include('../include/_comment',{comment}) %>
                               <% }); %>
                              

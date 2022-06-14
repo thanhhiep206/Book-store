@@ -21,7 +21,7 @@ const commentSchema = new mongoose.Schema(
   }
 );
 commentSchema.pre(/^find/, function (next) {
-  this.populate('user');
+  this.populate('book').populate('user');
   next();
 });
 
