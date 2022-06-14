@@ -46,19 +46,20 @@ exports.getCart = catchAsync(async (req, res) => {
 // render review foreach book
 exports.getReview = catchAsync(async (req, res) => {
   const book = await Book.findOne({ slug: req.params.slug }).populate('reviews');
+  console.log(book);
   // book similar not equal above book
   const bookSimilar = await Book.find({ cartgory: book.cartgory, slug: { $ne: req.params.slug } }).limit(5);
-
+  console.log(bookSimilar);
   const reviewOfoneBook = book.reviews;
-  const comment = await Comment.find();
-  const commentBook = comment.filter((x) => x.book.slug === req.params.slug);
+  // const comment = await Comment.find();
+  // const commentBook = comment.filter((x) => x.book.slug === req.params.slug);
   res.status(200).render('user/review', {
     title: 'Love book',
     user: req.user,
     book,
     bookSimilar,
     reviewOfoneBook,
-    commentBook,
+    // commentBook,
     style: 'product',
   });
 });
