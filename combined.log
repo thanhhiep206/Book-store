@@ -36,3 +36,8 @@
 {"level":"error","message":"consol is not defined"}
 {"level":"error","message":"Cannot read property 'slug' of null"}
 {"level":"error","message":"Cannot read property 'slug' of null"}
+{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\review.ejs:114\n    112| \r\n    113| \r\n >> 114|                             <% commentBook.forEach(function(comment){ %>\r\n    115|                                 <%- include('../include/_comment',{comment}) %>\r\n    116|                               <% }); %>\r\n    117|                              \r\n\ncommentBook is not defined"}
+{"level":"error","message":"Cannot read property 'slug' of null"}
+{"level":"error","message":"Cannot read property 'slug' of null"}
+{"level":"error","message":"Cannot read property 'slug' of null"}
+{"level":"error","message":"Cannot read property 'slug' of null"}
