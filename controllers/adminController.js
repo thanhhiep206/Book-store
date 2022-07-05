@@ -5,7 +5,7 @@ const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
 //getAdmin dashboard if req.user.role =='admin'
 
-exports.getManagerBook = catchAsync(async (req, res) => {
+  exports.getManagerBook = catchAsync(async (req, res) => {
   const items = await Book.find();
   res.status(200).render('admin/book', {
     breadcrumb: 'Book',
