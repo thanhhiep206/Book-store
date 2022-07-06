@@ -41,3 +41,6 @@
 {"level":"error","message":"Cannot read property 'slug' of null"}
 {"level":"error","message":"Cannot read property 'slug' of null"}
 {"level":"error","message":"Cannot read property 'slug' of null"}
+{"level":"error","message":"E11000 duplicate key error collection: Book.users index: email_1 dup key: { email: \"gblhiep1@gmail.com\" }"}
+{"level":"error","message":"Cannot read property 'role' of undefined"}
+{"level":"error","message":"Cannot read property 'role' of undefined"}

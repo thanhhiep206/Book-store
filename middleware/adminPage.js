@@ -3,8 +3,6 @@ const Order = require('../models/orderModel');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 //total money in per day
-let query = new Date();
-
 exports.getDashboard = catchAsync(async (req, res, next) => {
   if (req.user) {
     if (req.user.role == 'admin') {

@@ -6,7 +6,7 @@
         <p>
             <strong class="name"><%=comment.user.name%></strong>
                         </p>
-        <p><label><i><%=comment.createdAt%></i></label></p>
+        <p><label><i><%=comment.createdAt.toISOString().substr(0,20).split('T')%></i></label></p>
         <div class="content">
             <%=comment.content%>
         </div>
