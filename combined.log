@@ -1,46 +1,6 @@
-{"level":"error","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"book\" for model \"Cart\""}
-{"level":"error","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"book\" for model \"Cart\""}
-{"level":"error","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"book\" for model \"Cart\""}
-{"level":"error","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"book\" for model \"Cart\""}
-{"level":"error","message":"Unexpected token } in JSON at position 129"}
-{"level":"error","message":"User validation failed: name: Name must be more than 6 characters "}
-{"level":"error","message":"User validation failed: name: Name must be more than 6 characters "}
-{"level":"error","message":"User validation failed: email: Invalid email"}
-{"level":"error","message":"User validation failed: email: Invalid email"}
-{"level":"error","message":"User validation failed: email: Invalid email"}
-{"level":"error","message":"Cannot read property 'id' of undefined"}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\index.ejs:2\n    1| \r\n >> 2| <%- include ('../include/_header') %>\r\n    3| \r\n    4|     <!-- thanh tieu de \"danh muc sach\" + hotline + ho tro truc tuyen -->\r\n    5|     <section class=\"duoinavbar\">\r\n\nCould not find matching close tag for \"<%=\"."}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\index.ejs:2\n    1| \r\n >> 2| <%- include ('../include/_header') %>\r\n    3| \r\n    4|     <!-- thanh tieu de \"danh muc sach\" + hotline + ho tro truc tuyen -->\r\n    5|     <section class=\"duoinavbar\">\r\n\nUnexpected token 'else' in C:\\Users\\Administrator\\Desktop\\Book store\\views\\include\\_header.ejs while compiling ejs\n\nIf the above error is not helpful, you may want to try EJS-Lint:\nhttps://github.com/RyanZim/EJS-Lint\nOr, if you meant to create an async function, pass `async: true` as an option."}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\index.ejs:2\n    1| \r\n >> 2| <%- include ('../include/_header') %>\r\n    3| \r\n    4|     <!-- thanh tieu de \"danh muc sach\" + hotline + ho tro truc tuyen -->\r\n    5|     <section class=\"duoinavbar\">\r\n\nUnexpected token 'else' in C:\\Users\\Administrator\\Desktop\\Book store\\views\\include\\_header.ejs while compiling ejs\n\nIf the above error is not helpful, you may want to try EJS-Lint:\nhttps://github.com/RyanZim/EJS-Lint\nOr, if you meant to create an async function, pass `async: true` as an option."}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\index.ejs:2\n    1| \r\n >> 2| <%- include ('../include/_header') %>\r\n    3| \r\n    4|     <!-- thanh tieu de \"danh muc sach\" + hotline + ho tro truc tuyen -->\r\n    5|     <section class=\"duoinavbar\">\r\n\nUnexpected token 'else' in C:\\Users\\Administrator\\Desktop\\Book store\\views\\include\\_header.ejs while compiling ejs\n\nIf the above error is not helpful, you may want to try EJS-Lint:\nhttps://github.com/RyanZim/EJS-Lint\nOr, if you meant to create an async function, pass `async: true` as an option."}
-{"level":"error","message":"Cast to Number failed for value \"35%\" (type string) at path \"percentSale\""}
-{"level":"error","message":"Cast to Number failed for value \"35%\" (type string) at path \"percentSale\""}
-{"level":"error","message":"Cast to Number failed for value \"35%\" (type string) at path \"percentSale\""}
-{"level":"error","message":"Cannot set headers after they are sent to the client"}
-{"level":"error","message":"Cannot set headers after they are sent to the client"}
-{"level":"error","message":"Cannot set headers after they are sent to the client"}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\admin\\book.ejs:52\n    50|                     <td class=\"align-middle\">\r\n    51|                       <div class=\"ms-auto text-end\">\r\n >> 52|                         <a class=\"btn btn-link text-danger text-gradient px-3 mb-0\"id=\"deletebtn\"  data-model=\"books\" data-item-id=\"<%=book.id%>\"><i class=\"far fa-trash-alt me-2\"></i>Delete</a>\r\n    53|                         <button type=\"submit\"  class=\"btn btn-link text-dark px-3 mb-0\" ><i class=\"fas fa-pencil-alt text-dark me-2\" aria-hidden=\"true\" ></i>Update</button>\r\n    54|                       </div> \r\n    55|                     </td>\r\n\nbook is not defined"}
-{"level":"error","message":"Cannot set headers after they are sent to the client"}
-{"level":"error","message":"getaddrinfo ENOTFOUND 'smtp.gmail.com';"}
-{"level":"error","message":"Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials n127-20020a622785000000b0051bcab048f0sm11130376pfn.79 - gsmtp"}
-{"level":"error","message":"Invalid login: 535 5.7.0 Invalid login or password"}
-{"level":"error","message":"No recipients defined"}
-{"level":"error","message":"No recipients defined"}
-{"level":"error","message":"User validation failed: password: Path `password` (`1mnzr`) is shorter than the minimum allowed length (6)., passwordConfirm: Path `passwordConfirm` (`1mnzr`) is shorter than the minimum allowed length (6)."}
-{"level":"error","message":"User validation failed: password: Password must contain at least one letter and one number"}
-{"level":"error","message":"Cast to date failed for value \"/Mon Jun 13 2022 21:11:59 GMT+0700 (Indochina Time)/i\" (type RegExp) at path \"createdAt\" for model \"Order\""}
-{"level":"error","message":"Cannot read property 'slug' of undefined"}
-{"level":"error","message":"Cannot read property 'slug' of undefined"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"consol is not defined"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\user\\review.ejs:114\n    112| \r\n    113| \r\n >> 114|                             <% commentBook.forEach(function(comment){ %>\r\n    115|                                 <%- include('../include/_comment',{comment}) %>\r\n    116|                               <% }); %>\r\n    117|                              \r\n\ncommentBook is not defined"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"Cannot read property 'slug' of null"}
-{"level":"error","message":"E11000 duplicate key error collection: Book.users index: email_1 dup key: { email: \"gblhiep1@gmail.com\" }"}
-{"level":"error","message":"Cannot read property 'role' of undefined"}
+{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\admin\\index.ejs:4\n    2|     <!-- End Navbar -->\r\n    3|     <div class=\"container-fluid py-4\">\r\n >> 4|       <%- include('../partials/_statistic') %>\r\n    5|       <div class=\"row mt-4\">\r\n    6|         <div class=\"col-lg-7 mb-lg-0 mb-4\">\r\n    7|           <div class=\"card z-index-2 h-100\">\r\n\nCould not find matching close tag for \"<%=\"."}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\admin\\order.ejs:107\n    105|           <div class=\"card-body pt-4 p-3\">\r\n    106|             <ul class=\"list-group\">  \r\n >> 107|               <% items.forEach(function(orderItem){ %>\r\n    108|                 <%- include('../partials/_ordertemplate',{orderItem}) %>\r\n    109|               <% }); %>\r\n    110|             </ul>\r\n\nitems is not defined"}
 {"level":"error","message":"Cannot read property 'role' of undefined"}
