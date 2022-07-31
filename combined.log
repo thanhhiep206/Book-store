@@ -4,3 +4,9 @@
 {"level":"error","message":"Reduce of empty array with no initial value"}
 {"level":"error","message":"C:\\Users\\Administrator\\Desktop\\Book store\\views\\admin\\order.ejs:107\n    105|           <div class=\"card-body pt-4 p-3\">\r\n    106|             <ul class=\"list-group\">  \r\n >> 107|               <% items.forEach(function(orderItem){ %>\r\n    108|                 <%- include('../partials/_ordertemplate',{orderItem}) %>\r\n    109|               <% }); %>\r\n    110|             </ul>\r\n\nitems is not defined"}
 {"level":"error","message":"Cannot read property 'role' of undefined"}
+{"level":"error","message":"The Checkout Session's total amount due must add up to at least $0.50 usd"}
+{"level":"error","message":"The Checkout Session's total amount due must add up to at least $0.50 usd"}
+{"level":"error","message":"The Checkout Session's total amount due must add up to at least $0.50 usd"}
+{"level":"error","message":"The Checkout Session's total amount due must add up to at least $0.50 usd"}
+{"level":"error","message":"Invalid sort() argument. Must be a string, object, or array."}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}

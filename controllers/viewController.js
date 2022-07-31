@@ -8,7 +8,7 @@ const Comment = require('../models/commentModel');
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
 
-  const bookProgram = await Book.find({ cartgory: 'laptrinh' });
+  const bookProgram = await Book.find({ cartgory: 'laptrinh' }).sort({createdAt:-1});
   const books = await Book.find({ percentSale: { $gte: 45 } });
 
   res.status(200).render('user/index', {
