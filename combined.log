@@ -10,3 +10,4 @@
 {"level":"error","message":"The Checkout Session's total amount due must add up to at least $0.50 usd"}
 {"level":"error","message":"Invalid sort() argument. Must be a string, object, or array."}
 {"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"confirm is not defined"}
