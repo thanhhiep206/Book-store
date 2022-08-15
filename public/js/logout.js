@@ -6,7 +6,7 @@ const logout = () => {
   })
     .then((res) => {
       if (res.data.status === 'success') {
-        location.reload(true);
+        location.assign('/');
       }
     })
     .catch((e) => {

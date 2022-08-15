@@ -11,3 +11,12 @@
 {"level":"error","message":"Invalid sort() argument. Must be a string, object, or array."}
 {"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
 {"level":"error","message":"confirm is not defined"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"D:\\Book-store\\views\\error.ejs:1\n >> 1|   <%- include('../include/_header') %>\r\n    2|     <%- include('../include/_cartgory') %>\r\n    3|   <div class=\"errorpage\">\r\n    4|       <img class=\"search404\" src=\"/images/search.png\" alt=\"404\">\r\n\nCould not find the include file \"../include/_header\""}
+{"level":"error","message":"D:\\Book-store\\views\\error.ejs:1\n >> 1| <%- include('include/_header') %> <%- include('../../include/_cartgory') %>\r\n    2| <div class=\"errorpage\">\r\n    3|   <img class=\"search404\" src=\"/images/search.png\" alt=\"404\" />\r\n    4|   <img class=\"number404\" src=\"/images/404.png\" alt=\"404\" />\r\n\nD:\\Book-store\\views\\include\\_header.ejs:5\n    3| \r\n    4| <head>\r\n >> 5|     <title><%=title%></title>\r\n    6|     <meta charset=\"UTF-8\">\r\n    7|     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    8|     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\ntitle is not defined"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'id')"}

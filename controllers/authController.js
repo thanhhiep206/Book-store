@@ -87,7 +87,6 @@ exports.isLoggined = async (req, res, next) => {
       return next();
     }
   }
-
   next();
 };
 //authorization

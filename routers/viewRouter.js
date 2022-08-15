@@ -17,5 +17,4 @@ router.get('/book/:slug', viewController.getReview);
 router.get('/cartgory/:cartgory', viewController.getCartgory);
 router.get('/forget', viewController.getResetPassword);
 router.get('/search', searchController.search);
-
 module.exports = router;

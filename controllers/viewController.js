@@ -8,7 +8,7 @@ const Comment = require('../models/commentModel');
 exports.getIndex = catchAsync(async (req, res, next) => {
   const bookbestSale = await Book.find({ percentSale: { $gte: 35 } });
 
-  const bookProgram = await Book.find({ cartgory: 'laptrinh' }).sort({createdAt:-1});
+  const bookProgram = await Book.find({ cartgory: 'laptrinh' }).sort({ createdAt: -1 });
   const books = await Book.find({ percentSale: { $gte: 45 } });
 
   res.status(200).render('user/index', {
@@ -32,16 +32,20 @@ exports.getMe = catchAsync(async (req, res) => {
   });
 });
 //render cart page
-exports.getCart = catchAsync(async (req, res) => {
-  const bookInCart = await Cart.find({ user: req.user.id }); //return array
-  const bookInfo = bookInCart.map((x) => x.book);
-  res.status(200).render('user/cart', {
-    title: 'Your cart',
-    user: req.user,
-    style: 'cart',
-    bookInfo,
-  });
-});
+exports.getCart = async (req, res) => {
+  try {
+    const bookInCart = await Cart.find({ user: req.user.id }); //return array
+    const bookInfo = bookInCart.map((x) => x.book);
+    res.status(200).render('user/cart', {
+      title: 'Your cart',
+      user: req.user,
+      style: 'cart',
+      bookInfo,
+    });
+  } catch (e) {
+    return res.redirect('/');
+  }
+};
 
 // render review foreach book
 exports.getReview = catchAsync(async (req, res) => {
