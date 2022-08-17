@@ -20,3 +20,8 @@
 {"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'id')"}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"Reduce of empty array with no initial value"}
+{"level":"error","message":"User validation failed: name: Please provide your name"}
+{"level":"error","message":"E11000 duplicate key error collection: 61cde048f7b37d3fe2144b1b_Book.users index: name_1 dup key: { name: \"doanthanhhiep\" }"}

@@ -5,19 +5,34 @@ const Order = require('../models/orderModel');
 const catchAsync = require('../utils/catchAsync');
 //getAdmin dashboard if req.user.role =='admin'
 exports.getDashboard = catchAsync(async (req, res, next) => {
-  const order = await Order.find();
   const user = await User.find();
-  //total money
-  const totalMoney = order.map((x) => x.book.priceafterSale);
+  //query in  money
+  let startDate = new Date(2022, new Date().getMonth());
+  let endDate = new Date(2022, new Date().getMonth() + 1);
+  let startDateYear = new Date(new Date().getFullYear() - 1, 12);
+  let endDateYear = new Date(new Date().getFullYear(), 12);
+  const orderInMonth = await Order.find({
+    $and: [{ createdAt: { $gt: startDate } }, { createdAt: { $lt: endDate } }],
+  });
+  const orderInYear = await Order.find({
+    $and: [{ createdAt: { $gt: startDateYear } }, { createdAt: { $lt: endDateYear } }],
+  });
+  const totalMoney = orderInMonth.map((x) => x.book.priceafterSale);
+  const totalYear = orderInYear.map((x) => x.book.priceafterSale);
   const total = totalMoney.reduce(function (prev, cur) {
     return prev + cur;
+  });
+  let totalInYear = 0;
+  totalYear.forEach(function (x) {
+    return (totalInYear = totalInYear + x);
   });
   if (req.user) {
     if (req.user.role == 'admin') {
       res.status(200).render('admin/index', {
         breadcrumb: 'Dashboard',
         total,
-        order,
+        totalInYear,
+        orderInMonth,
         user,
       });
     } else {
