@@ -36,7 +36,6 @@ exports.getMe = catchAsync(async (req, res) => {
 exports.getCart = async (req, res) => {
   const bookInCart = await Cart.find({ user: req.user.id }); //return array
   const bookInfo = bookInCart.map((x) => x.book);
-  console.log(bookInfo);
 
   res.status(200).render('user/cart', {
     title: 'Your cart',

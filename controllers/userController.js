@@ -9,7 +9,7 @@ const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith('image')) {
     cb(null, true);
   } else {
-    cb(new Erorr('Not an image! Please upload only images.'), false);
+    cb(new Erorr('Vui lòng tải ảnh lên'), false);
   }
 };
 

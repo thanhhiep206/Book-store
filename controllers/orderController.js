@@ -45,10 +45,16 @@ exports.createOrderCheckout = catchAsync(async (req, res, next) => {
   const { book, user, price } = req.query;
 
   if (!book && !user && !price) return next();
-  await Order.create({ book, user, price });
+  await Order.create({ book, user, price, paid: true });
   //delete cart after payment
   await Cart.deleteOne({ book, user });
   res.redirect(req.originalUrl.split('?')[0]);
+});
+exports.createOrderCod = catchAsync(async (req, res, next) => {
+  const bookInfo = await Book.findById(req.params.bookId);
+  const order = await Order.create({ book: bookInfo._id, user: req.user.id, price: bookInfo.priceafterSale, paid: false });
+  await Cart.deleteOne({ book: bookInfo._id });
+  res.status(201).json(order);
 });
 exports.getOneOrder = factory.getOne(Order);
 exports.getAllOrder = factory.getAll(Order);

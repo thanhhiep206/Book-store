@@ -45,14 +45,14 @@ exports.login = catchAsync(async (req, res) => {
   if (!user)
     return res.status(404).json({
       status: 'fail',
-      message: 'User not exist, Please signup to continue',
+      message: 'Tài Khoản không tồn tại vui lòng đăng kí tài khoản',
     });
 
   const compare = await user.comparePassword(user.password, password);
   if (!compare)
     return res.status(404).json({
       status: 'fail',
-      message: 'password  not correct',
+      message: 'Sai tài khoản hoặc mật khẩu',
     });
   //check
   sendToken(user, res);
@@ -77,7 +77,7 @@ exports.isLoggined = async (req, res, next) => {
       const decoded = await util.promisify(jwt.verify)(req.cookies.jwt, process.env.JWT_KEY);
       const user = await User.findOne({ _id: decoded.id });
       if (!user) {
-        throw new Error(' User not loggin Please login to continue');
+        throw new Error(' Tài Khoản không tồn tại vui lòng đăng kí tài khoản');
       }
       res.locals = user;
       req.user = user;
@@ -94,7 +94,7 @@ exports.authorization = (role) => {
   // authorize based on user role
   return (req, res, next) => {
     if (!role.includes(req.user.role)) {
-      return res.status(401).json({ message: 'You not permission' });
+      return res.status(401).json({ message: 'Bạn không được phép làm điều này' });
     }
 
     next();
@@ -106,13 +106,13 @@ exports.updatePasswordMe = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user._id).select('+password');
   const compare = await user.comparePassword(user.password, password);
   if (!compare) {
-    throw new Error('Password current is not correct');
+    throw new Error('Mật khẩu hiện tại sai');
   }
   if (password === newpassword) {
-    throw new Error('newpassword is same password current');
+    throw new Error('Mật khẩu mới trùng với mật khẩu hiện tại');
   }
   if (password !== passwordConfirm) {
-    throw new Error('passwordConfirm is not same newpassword');
+    throw new Error('Vui lòng xác nhận lại đúng mật khẩu bạn thay đổi');
   }
   user.password = passwordConfirm;
   await user.save();
@@ -126,7 +126,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
   if (!user) {
-    throw new Error('User not exists');
+    throw new Error('Tài Khoản không tồn tại vui lòng đăng kí tài khoản');
   }
   //not securtiy but just demo  send email reset password
   const passwordRandom = Math.random().toString(36).substring(2, 8);

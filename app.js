@@ -47,9 +47,7 @@ app.use('/api/v1/books', require('./routers/bookRouter'));
 app.use('/api/v1/users', require('./routers/userRouter'));
 app.use('/api/v1/comments', require('./routers/commentRouter'));
 app.all('*', (req, res, next) => {
-  res.status(200).render('error', {
-    message: '',
-  });
+  res.status(200).render('error');
 });
 app.use(error);
 module.exports = app;
