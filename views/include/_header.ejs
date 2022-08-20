@@ -100,15 +100,22 @@
                     </div>
                 </div>
                 
-                <li class="nav-item giohang">
-                    <a href="/#" class="btn btn-secondary rounded-circle">
-                        <i class="fa fa-shopping-cart"></i>
-                        <div class="cart-amount">0</div>
-                    </a>
-                    <a class="nav-link text-dark giohang text-uppercase" href="/cart"
-                        style="display:inline-block">Giỏ
-                        Hàng</a>
-                </li>
+                <div class="dropdown">
+                    <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="cart-amount">0</div>
+                        </a>
+                        <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Giỏ
+                            hàng</a>
+                    </li>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
+                            data-target="#formdangky">Đăng ký</a>
+                        <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
+                            data-target="#formdangnhap">Đăng nhập</a>
+                    </div>
+                </div>
                 <% } %>
             </ul>
         </div>
@@ -202,19 +209,15 @@
                     </div>
 
                     <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+                        
                         <a href="/forget" class="float-right text-decoration-none" style="color: #1a94ff">Quên mật
                             khẩu</a>
                     </div>
 
                     <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit"
                         style="background: #1a94ff">Đăng nhập</button>
-                    <hr class="my-4">
-                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                            class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
-                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                            class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                   
+                    
                 </form>
             </div>
         </div>

@@ -1,80 +1,84 @@
 <div class="col-md-5 khoianh">
-    <div class="anhto mb-4">
-        <a class="active" href="/images/<%=book.img%>" data-fancybox="thumb-img">
-            <img class="product-image" src="/images/<%=book.img%>" alt="<%=book.name%>img" style="width: 100%;">
-        </a>
-        <a href="/images/<%=book.img%>" data-fancybox="thumb-img"></a>
-    </div>
-    <div class="list-anhchitiet d-flex mb-4" style="margin-left: 2rem;">
-        <img class="thumb-img thumb1 mr-3" src="/images/<%=book.img%>" class="img-fluid" alt="<%=book.name%>">
-        <img class="thumb-img thumb2" src="/images/<%=book.img%>" class="img-fluid" alt="<%=book.name%>">
-    </div>
+  <div class="anhto mb-4">
+    <a class="active" href="/images/<%=book.img%>" data-fancybox="thumb-img">
+      <img class="product-image" src="/images/<%=book.img%>" alt="<%=book.name%>img" style="width: 100%" />
+    </a>
+    <a href="/images/<%=book.img%>" data-fancybox="thumb-img"></a>
+  </div>
+  <div class="list-anhchitiet d-flex mb-4" style="margin-left: 2rem">
+    <img class="thumb-img thumb1 mr-3" src="/images/<%=book.img%>" class="img-fluid" alt="<%=book.name%>" />
+    <img class="thumb-img thumb2" src="/images/<%=book.img%>" class="img-fluid" alt="<%=book.name%>" />
+  </div>
 </div>
 <!-- thông tin sản phẩm: tên, giá bìa giá bán tiết kiệm, các khuyến mãi, nút chọn mua.... -->
 <div class="col-md-7 khoithongtin">
-    <div class="row">
-        <div class="col-md-12 header">
-            <h4 class="ten"><%=book.name%></h4>
-            <div class="rate">
-                <i class="fa fa-star active"></i>
-                <i class="fa fa-star active"></i>
-                <i class="fa fa-star active"></i>
-                <i class="fa fa-star active"></i>
-                <i class="fa fa-star "></i>
-            </div>
-            <hr>
-        </div>
-        <div class="col-md-7">
-            <div class="gia">
-                <div class="giabia">Giá bìa:<span class="giacu ml-2"><%=book.price +"$"%></span></div>
-                <div class="giaban">Giá bán tại LoveBooks: <span
-                        class="giamoi font-weight-bold"><%=book.priceafterSale +"$"%></span><span class="donvitien"></span></div>
-                        <%var priceSave =book.price - book.priceafterSale%>
-                <div class="tietkiem">Tiết kiệm: <b><%=priceSave +"$"%></b> <span class="sale"><%="-"+book.percentSale +"%"%></span>
-                </div>
-            </div>
-            <div class="uudai my-3">
-                <h6 class="header font-weight-bold">Khuyến mãi & Ưu đãi tại LoveBook:</h6>
-                <ul>
-                    <li><b>Miễn phí giao hàng </b>cho đơn hàng từ 150.000đ ở TP.HCM và 300.000đ ở
-                        Tỉnh/Thành khác <a href="#">>> Chi tiết</a></li>
-                    <li><b>Combo sách HOT - GIẢM 25% </b><a href="#">>>Xem ngay</a></li>
-                    <li>Tặng Bookmark cho mỗi đơn hàng</li>
-                    <li>Bao sách miễn phí (theo yêu cầu)</li>
-                </ul>
-            </div>
-            <div class="soluong d-flex">
-                <label class="font-weight-bold">Số lượng: </label>
-                <div class="input-number input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text btn-spin btn-dec">-</span>
-                    </div>
-                    <input type="text" value="1" class="soluongsp  text-center">
-                    <div class="input-group-append">
-                        <span class="input-group-text btn-spin btn-inc">+</span>
-                    </div>
-                </div>
-            </div>
-            <form action="/api/v1/carts/<%=book.id%>" method="post">
-            <button class="nutmua btn w-100 text-uppercase">Chọn mua</button>
-            </form>
-            <a class="huongdanmuahang text-decoration-none" href="#">(Vui lòng xem hướng dẫn mua
-                hàng)</a>
-           
-        </div>
-        <!-- thông tin khác của sản phẩm:  tác giả, ngày xuất bản, kích thước ....  -->
-        <div class="col-md-5">
-            <div class="thongtinsach">
-                <ul>
-                    <li>Tác giả: <a href="#" class="tacgia"><%=book.author %></a></li>
-                    <li>Ngày xuất bản: <b><%= reviewOfoneBook.publishDate%></b></li>
-                    <li>Kích thước: <b><%=reviewOfoneBook.sizeHeight + " x"%> <%=reviewOfoneBook.sizeWidth+" cm"%></b></li>
-                    <li>Hình thức bìa: <b><%=reviewOfoneBook.coverImage%></b></li>
-                    <li>Số trang: <b><%=reviewOfoneBook.pageNumber%></b></li>
-                    <li>Số phần: <b><%=reviewOfoneBook.chapter%></b></li>
-                    <li>Cân nặng: <b><%=reviewOfoneBook.weight%></b></li>
-                </ul>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-md-12 header">
+      <h4 class="ten"><%=book.name%></h4>
+      <div class="rate">
+        <i class="fa fa-star active"></i>
+        <i class="fa fa-star active"></i>
+        <i class="fa fa-star active"></i>
+        <i class="fa fa-star active"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <hr />
     </div>
+    <div class="col-md-7">
+      <div class="gia">
+        <div class="giabia">Giá bìa:<span class="giacu ml-2"><%=book.price +"$"%></span></div>
+        <div class="giaban">
+          Giá bán tại LoveBooks: <span class="giamoi font-weight-bold"><%=book.priceafterSale +"$"%></span
+          ><span class="donvitien"></span>
+        </div>
+        <%var priceSave =book.price - book.priceafterSale%>
+        <div class="tietkiem">
+          Tiết kiệm: <b><%=priceSave +"$"%></b> <span class="sale"><%="-"+book.percentSale +"%"%></span>
+        </div>
+      </div>
+      <div class="uudai my-3">
+        <h6 class="header font-weight-bold">Khuyến mãi & Ưu đãi tại LoveBook:</h6>
+        <ul>
+          <li>
+            <b>Miễn phí giao hàng </b>cho đơn hàng từ 150.000đ ở TP.HCM và 300.000đ ở Tỉnh/Thành khác
+            <a href="#">>> Chi tiết</a>
+          </li>
+          <li><b>Combo sách HOT - GIẢM 25% </b><a href="#">>>Xem ngay</a></li>
+          <li>Tặng Bookmark cho mỗi đơn hàng</li>
+          <li>Bao sách miễn phí (theo yêu cầu)</li>
+        </ul>
+      </div>
+      <form action="/api/v1/carts/<%=book.id%>" method="post">
+        <!-- <div class="soluong d-flex">
+          <label class="font-weight-bold">Số lượng: </label>
+          <div class="input-number input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text btn-spin btn-dec">-</span>
+            </div>
+            <input type="text" value="1" class="soluongsp text-center" />
+            <div class="input-group-append">
+              <span class="input-group-text btn-spin btn-inc">+</span>
+            </div>
+          </div>
+        </div> -->
+
+        <button class="nutmua btn w-100 text-uppercase">Chọn mua</button>
+      </form>
+      <a class="huongdanmuahang text-decoration-none" href="#">(Vui lòng xem hướng dẫn mua hàng)</a>
+    </div>
+    <!-- thông tin khác của sản phẩm:  tác giả, ngày xuất bản, kích thước ....  -->
+    <div class="col-md-5">
+      <div class="thongtinsach">
+        <ul>
+          <li>Tác giả: <a href="#" class="tacgia"><%=book.author %></a></li>
+          <li>Ngày xuất bản: <b><%= reviewOfoneBook.publishDate%></b></li>
+          <li>Kích thước: <b><%=reviewOfoneBook.sizeHeight + " x"%> <%=reviewOfoneBook.sizeWidth+" cm"%></b></li>
+          <li>Hình thức bìa: <b><%=reviewOfoneBook.coverImage%></b></li>
+          <li>Số trang: <b><%=reviewOfoneBook.pageNumber%></b></li>
+          <li>Số phần: <b><%=reviewOfoneBook.chapter%></b></li>
+          <li>Cân nặng: <b><%=reviewOfoneBook.weight%></b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

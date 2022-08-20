@@ -31,20 +31,19 @@ exports.getMe = catchAsync(async (req, res) => {
     style: 'account',
   });
 });
+
 //render cart page
 exports.getCart = async (req, res) => {
-  try {
-    const bookInCart = await Cart.find({ user: req.user.id }); //return array
-    const bookInfo = bookInCart.map((x) => x.book);
-    res.status(200).render('user/cart', {
-      title: 'Your cart',
-      user: req.user,
-      style: 'cart',
-      bookInfo,
-    });
-  } catch (e) {
-    return res.redirect('/');
-  }
+  const bookInCart = await Cart.find({ user: req.user.id }); //return array
+  const bookInfo = bookInCart.map((x) => x.book);
+  console.log(bookInfo);
+
+  res.status(200).render('user/cart', {
+    title: 'Your cart',
+    user: req.user,
+    style: 'cart',
+    bookInfo,
+  });
 };
 
 // render review foreach book

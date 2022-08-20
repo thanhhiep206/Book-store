@@ -1,411 +1,408 @@
-
 <%- include ('../include/_header') %>
 
-    <!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
-    <section class="duoinavbar">
-        <div class="container text-white">
-            <div class="row justify">
-                <div class="col-md-3">
-                    <div class="categoryheader">
-                        <div class="noidungheader text-white">
-                            <i class="fa fa-bars"></i>
-                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="benphai float-right">
-                        <div class="hotline">
-                            <i class="fa fa-phone"></i>
-                            <span>Hotline:<b>1900 1999</b> </span>
-                        </div>
-                        <i class="fas fa-comments-dollar"></i>
-                        <a href="#">Hỗ trợ trực tuyến </a>
-                    </div>
-                </div>
-            </div>
+<!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
+<section class="duoinavbar">
+  <div class="container text-white">
+    <div class="row justify">
+      <div class="col-md-3">
+        <div class="categoryheader">
+          <div class="noidungheader text-white">
+            <i class="fa fa-bars"></i>
+            <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
+          </div>
         </div>
-    </section>
-
-    <!-- noi dung danh muc sach(categories) + banner slider -->
-    <section class="header bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3" style="margin-right: -15px;">
-                    <!-- CATEGORIES -->
-                    <div class="categorycontent">
-                        <ul>
-                            <li> <a href="/cartgory/kinhte"> Sách Kinh Tế </a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Kinh Tế </a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Kinh Tế - Chính Trị</a></li>
-                                        <li><a href="#">Sách Khởi Nghiệp</a></li>
-                                        <li><a href="#">Sách Tài Chính, Kế Toán</a></li>
-                                        <li><a href="#">Sách Quản Trị Nhân Sự</a></li>
-                                        <li><a href="#">Sách Kỹ Năng Làm Việc</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Nhân Vật - Bài Học Kinh Doanh</a></li>
-                                        <li><a href="#">Sách Quản Trị - Lãnh Đạo</a></li>
-                                        <li><a href="#">Sách Kinh Tế Học</a></li>
-                                        <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
-                                        <li><a href="#">Sách Marketing - Bán Hàng</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-
-                            <li><a href="/cartgory/laptrinh">Sách Lập Trình </a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Lập Trình</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Lập trình Javscript</a></li>
-                                        <li><a href="#">Lập trình Golang</a></li>
-                                        <li><a href="#">Lập trình Php</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Lập trình Java</a></li>
-                                        <li><a href="#">Lập trình Flutter</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/vanhocvietnam">Sách Văn Học Việt Nam</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Việt
-                                            Nam</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Truyện Ngắn - Tản Văn </a></li>
-                                        <li><a href="#">Tiểu Thuyết lịch Sử </a></li>
-                                        <li><a href="#">Phóng Sự - Ký Sự - Du ký - Tùy Bút</a></li>
-                                        <li><a href="#">Thơ</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Tiểu thuyết</a></li>
-                                        <li><a href="#">Tiểu sử - Hồi ký</a></li>
-                                        <li><a href="#">Phê Bình Văn Học</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/vanhocnuocngoai">Sách Văn Học Nước Ngoài</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Nước
-                                            Ngoài</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Văn Học Hiện Đại</a></li>
-                                        <li><a href="#">Tiểu Thuyết </a></li>
-                                        <li><a href="#">Truyện Trinh Thám</a></li>
-                                        <li><a href="#">Thần Thoại - Cổ Tích</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Văn Học Kinh Điển</a></li>
-                                        <li><a href="#">Sách Giả Tưởng - Kinh Dị</a></li>
-                                        <li><a href="#">Truyện Kiếm Hiệp</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/thieunhi">Sách Thiếu Nhi</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Thiếu Nhi</a>
-                                    </li>
-                                    <div class="content trai">
-                                        <li><a href="#">Mẫu Giáo</a></li>
-                                        <li><a href="#">Thiếu Niên</a></li>
-                                        <li><a href="#">Kiến Thức - Bách Khoa</a></li>
-                                        <li><a href="#">Truyện Cổ Tích</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Nhi Đồng</a></li>
-                                        <li><a href="#">Văn Học Thiếu Nhi</a></li>
-                                        <li><a href="#">Kỹ Năng Sống</a></li>
-                                        <li><a href="#">Truyện Tranh</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/giaoduc">Sách Giáo Dục</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Giáo Dục - Gia
-                                            Đình</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Giáo dục</a></li>
-                                        <li><a href="#">Thai Giáo</a></li>
-                                        <li><a href="#">Sách Dinh Dưỡng - Chăm Sóc Trẻ</a></li>
-                                        <li><a href="#">Ẩm Thực - Nấu Ăn</a></li>
-                                        <li><a href="#">Sách Tham Khảo</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Giới Tính</a></li>
-                                        <li><a href="#">Sách Làm Cha Mẹ</a></li>
-                                        <li><a href="#">Kiến Thức - Kỹ Năng Cho Trẻ</a></li>
-                                        <li><a href="#">Ngoại Ngữ - Từ Điển</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/lichsu">Sách Lịch Sử</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Lịch Sử</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Lịch Sử Việt Nam</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Lịch Sử Thế Giới</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/vanhoanghethuat">Sách Văn Hóa - Nghệ Thuật</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Hóa - Nghệ
-                                            Thuật</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Văn Hóa</a></li>
-                                        <li><a href="#">Phong Tục Tập Quán</a></li>
-                                        <li><a href="#">Phong Thủy</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Nghệ Thuật</a></li>
-                                        <li><a href="#">Kiến Trúc</a></li>
-                                        <li><a href="#">Du Lịch</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/triethoc">Sách Khoa Học - Triết Học</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Khoa Học - Triết
-                                            Học</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Triết Học Phương Tây</a></li>
-                                        <li><a href="#">Khoa Học Cơ Bản</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Minh Tiết Phương Đông</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li><a href="/cartgory/tamlinhtongiao">Sách Tâm Linh - Tôn Giáo</a><i class="fa fa-chevron-right float-right"></i>
-
-                            </li>
-                            <li><a href="/cartgory/dinhduongyhoc">Sách Y Học - Dinh Dưỡng</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Y Học - Thực
-                                            Dưỡng</a></li>
-                                    <div class="content trai">
-                                        <li><a href="#">Chăm Sóc Sức Khỏe</a></li>
-                                        <li><a href="#">Y Học</a></li>
-                                        <li><a href="#">Thiền - Yoga</a></li>
-                                    </div>
-                                    <div class="content phai">
-                                        <li><a href="#">Thực Dưỡng</a></li>
-                                        <li><a href="#">Đông Y - Cổ Truyền</a></li>
-                                    </div>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- banner slider  -->
-                <div class="col-md-9 px-0">
-                    <div id="carouselId" class="carousel slide" data-ride="carousel">
-                        <ol class="nutcarousel carousel-indicators rounded-circle">
-                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselId" data-slide-to="1"></li>
-                            <li data-target="#carouselId" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="#"><img src="/images/banner2.jpg" class="img-fluid"
-                                        style="height: 386px;" width="900px" alt="First slide"></a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="#"><img src="/images/banner1.jpg" class="img-fluid"
-                                        style="height: 386px;" width="900px" alt="Second slide"></a>
-                            </div>
-                            <div class="carousel-item">
-                                <a href="#"><img src="/images/banner4.jpg" class="img-fluid"
-                                        style="height: 386px;" width="900px" alt="Third slide"></a>
-                            </div>
-                            
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselId" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselId" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-9">
+        <div class="benphai float-right">
+          <div class="hotline">
+            <i class="fa fa-phone"></i>
+            <span>Hotline:<b>1900 1999</b> </span>
+          </div>
+          <i class="fas fa-comments-dollar"></i>
+          <a href="#">Hỗ trợ trực tuyến </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- khoi sach moi  -->
-    <section class="_1khoi sachmoi bg-white">
-        <div class="container">
-            <div class="noidung" style=" width: 100%;">
-                <div class="row">
-                    <!--header-->
-                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                        <h1 class="header text-uppercase" style="font-weight: 400;">Sách bán chạy nhất</h1>
-                       
-                    </div>
+<!-- noi dung danh muc sach(categories) + banner slider -->
+<section class="header bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" style="margin-right: -15px">
+        <!-- CATEGORIES -->
+        <div class="categorycontent">
+          <ul>
+            <li>
+              <a href="/cartgory/kinhte"> Sách Kinh Tế </a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Kinh Tế </a></li>
+                <div class="content trai">
+                  <li><a href="#">Kinh Tế - Chính Trị</a></li>
+                  <li><a href="#">Sách Khởi Nghiệp</a></li>
+                  <li><a href="#">Sách Tài Chính, Kế Toán</a></li>
+                  <li><a href="#">Sách Quản Trị Nhân Sự</a></li>
+                  <li><a href="#">Sách Kỹ Năng Làm Việc</a></li>
                 </div>
-                <div class="khoisanpham" style="padding-bottom: 2rem;">
-                    
-                    <!-- 1 san pham -->
-                    <% bookProgram.forEach(function(book){ %>
-                        <%- include('../include/_booktemplate',{book}) %>
-                      <% }); %>
-                  
+                <div class="content phai">
+                  <li><a href="#">Nhân Vật - Bài Học Kinh Doanh</a></li>
+                  <li><a href="#">Sách Quản Trị - Lãnh Đạo</a></li>
+                  <li><a href="#">Sách Kinh Tế Học</a></li>
+                  <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
+                  <li><a href="#">Sách Marketing - Bán Hàng</a></li>
                 </div>
-            </div>
+              </ul>
+            </li>
+
+            <li>
+              <a href="/cartgory/laptrinh">Sách Lập Trình </a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Lập Trình</a></li>
+                <div class="content trai">
+                  <li><a href="#">Lập trình Javscript</a></li>
+                  <li><a href="#">Lập trình Golang</a></li>
+                  <li><a href="#">Lập trình Php</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Lập trình Java</a></li>
+                  <li><a href="#">Lập trình Flutter</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/vanhocvietnam">Sách Văn Học Việt Nam</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Việt Nam</a></li>
+                <div class="content trai">
+                  <li><a href="#">Truyện Ngắn - Tản Văn </a></li>
+                  <li><a href="#">Tiểu Thuyết lịch Sử </a></li>
+                  <li><a href="#">Phóng Sự - Ký Sự - Du ký - Tùy Bút</a></li>
+                  <li><a href="#">Thơ</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Tiểu thuyết</a></li>
+                  <li><a href="#">Tiểu sử - Hồi ký</a></li>
+                  <li><a href="#">Phê Bình Văn Học</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/vanhocnuocngoai">Sách Văn Học Nước Ngoài</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Nước Ngoài</a></li>
+                <div class="content trai">
+                  <li><a href="#">Văn Học Hiện Đại</a></li>
+                  <li><a href="#">Tiểu Thuyết </a></li>
+                  <li><a href="#">Truyện Trinh Thám</a></li>
+                  <li><a href="#">Thần Thoại - Cổ Tích</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Văn Học Kinh Điển</a></li>
+                  <li><a href="#">Sách Giả Tưởng - Kinh Dị</a></li>
+                  <li><a href="#">Truyện Kiếm Hiệp</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/thieunhi">Sách Thiếu Nhi</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Thiếu Nhi</a></li>
+                <div class="content trai">
+                  <li><a href="#">Mẫu Giáo</a></li>
+                  <li><a href="#">Thiếu Niên</a></li>
+                  <li><a href="#">Kiến Thức - Bách Khoa</a></li>
+                  <li><a href="#">Truyện Cổ Tích</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Nhi Đồng</a></li>
+                  <li><a href="#">Văn Học Thiếu Nhi</a></li>
+                  <li><a href="#">Kỹ Năng Sống</a></li>
+                  <li><a href="#">Truyện Tranh</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/giaoduc">Sách Giáo Dục</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Giáo Dục - Gia Đình</a></li>
+                <div class="content trai">
+                  <li><a href="#">Giáo dục</a></li>
+                  <li><a href="#">Thai Giáo</a></li>
+                  <li><a href="#">Sách Dinh Dưỡng - Chăm Sóc Trẻ</a></li>
+                  <li><a href="#">Ẩm Thực - Nấu Ăn</a></li>
+                  <li><a href="#">Sách Tham Khảo</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Giới Tính</a></li>
+                  <li><a href="#">Sách Làm Cha Mẹ</a></li>
+                  <li><a href="#">Kiến Thức - Kỹ Năng Cho Trẻ</a></li>
+                  <li><a href="#">Ngoại Ngữ - Từ Điển</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/lichsu">Sách Lịch Sử</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Lịch Sử</a></li>
+                <div class="content trai">
+                  <li><a href="#">Lịch Sử Việt Nam</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Lịch Sử Thế Giới</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/vanhoanghethuat">Sách Văn Hóa - Nghệ Thuật</a
+              ><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Hóa - Nghệ Thuật</a></li>
+                <div class="content trai">
+                  <li><a href="#">Văn Hóa</a></li>
+                  <li><a href="#">Phong Tục Tập Quán</a></li>
+                  <li><a href="#">Phong Thủy</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Nghệ Thuật</a></li>
+                  <li><a href="#">Kiến Trúc</a></li>
+                  <li><a href="#">Du Lịch</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/triethoc">Sách Khoa Học - Triết Học</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Khoa Học - Triết Học</a></li>
+                <div class="content trai">
+                  <li><a href="#">Triết Học Phương Tây</a></li>
+                  <li><a href="#">Khoa Học Cơ Bản</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Minh Tiết Phương Đông</a></li>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a href="/cartgory/tamlinhtongiao">Sách Tâm Linh - Tôn Giáo</a><i class="fa fa-chevron-right float-right"></i>
+            </li>
+            <li>
+              <a href="/cartgory/dinhduongyhoc">Sách Y Học - Dinh Dưỡng</a><i class="fa fa-chevron-right float-right"></i>
+              <ul>
+                <li class="liheader"><a href="#" class="header text-uppercase">Sách Y Học - Thực Dưỡng</a></li>
+                <div class="content trai">
+                  <li><a href="#">Chăm Sóc Sức Khỏe</a></li>
+                  <li><a href="#">Y Học</a></li>
+                  <li><a href="#">Thiền - Yoga</a></li>
+                </div>
+                <div class="content phai">
+                  <li><a href="#">Thực Dưỡng</a></li>
+                  <li><a href="#">Đông Y - Cổ Truyền</a></li>
+                </div>
+              </ul>
+            </li>
+          </ul>
         </div>
-    </section>
-
-    <!-- khoi sach combo hot  -->
-    <section class="_1khoi combohot mt-4">
-        <div class="container">
-            <div class="noidung bg-white" style=" width: 100%;">
-                <div class="row">
-                    <!--header -->
-                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">Sách khuyến mại đặc biệt</h2>
-                       
-                    </div>
-                </div>
-                <div class="khoisanpham">
-                     <!-- 1 san pham -->
-                     <% bookbestSale.forEach(function(book){ %>
-                        <%- include('../include/_booktemplate',{book}) %>
-                      <% }); %>
-                </div> 
+      </div>
+      <!-- banner slider  -->
+      <div class="col-md-9 px-0">
+        <div id="carouselId" class="carousel slide" data-ride="carousel">
+          <ol class="nutcarousel carousel-indicators rounded-circle">
+            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselId" data-slide-to="1"></li>
+            <li data-target="#carouselId" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#"
+                ><img src="/images/banner2.jpg" class="img-fluid" style="height: 386px" width="900px" alt="First slide"
+              /></a>
             </div>
-        </div>
-    </section>
-
-    <!-- khoi sach sap phathanh  -->
-    <section class="_1khoi sapphathanh mt-4">
-        <div class="container">
-            <div class="noidung bg-white" style=" width: 100%;">
-                <div class="row">
-                    <!--header-->
-                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">Sách Nổi Bật</h2>
-                       
-                    </div>
-                </div>
-                <div class="khoisanpham">
-                    <!-- 1 san pham -->
-                     <!-- 1 san pham -->
-                     <% books.forEach(function(book){ %>
-                        <%- include('../include/_booktemplate',{book}) %>
-                      <% }); %>
-                </div>
+            <div class="carousel-item">
+              <a href="#"
+                ><img src="/images/banner1.jpg" class="img-fluid" style="height: 386px" width="900px" alt="Second slide"
+              /></a>
             </div>
-        </div>
-    </section>
-
-
-    <!-- div _1khoi -- khoi sachnendoc -->
-    <section class="_1khoi sachnendoc bg-white mt-4">
-        <div class="container">
-            <div class="noidung" style=" width: 100%;">
-                <div class="row">
-                    <!--header-->
-                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH HAY NÊN ĐỌC</h2>
-                       
-                    </div>
-                    <!-- 1 san pham -->
-                    <div class="col-lg col-sm-4">
-                       
-                        <div class="card">
-                            <a href="/book/" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="name1">
-                                <img class="card-img-top anh " src="/images/vua-gia-long.jpg"
-                                    alt="img">   
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Hào quang của vua gia long</h3>
-                                    <small class="thoigian text-muted">12/2019</small>
-                                   
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg col-sm-4">
-                       
-                        <div class="card">
-                            <a href="/book/" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="name1">
-                                <img class="card-img-top anh " src="/images/tung-buoc-chan-no-hoa.jpg"
-                                    alt="img">   
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Cuộc sống thăng trầm </h3>
-                                    <small class="thoigian text-muted">8/2020</small>
-                                   
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg col-sm-4">
-                       
-                        <div class="card">
-                            <a href="/book/" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="name1">
-                                <img class="card-img-top anh " src="/images/dai-dich-tren-con-duong-to-lua.jpg"
-                                    alt="img">   
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Đại dịch trên con đường tơ lụa</h3>
-                                    <small class="thoigian text-muted">10/2022</small>
-                                   
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg col-sm-4">
-                       
-                        <div class="card">
-                            <a href="/book/" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="name1">
-                                <img class="card-img-top anh " src="/images/cam-on-vi-da-duoc-thuong.jpg"
-                                    alt="img">   
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Người từng thương yêu bạn</h3>
-                                    <small class="thoigian text-muted">10/2021</small>
-                                   
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg col-sm-4">
-                       
-                        <div class="card">
-                            <a href="/book/" class="motsanpham" style="text-decoration: none; color: black;"
-                                data-toggle="tooltip" data-placement="bottom"
-                                title="name1">
-                                <img class="card-img-top anh " src="/images/suoi-nguon-va-cai-toi-trong-tung-ca-the.jpg"
-                                    alt="img">   
-                                <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">"Suối nguồn" cái tôi của bản thân</h3>
-                                    <small class="thoigian text-muted">10/2021</small>
-                                   
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <a href="#"
+                ><img src="/images/banner4.jpg" class="img-fluid" style="height: 386px" width="900px" alt="Third slide"
+              /></a>
             </div>
-            <hr>
+          </div>
+          <a class="carousel-control-prev" href="#carouselId" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselId" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
-   <%- include('../include/_footer') %>
+<!-- khoi sach moi  -->
+<section class="_1khoi sachmoi bg-white">
+  <div class="container">
+    <div class="noidung" style="width: 100%">
+      <div class="row">
+        <!--header-->
+        <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+          <h1 class="header text-uppercase" style="font-weight: 400">Sách bán chạy nhất</h1>
+        </div>
+      </div>
+      <div class="khoisanpham" style="padding-bottom: 2rem">
+        <!-- 1 san pham -->
+        <% bookProgram.forEach(function(book){ %> <%- include('../include/_booktemplate',{book}) %> <% }); %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- khoi sach combo hot  -->
+<section class="_1khoi combohot mt-4">
+  <div class="container">
+    <div class="noidung bg-white" style="width: 100%">
+      <div class="row">
+        <!--header -->
+        <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
+          <h2 class="header text-uppercase" style="font-weight: 400">Sách khuyến mại đặc biệt</h2>
+        </div>
+      </div>
+      <div class="khoisanpham">
+        <!-- 1 san pham -->
+        <% bookbestSale.forEach(function(book){ %> <%- include('../include/_booktemplate',{book}) %> <% }); %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- khoi sach sap phathanh  -->
+<section class="_1khoi sapphathanh mt-4">
+  <div class="container">
+    <div class="noidung bg-white" style="width: 100%">
+      <div class="row">
+        <!--header-->
+        <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
+          <h2 class="header text-uppercase" style="font-weight: 400">Sách Nổi Bật</h2>
+        </div>
+      </div>
+      <div class="khoisanpham">
+        <!-- 1 san pham -->
+        <!-- 1 san pham -->
+        <% books.forEach(function(book){ %> <%- include('../include/_booktemplate',{book}) %> <% }); %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- div _1khoi -- khoi sachnendoc -->
+<section class="_1khoi sachnendoc bg-white mt-4">
+  <div class="container">
+    <div class="noidung" style="width: 100%">
+      <div class="row">
+        <!--header-->
+        <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+          <h2 class="header text-uppercase" style="font-weight: 400">SÁCH HAY NÊN ĐỌC</h2>
+        </div>
+        <!-- 1 san pham -->
+        <div class="col-lg col-sm-4">
+          <div class="card">
+            <a
+              href="#"
+              class="motsanpham"
+              style="text-decoration: none; color: black"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="name1"
+            >
+              <img class="card-img-top anh" src="/images/vua-gia-long.jpg" alt="img" />
+              <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten">Hào quang của vua gia long</h3>
+                <small class="thoigian text-muted">12/2019</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg col-sm-4">
+          <div class="card">
+            <a
+              href="#"
+              class="motsanpham"
+              style="text-decoration: none; color: black"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="name1"
+            >
+              <img class="card-img-top anh" src="/images/tung-buoc-chan-no-hoa.jpg" alt="img" />
+              <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten">Cuộc sống thăng trầm</h3>
+                <small class="thoigian text-muted">8/2020</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg col-sm-4">
+          <div class="card">
+            <a
+              href="#"
+              class="motsanpham"
+              style="text-decoration: none; color: black"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="name1"
+            >
+              <img class="card-img-top anh" src="/images/dai-dich-tren-con-duong-to-lua.jpg" alt="img" />
+              <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten">Đại dịch trên con đường tơ lụa</h3>
+                <small class="thoigian text-muted">10/2022</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg col-sm-4">
+          <div class="card">
+            <a
+              href="#"
+              class="motsanpham"
+              style="text-decoration: none; color: black"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="name1"
+            >
+              <img class="card-img-top anh" src="/images/cam-on-vi-da-duoc-thuong.jpg" alt="img" />
+              <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten">Người từng thương yêu bạn</h3>
+                <small class="thoigian text-muted">10/2021</small>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg col-sm-4">
+          <div class="card">
+            <a
+              href="#"
+              class="motsanpham"
+              style="text-decoration: none; color: black"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="name1"
+            >
+              <img class="card-img-top anh" src="/images/suoi-nguon-va-cai-toi-trong-tung-ca-the.jpg" alt="img" />
+              <div class="card-body noidungsp mt-3">
+                <h3 class="card-title ten">"Suối nguồn" cái tôi của bản thân</h3>
+                <small class="thoigian text-muted">10/2021</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</section>
+
+<!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
+<%- include('../include/_footer') %>
