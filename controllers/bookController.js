@@ -7,7 +7,6 @@ exports.createBook = factory.createOne(Book);
 exports.updateBook = factory.updateOne(Book);
 //deleteBook:id
 exports.deleteOneBook = factory.deleteOne(Book);
-exports.deleteAllBook = factory.deleteAll(Book);
 //getAllBook
 exports.getAllBook = factory.getAll(Book, { path: 'reviews' });
 //getOneBook

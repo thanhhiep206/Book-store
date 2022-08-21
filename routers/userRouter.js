@@ -22,7 +22,7 @@ router.post(
 //crud user
 // router.use(authController.authorization('admin'));
 //all
-router.route('/').get(userController.getAllUser).post(userController.createOneUser).delete(userController.deleteAllUser);
+router.route('/').get(userController.getAllUser);
 //id
 router.route('/:id').patch(userController.updateOneUser).delete(userController.deleteOneUser).get(userController.getOneUser);
 

@@ -47,7 +47,5 @@ exports.updateMe = catchAsync(async (req, res) => {
 //for admin
 exports.getOneUser = factory.getOne(User);
 exports.getAllUser = factory.getAll(User);
-exports.createOneUser = factory.createOne(User);
 exports.deleteOneUser = factory.deleteOne(User);
-exports.deleteAllUser = factory.deleteAll(User);
 exports.updateOneUser = factory.updateOne(User);

@@ -103,17 +103,35 @@ $(function () {
 
   //btn-spin
   $('.btn-inc').click(function (e) {
+    // add incement value
+    let value = document.querySelector('.tongcong').textContent;
     var strval = $(this).parent().prev().val();
     var val = parseInt(strval) + 1;
     $(this).parent().prev().attr('value', val);
+    value = parseInt(value) * 2;
+    document.querySelector('.tongcong').innerHTML = `${value}$`;
+    //   $.ajax({
+    //     url : `/api/v1/orders/${}`,
+    //     type: "PATCH",
+    //     data: JSON.stringify({amount:val}),
+    //     contentType: "application/json; charset=utf-8",
+    //     dataType   : "json",
+    //     success    : function(){
+    //         console.log("Pure jQuery Pure JS object");
+    //     }
+    // });
   });
   $('.btn-dec').click(function (e) {
+    //dec value when click amount
+    let value = document.querySelector('.tongcong').textContent;
     var strval = $(this).parent().next().val();
     var val = parseInt(strval) - 1;
     if (val < 1) {
       $(this).parent().next().attr('value', 1);
     } else {
       $(this).parent().next().attr('value', val);
+      value = parseInt(value) / 2;
+      document.querySelector('.tongcong').innerHTML = `${value}$`;
     }
   });
 

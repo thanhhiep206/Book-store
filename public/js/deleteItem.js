@@ -19,7 +19,18 @@ deleteBtn.forEach((ele) =>
   ele.addEventListener('click', (e) => {
     e.preventDefault();
     const { model, itemId } = e.target.dataset;
-    console.log(e.target.dataset);
-    deleteItem(model, itemId);
+    swal({
+      title: 'Bạn chắc chắn chứ',
+      text: 'Bạn có muốn xóa không',
+      icon: 'warning',
+      buttons: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        deleteItem(model, itemId);
+        swal('Sản phẩm đã được xóa ', {
+          icon: 'success',
+        });
+      }
+    });
   })
 );
