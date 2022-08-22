@@ -13,11 +13,22 @@ const signup = (name, email, password, passwordConfirm) => {
   })
     .then((res) => {
       if (res.data.status === 'success') {
-        alert('Signup successfully!, Please Login to site');
+        swal('Đăng kí tài khoản thành công vui lòng đăng nhập để tiếp tục', {
+          icon: 'success',
+        });
       }
     })
     .catch((e) => {
-      alert(e.response.data);
+      console.log(e);
+      if (e.response.data.startsWith('E11000')) {
+        swal('Email đã tồn tại vui lòng chọn email khác', {
+          icon: 'error',
+        });
+      }
+
+      swal(e.response.data, {
+        icon: 'error',
+      });
     });
 };
 signupForm.addEventListener('submit', (e) => {

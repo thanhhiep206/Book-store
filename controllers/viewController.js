@@ -84,3 +84,10 @@ exports.getCartgory = catchAsync(async (req, res) => {
 exports.getResetPassword = (req, res) => {
   res.status(200).render('user/resetpassword');
 };
+exports.getorder = catchAsync(async (req, res) => {
+  const bookOrder = await Book.findById(req.params.bookId);
+  res.status(200).render('user/order', {
+    bookOrder,
+    title: 'Order',
+  });
+});

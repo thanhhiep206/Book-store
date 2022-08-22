@@ -17,7 +17,9 @@ const login = (email, password) => {
       }
     })
     .catch((e) => {
-      alert(e.response.data.message);
+      swal(e.response.data.message, {
+        icon: 'error',
+      });
     });
 };
 loginForm.addEventListener('submit', (e) => {

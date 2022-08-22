@@ -133,8 +133,8 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   await sendEmail({
     email: user.email,
-    subject: 'Your password reset ',
-    message: `this is new your password :  ${passwordRandom} `,
+    subject: 'Thay đổi mật khẩu ',
+    message: `Đây là mật khẩu mới của bản:  ${passwordRandom}  vui lòng thay đổi mật khẩu ngay sau khi nhận được mật khẩu này`,
   });
   user.password = passwordRandom;
   await user.save({ validateBeforeSave: false });

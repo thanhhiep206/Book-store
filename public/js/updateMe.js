@@ -9,12 +9,16 @@ const update = (data) => {
   })
     .then((res) => {
       if (res.data.status === 'success') {
-        alert('update successfully!');
+        swal('Cập nhật thành công', {
+          icon: 'success',
+        });
         location.reload(true);
       }
     })
     .catch((e) => {
-      alert(e.response.data.message);
+      swal(e.response.data.message, {
+        icon: 'error',
+      });
     });
 };
 updateMe.addEventListener('submit', (e) => {
@@ -47,7 +51,9 @@ const updatePass = (password, newpassword, passwordConfirm) => {
       }
     })
     .catch((e) => {
-      alert(e);
+      swal(e.response.data.message, {
+        icon: 'error',
+      });
     });
 };
 updatePassword.addEventListener('submit', (e) => {

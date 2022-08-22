@@ -25,26 +25,24 @@ const orderBookCod = async (bookId) => {
     console.log(e);
   }
 };
-paymentBtn.forEach((ele) =>
-  ele.addEventListener('click', (e) => {
-    e.preventDefault();
-    const { bookId } = e.target.dataset;
-    swal({
-      title: 'Bạn chắc chắn chứ',
-      icon: 'warning',
-      buttons: ['Thanh toán khi nhận hàng', 'Thanh toán qua thẻ visa'],
-    }).then((willDelete) => {
-      if (willDelete) {
-        swal('Vui lòng chờ để chuyển trang đến thanh toán qua thẻ ', {
-          icon: 'success',
-        });
-        orderBook(bookId);
-      } else {
-        orderBookCod(bookId);
-        swal('Bạn đã đặt hàng thành công , vui lòng kiểm tra đơn hàng và thanh toán trước khi nhận hàng ', {
-          icon: 'success',
-        });
-      }
-    });
-  })
-);
+paymentBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const { bookId } = e.target.dataset;
+  // swal({
+  //   title: 'Bạn chắc chắn chứ',
+  //   icon: 'warning',
+  //   buttons: ['Thanh toán khi nhận hàng', 'Thanh toán qua thẻ visa'],
+  // }).then((willDelete) => {
+  //   if (willDelete) {
+  //     swal('Vui lòng chờ để chuyển trang đến thanh toán qua thẻ ', {
+  //       icon: 'success',
+  //     });
+  //     orderBook(bookId);
+  //   } else {
+  //     orderBookCod(bookId);
+  //     swal('Bạn đã đặt hàng thành công , vui lòng kiểm tra đơn hàng và thanh toán trước khi nhận hàng ', {
+  //       icon: 'success',
+  //     });
+  //   }
+  // });
+});

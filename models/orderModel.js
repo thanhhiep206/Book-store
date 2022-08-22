@@ -24,6 +24,48 @@ const orderSchema = new mongoose.Schema(
       type: Number,
       default: 1,
     },
+    info: {
+      name: {
+        type: String,
+        required: true,
+      },
+      phone: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true,
+      },
+      address: {
+        type: String,
+        required: true,
+      },
+      province: {
+        type: String,
+        required: true,
+      },
+      district: {
+        type: String,
+        required: true,
+      },
+      town: {
+        type: String,
+        required: true,
+      },
+      pack: {
+        type: String,
+        required: true,
+      },
+      payment: {
+        type: String,
+        required: true,
+      },
+      note: {
+        type: String,
+        required: true,
+      },
+    },
   },
   {
     timestamps: true,
