@@ -23,13 +23,29 @@
                       <label id="LABEL_280">
                         <span id="SPAN_281">Họ và tên: <b id="B_282">(*)</b></span>
                       </label>
-                      <input name="don_ho_ten" type="text" maxlength="255" placeholder="Họ và tên" id="INPUT_283" />
+                      <input
+                        name="don_ho_ten"
+                        type="text"
+                        maxlength="255"
+                        placeholder="Họ và tên"
+                        id="INPUT_283"
+                        class="fullname_order"
+                        required
+                      />
                     </div>
                     <div id="DIV_284">
                       <label id="LABEL_285">
                         <span id="SPAN_286">Điện thoại: <b id="B_287">(*)</b></span>
                       </label>
-                      <input name="don_so_dt" type="text" maxlength="255" placeholder="Số điện thoại" id="INPUT_288" />
+                      <input
+                        name="don_so_dt"
+                        type="text"
+                        maxlength="255"
+                        placeholder="Số điện thoại"
+                        id="INPUT_288"
+                        class="phone_order"
+                        required
+                      />
                     </div>
                     <div id="DIV_289"></div>
                     <div id="DIV_290">
@@ -42,6 +58,8 @@
                         maxlength="255"
                         placeholder="Email để nhận thông báo đơn hàng"
                         id="INPUT_294"
+                        class="email_order"
+                        required
                       />
                     </div>
                     <div id="DIV_295"></div>
@@ -49,104 +67,23 @@
                       <label id="LABEL_297">
                         <span id="SPAN_298">Địa chỉ nhận: <b id="B_299">(*)</b></span>
                       </label>
-                      <input name="don_dia_chi" type="text" maxlength="255" placeholder="Địa chỉ " id="INPUT_300" />
+                      <input
+                        name="don_dia_chi"
+                        type="text"
+                        maxlength="255"
+                        placeholder="Địa chỉ "
+                        id="INPUT_300"
+                        class="address_order"
+                        required
+                      />
                     </div>
-                    <div id="DIV_301">
-                      <label id="LABEL_302">
-                        <span id="SPAN_303">Tỉnh/Thành: <b id="B_304">(*)</b></span>
-                      </label>
-                      <select name="don_tinh" id="SELECT_305">
-                        <option id="OPTION_306">Chọn tỉnh thành</option>
-                        <option value="79" id="OPTION_307">Hồ Chí Minh</option>
-                        <option value="01" id="OPTION_308">Hà Nội</option>
-                        <option value="760" id="OPTION_309"></option>
-                        <option value="89" id="OPTION_310">An Giang</option>
-                        <option value="77" id="OPTION_311">Bà Rịa - Vũng Tàu</option>
-                        <option value="24" id="OPTION_312">Bắc Giang</option>
-                        <option value="06" id="OPTION_313">Bắc Kạn</option>
-                        <option value="95" id="OPTION_314">Bạc Liêu</option>
-                        <option value="27" id="OPTION_315">Bắc Ninh</option>
-                        <option value="83" id="OPTION_316">Bến Tre</option>
-                        <option value="74" id="OPTION_317">Bình Dương</option>
-                        <option value="70" id="OPTION_318">Bình Phước</option>
-                        <option value="60" id="OPTION_319">Bình Thuận</option>
-                        <option value="52" id="OPTION_320">Bình Định</option>
-                        <option value="96" id="OPTION_321">Cà Mau</option>
-                        <option value="92" id="OPTION_322">Cần Thơ</option>
-                        <option value="04" id="OPTION_323">Cao Bằng</option>
-                        <option value="64" id="OPTION_324">Gia Lai</option>
-                        <option value="02" id="OPTION_325">Hà Giang</option>
-                        <option value="35" id="OPTION_326">Hà Nam</option>
-                        <option value="01" id="OPTION_327">Hà Nội</option>
-                        <option value="42" id="OPTION_328">Hà Tĩnh</option>
-                        <option value="30" id="OPTION_329">Hải Dương</option>
-                        <option value="31" id="OPTION_330">Hải Phòng</option>
-                        <option value="93" id="OPTION_331">Hậu Giang</option>
-                        <option value="79" id="OPTION_332">Hồ Chí Minh</option>
-                        <option value="17" id="OPTION_333">Hoà Bình</option>
-                        <option value="33" id="OPTION_334">Hưng Yên</option>
-                        <option value="56" id="OPTION_335">Khánh Hòa</option>
-                        <option value="91" id="OPTION_336">Kiên Giang</option>
-                        <option value="62" id="OPTION_337">Kon Tum</option>
-                        <option value="12" id="OPTION_338">Lai Châu</option>
-                        <option value="68" id="OPTION_339">Lâm Đồng</option>
-                        <option value="20" id="OPTION_340">Lạng Sơn</option>
-                        <option value="10" id="OPTION_341">Lào Cai</option>
-                        <option value="80" id="OPTION_342">Long An</option>
-                        <option value="36" id="OPTION_343">Nam Định</option>
-                        <option value="40" id="OPTION_344">Nghệ An</option>
-                        <option value="37" id="OPTION_345">Ninh Bình</option>
-                        <option value="58" id="OPTION_346">Ninh Thuận</option>
-                        <option value="25" id="OPTION_347">Phú Thọ</option>
-                        <option value="54" id="OPTION_348">Phú Yên</option>
-                        <option value="44" id="OPTION_349">Quảng Bình</option>
-                        <option value="49" id="OPTION_350">Quảng Nam</option>
-                        <option value="51" id="OPTION_351">Quảng Ngãi</option>
-                        <option value="22" id="OPTION_352">Quảng Ninh</option>
-                        <option value="45" id="OPTION_353">Quảng Trị</option>
-                        <option value="94" id="OPTION_354">Sóc Trăng</option>
-                        <option value="14" id="OPTION_355">Sơn La</option>
-                        <option value="72" id="OPTION_356">Tây Ninh</option>
-                        <option value="34" id="OPTION_357">Thái Bình</option>
-                        <option value="19" id="OPTION_358">Thái Nguyên</option>
-                        <option value="38" id="OPTION_359">Thanh Hóa</option>
-                        <option value="46" id="OPTION_360">Thừa Thiên Huế</option>
-                        <option value="82" id="OPTION_361">Tiền Giang</option>
-                        <option value="84" id="OPTION_362">Trà Vinh</option>
-                        <option value="08" id="OPTION_363">Tuyên Quang</option>
-                        <option value="86" id="OPTION_364">Vĩnh Long</option>
-                        <option value="26" id="OPTION_365">Vĩnh Phúc</option>
-                        <option value="15" id="OPTION_366">Yên Bái</option>
-                        <option value="48" id="OPTION_367">Đà Nẵng</option>
-                        <option value="66" id="OPTION_368">Đắk Lắk</option>
-                        <option value="67" id="OPTION_369">Đắk Nông</option>
-                        <option value="11" id="OPTION_370">Điện Biên</option>
-                        <option value="75" id="OPTION_371">Đồng Nai</option>
-                        <option value="87" id="OPTION_372">Đồng Tháp</option>
-                      </select>
-                    </div>
-                    <div id="DIV_373">
-                      <label id="LABEL_374">
-                        <span id="SPAN_375">Quận/Huyện: <b id="B_376">(*)</b></span>
-                      </label>
-                      <select name="quan_huyen" id="SELECT_377">
-                        <option id="OPTION_378">Chọn Quận/Huyện</option>
-                      </select>
-                    </div>
-                    <div id="DIV_379">
-                      <label id="LABEL_380">
-                        <span id="SPAN_381">Phường/Xã: <b id="B_382">(*)</b></span>
-                      </label>
-                      <select name="phuong_xa" id="SELECT_383">
-                        <option id="OPTION_384">Chọn Phường/Xã</option>
-                      </select>
-                    </div>
+
                     <div id="DIV_385"></div>
                     <div id="DIV_386">
                       <label id="LABEL_387">
                         <span id="SPAN_388">Đóng Gói: <b id="B_389">(*)</b></span>
                       </label>
-                      <select name="dong_goi" id="SELECT_390">
+                      <select name="dong_goi" id="SELECT_390" class="pack_order" required>
                         <option id="OPTION_391">Chọn quy cách đóng gói</option>
                         <option value="1" id="OPTION_392">Để nguyên seal</option>
                         <option value="2" id="OPTION_393">Bọc Platis</option>
@@ -158,7 +95,7 @@
                       <label id="LABEL_397">
                         <span id="SPAN_398">Hình thức thanh toán: <b id="B_399">(*)</b></span>
                       </label>
-                      <select name="hinh_thuc_tt" id="SELECT_400">
+                      <select name="hinh_thuc_tt" id="SELECT_400" class="payment_order" required>
                         <option id="OPTION_401">Chọn hình thức</option>
                         <option value="1" id="OPTION_402">Cod: Giao hàng nhận tiền</option>
                         <option value="2" id="OPTION_403">Chuyển khoản</option>
@@ -168,14 +105,20 @@
                       <label for="billingAddress1" id="LABEL_405">
                         <span id="SPAN_406">Ghi chú:</span>
                       </label>
-                      <textarea name="ghi_chu" rows="3" cols="20" id="TEXTAREA_407" placeholder="Ghi chú về đơn hàng">
+                      <textarea
+                        name="ghi_chu"
+                        rows="3"
+                        cols="20"
+                        id="TEXTAREA_407"
+                        placeholder="Ghi chú về đơn hàng"
+                        class="note_order"
+                      >
                       </textarea>
                     </div>
                   </fieldset>
                 </div>
                 <div id="DIV_408"></div>
-                <!-- id="payment"
-                    data-book-id="<%#=bookOrder.id%>" -->
+
                 <input
                   type="submit"
                   name="tr_tranh_toan"
@@ -328,3 +271,54 @@
     </div>
   </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+  integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="https://sweetalert.js.org/assets/sweetalert/sweetalert.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/payment.js"></script>
+<!-- Messenger Plugin chat Code -->
+<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat"></div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute('page_id', '105817078737500');
+  chatbox.setAttribute('attribution', 'biz_inbox');
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: 'v14.0',
+    });
+  };
+
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+</script>

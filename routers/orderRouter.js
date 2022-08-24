@@ -3,7 +3,7 @@ const authController = require('../controllers/authController');
 
 const router = require('express').Router();
 
-router.get('/checkout-session/:bookId', authController.isLoggined, orderController.getCheckoutSession);
+router.post('/checkout-session/:bookId', authController.isLoggined, orderController.getCheckoutSession);
 router.post('/cod/:bookId', authController.isLoggined, orderController.createOrderCod);
 router.route('/').get(orderController.getAllOrder);
 //id

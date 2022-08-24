@@ -35,3 +35,8 @@
 {"level":"error","message":"Cannot read properties of undefined (reading 'filename')"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'filename')"}
 {"level":"error","message":"D:\\Book-store\\views\\user\\order.ejs:207\n    205|                         <div id=\"DIV_429\">\r\n    206|                           <a href=\"https://nobita.vn/san-pham/stadee-cao-thu-tap-6\" id=\"A_430\"\r\n >> 207|                             ><%=bookOrder.name%><br id=\"BR_431\" />\r\n    208|                             <label id=\"LABEL_432\"> Mã SP: id_2355 </label><br id=\"BR_433\"\r\n    209|                           /></a>\r\n    210|                           <label id=\"LABEL_434\"> Số lượng: 1 </label><br id=\"BR_435\" />\r\n\nCannot read properties of null (reading 'name')"}
+{"level":"error","message":"Operation `books.findOne()` buffering timed out after 10000ms"}
+{"level":"error","message":"Operation `books.findOne()` buffering timed out after 10000ms"}
+{"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}
+{"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}
+{"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}

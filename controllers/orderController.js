@@ -17,6 +17,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     payment_method_types: ['card'],
     success_url: `${req.protocol}://${req.get('host')}/?book=${req.params.bookId}&user=${req.user.id}&price=${
       book.priceafterSale
+    }&fullname=${req.body.fullname}&email=${req.body.email}&phone=${req.body.phone}&address=${req.body.address}&note=${
+      req.body.note
     }`,
     cancel_url: `${req.protocol}://${req.get('host')}/book/${book.slug}`,
     customer_email: req.user.email,
@@ -32,7 +34,6 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       },
     ],
   });
-
   // 3) Create session as response
   res.status(200).json({
     status: 'success',
@@ -42,17 +43,43 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
 exports.createOrderCheckout = catchAsync(async (req, res, next) => {
   // This is only TEMPORARY, because it's UNSECURE: everyone can make bookings without paying
-  const { book, user, price } = req.query;
-
+  const { book, user, price, fullname, phone, email, address, note } = req.query;
   if (!book && !user && !price) return next();
-  await Order.create({ book, user, price, paid: true });
+  await Order.create({
+    book,
+    user,
+    price,
+    paid: true,
+    info: {
+      fullname: fullname,
+      email: email,
+      address: address,
+      phone: phone,
+      note: note,
+      payment: 'Chuyển khoản',
+    },
+  });
   //delete cart after payment
   await Cart.deleteOne({ book, user });
   res.redirect(req.originalUrl.split('?')[0]);
 });
 exports.createOrderCod = catchAsync(async (req, res, next) => {
   const bookInfo = await Book.findById(req.params.bookId);
-  const order = await Order.create({ book: bookInfo._id, user: req.user.id, price: bookInfo.priceafterSale, paid: false });
+  const order = await Order.create({
+    book: bookInfo._id,
+    user: req.user.id,
+    price: bookInfo.priceafterSale,
+    paid: false,
+    info: {
+      fullname: req.body.fullname,
+      email: req.body.email,
+      phone: req.body.phone,
+      address: req.body.address,
+      pack: req.body.pack,
+      note: req.body.note,
+      payment: 'Cod: Giao hàng nhận tiền',
+    },
+  });
   await Cart.deleteOne({ book: bookInfo._id });
   res.status(201).json(order);
 });
