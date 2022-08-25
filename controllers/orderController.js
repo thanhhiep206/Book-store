@@ -60,7 +60,7 @@ exports.createOrderCheckout = catchAsync(async (req, res, next) => {
     },
   });
   //delete cart after payment
-  await Cart.deleteOne({ book, user });
+  await Cart.findOneAndDelete({ book, user });
   res.redirect(req.originalUrl.split('?')[0]);
 });
 exports.createOrderCod = catchAsync(async (req, res, next) => {
@@ -80,7 +80,7 @@ exports.createOrderCod = catchAsync(async (req, res, next) => {
       payment: 'Cod: Giao hàng nhận tiền',
     },
   });
-  await Cart.deleteOne({ book: bookInfo._id });
+  await Cart.findOneAndDelete({ book: req.params.bookId });
   res.status(201).json(order);
 });
 

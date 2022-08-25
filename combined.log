@@ -40,3 +40,4 @@
 {"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}
 {"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}
 {"level":"error","message":"Invalid URL: Non-ASCII characters in URLs must be percent-encoded in order for the URL to be valid."}
+{"level":"error","message":"D:\\Book-store\\views\\admin\\order.ejs:108\n    106|             <ul class=\"list-group\">  \r\n    107|               <% items.forEach(function(orderItem){ %>\r\n >> 108|                 <%- include('../partials/_ordertemplate',{orderItem}) %>\r\n    109|               <% }); %>\r\n    110|             </ul>\r\n    111|           </div>\r\n\nCould not find matching close tag for \"<%\"."}

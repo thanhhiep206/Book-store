@@ -1,16 +1,38 @@
 <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-    <div class="d-flex flex-column">
-      <h6 class="mb-3 text-sm"><%=orderItem.user.name%></h6>
-      <span class="mb-2 text-xs">Item <span class="text-dark font-weight-bold ms-sm-2"><%=orderItem.book.name%></span></span>
-      <span class="mb-2 text-xs">Email  <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.user.email%>></span></span>
-      <span class="mb-2 text-xs">Price <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.book.priceafterSale%></span></span>
-      <span class="mb-2 text-xs">TimeOrder <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.createdAt.toISOString().split('T')[0]%></span></span>
-      <span class="mb-2 text-xs">Quantity <span class="text-dark ms-sm-2 font-weight-bold">1</span></span>
-      <span class="mb-2 text-xs">Status <span class="text-dark ms-sm-2 font-weight-bold">Paid</span></span>
-      <span class="mb-2 text-xs">Serial order <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.id%></span></span>
-    </div>
-    <div class="ms-auto text-end">
-      <a class="btn btn-link text-danger text-gradient px-3 mb-0"  id="deletebtn" data-model="orders" data-item-id="<%=orderItem.id%>"><i class="far fa-trash-alt me-2"></i>Delete</a>
-      <a class="btn btn-link text-dark px-3 mb-0" ><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
-    </div>
-  </li>
+  <div class="d-flex flex-column">
+    <h6 class="mb-3 text-sm"><%=orderItem.user.name%></h6>
+    <span class="mb-2 text-xs">Item <span class="text-dark font-weight-bold ms-sm-2"><%=orderItem.book.name%></span></span>
+    <span class="mb-2 text-xs"
+      >Email <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.user.email%>></span></span
+    >
+    <span class="mb-2 text-xs"
+      >Price <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.book.priceafterSale%></span></span
+    >
+    <span class="mb-2 text-xs"
+      >TimeOrder
+      <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.createdAt.toISOString().split('T')[0]%></span></span
+    >
+    <span class="mb-2 text-xs">Quantity <span class="text-dark ms-sm-2 font-weight-bold">1</span></span>
+    <span class="mb-2 text-xs">Status <span class="text-dark ms-sm-2 font-weight-bold">Paid</span></span>
+    <span class="mb-2 text-xs">Serial order <span class="text-dark ms-sm-2 font-weight-bold"><%=orderItem.id%></span></span>
+
+    <span class="mb-2 text-xs"
+      >Info order
+      <span class="text-dark ms-sm-2 font-weight-bold"
+        ><%=orderItem.info.fullname +","%><%=orderItem.info.email +","%><%=orderItem.info.phone +","%>
+        <%=orderItem.info.address +","%><%=orderItem.info.pack +","%><%=orderItem.info.note +","%>
+        <%=orderItem.info.payment%></span
+      ></span
+    >
+  </div>
+  <div class="ms-auto text-end">
+    <a
+      class="btn btn-link text-danger text-gradient px-3 mb-0"
+      id="deletebtn"
+      data-model="orders"
+      data-item-id="<%=orderItem.id%>"
+      ><i class="far fa-trash-alt me-2"></i>Delete</a
+    >
+    <a class="btn btn-link text-dark px-3 mb-0"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
+  </div>
+</li>

@@ -1,13 +1,12 @@
-<table class="m-auto">
-  <tr>
-    <th><%=order.id%></th>
-    <th><%=order.createdAt.toISOString().split('T')[0]%></th>
-    <th><%=order.book.name%></th>
-    <th><%=order.book.priceafterSale +"$"%></th>
+ <tr>
+    <td><%=order.id%></td>
+    <td><%=order.createdAt.toISOString().split('T')[0]%></td>
+    <td><%=order.book.name%></th>
+    <td><%=order.book.priceafterSale +"$"%></td>
     <% let checkPaid =order.paid %> <% if(checkPaid===true){ %>
-    <th>Đã Thanh Toán</th>
+    <td>Đã Thanh Toán</td>
     <% } else{ %>
-    <th>Chưa Thanh Toán</th>
+    <td>Chưa Thanh Toán</td>
     <% } %>
   </tr>
-</table>
+
