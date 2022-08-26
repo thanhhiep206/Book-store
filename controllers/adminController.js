@@ -21,7 +21,7 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
   const totalYear = orderInYear.map((x) => x.book.priceafterSale);
   let totalInMonth = 0;
   totalMoney.forEach(function (x) {
-    return (totalInMothn = totalInMothn + x);
+    return (totalInMonth = totalInMonth + x);
   });
   let totalInYear = 0;
   totalYear.forEach(function (x) {
