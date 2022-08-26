@@ -19,8 +19,9 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
   });
   const totalMoney = orderInMonth.map((x) => x.book.priceafterSale);
   const totalYear = orderInYear.map((x) => x.book.priceafterSale);
-  const total = totalMoney.reduce(function (prev, cur) {
-    return prev + cur;
+  let totalInMonth = 0;
+  totalMoney.forEach(function (x) {
+    return (totalInMothn = totalInMothn + x);
   });
   let totalInYear = 0;
   totalYear.forEach(function (x) {
@@ -30,7 +31,7 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
     if (req.user.role == 'admin') {
       res.status(200).render('admin/index', {
         breadcrumb: 'Dashboard',
-        total,
+        totalInMonth,
         totalInYear,
         orderInMonth,
         user,
