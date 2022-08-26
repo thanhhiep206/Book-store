@@ -55,6 +55,7 @@ exports.createOrderCheckout = catchAsync(async (req, res, next) => {
       email: email,
       address: address,
       phone: phone,
+      pack:"Bọc Platis",
       note: note,
       payment: 'Chuyển khoản',
     },

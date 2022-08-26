@@ -67,6 +67,9 @@ exports.updateOne = (Model) =>
     if (dataUpdate.slug) {
       return res.redirect('/admin/book');
     }
+    if (dataUpdate.email) {
+      return res.redirect('/admin/user');
+    }
     res.status(201).json({
       status: 'success',
       msg: `update ${dataUpdate.name} sucessfully`,
